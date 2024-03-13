@@ -217,6 +217,17 @@ function copyCurrentUrl() {
 </script>
 <button onclick="copyCurrentUrl()">复制当前页面地址</button>
 
-
+<script>
+// 禁用右键菜单和Ctrl+U快捷键
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+ 
+document.addEventListener('keydown', function(e) {
+  if (e.ctrlKey && e.key == 'u') {
+    e.preventDefault();
+  }
+});
+</script>
 </body>
 </html>
