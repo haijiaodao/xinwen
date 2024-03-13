@@ -159,7 +159,7 @@ color:orange;
 <!--hide script from old browsers
 document.write("发布时间: " + document.lastModified + "")
 // end hiding -->
-</script>&emsp;&emsp;访问量:<span id="result1"></span>次&emsp;©<!-- -->著作权归作者所有,转载或内容合作请联系作者。<p style="text-align:right;font-size: 12px;"><div>网内版权号：<span id="uniqueCode"></span></div></p></strong>
+</script>&emsp;&emsp;访问量:<span id="result1"></span>次&emsp;©<!-- -->著作权归作者所有,转载或内容合作请联系作者。<p style="text-align:right;font-size: 12px;"><div>网内版权号：<span id="uniqueNumber"></span></div></p></strong>
                       <script type="text/javascript">
 	//流量统计
                     if (localStorage.pagecount) {
@@ -231,18 +231,22 @@ document.addEventListener('keydown', function(e) {
 </script>
 <script>
 // 生成版权
-function generateUniqueCode(url) {
-  // 使用MD5生成不变的哈希值
-  var md5 = require('md5');
-  var uniqueCode = md5(url).substring(8, 24);
-  return uniqueCode;
+function generateUniqueNumber(url) {
+  // 使用URL的hashCode作为号码
+  let hash = 0;
+  for (let i = 0; i < url.length; i++) {
+    hash = ((hash << 5) - hash) + url.charCodeAt(i);
+    hash |= 0; // 转换为32位整数
+  }
+  return Math.abs(hash);
 }
  
-window.onload = function() {
-  var url = window.location.href; // 获取当前页面的URL
-  var uniqueCode = generateUniqueCode(url);
-  document.getElementById('uniqueCode').textContent = uniqueCode; // 显示唯一号码
-};
+// 获取当前页面的URL
+const url = window.location.href;
+// 生成唯一号码
+const uniqueNumber = generateUniqueNumber(url);
+// 显示号码
+document.getElementById('uniqueNumber').textContent = uniqueNumber.toString();
 </script>
 </body>
 </html>
