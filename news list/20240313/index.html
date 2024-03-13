@@ -206,6 +206,16 @@ document.write("发布时间: " + document.lastModified + "")
 			</div><h3 style="color: red;"></h3>
 		</header>
 	</div>
+<script>
+function copyCurrentUrl() {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    console.log('复制成功');
+  }).catch(function(error) {
+    console.error('复制失败', error);
+  });
+}
+</script>
+<button onclick="copyCurrentUrl()">复制当前页面地址</button>
 
 
 </body>
