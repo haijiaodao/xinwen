@@ -108,12 +108,18 @@ body {
   right:1px; /* 相对于原位置向右移动20px */
 color:orange;
 }
+span {
+text-align:right;
+width:800px;
+font-size:12px;
+}
+
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>新闻网页</title>
-    
+	 
 </head>
 <body>
 <div class="container1">
@@ -155,11 +161,11 @@ color:orange;
             
            
         </div><p style="color: #98AFC7;">
-<span class="name">&emsp;<p class="center-text"><script language="JavaScript">
+<span>&emsp;&emsp;<script language="JavaScript">
 <!--hide script from old browsers
 document.write("发布时间: " + document.lastModified + "")
 // end hiding -->
-</script>&emsp;&emsp;访问量:<span id="result1"></span>次&emsp;©<!-- -->著作权归作者所有,转载或内容合作请联系作者</p></strong>
+</script>&emsp;访问量:<span id="result1"></span>次&emsp;©<!-- -->著作权归作者所有,转载或内容合作请联系作者。<span style="text-align:right;font-size: 12px;color:#8B0000">&copy;网内版权号：<span id="uniqueNumber"></span></div></p></strong>
                       <script type="text/javascript">
 	//流量统计
                     if (localStorage.pagecount) {
@@ -229,5 +235,25 @@ document.addEventListener('keydown', function(e) {
   }
 });
 </script>
+<script>
+// 生成版权
+function generateUniqueNumber(url) {
+  // 使用URL的hashCode作为号码
+  let hash = 0;
+  for (let i = 0; i < url.length; i++) {
+    hash = ((hash << 5) - hash) + url.charCodeAt(i);
+    hash |= 0; // 转换为32位整数
+  }
+  return Math.abs(hash);
+}
+ 
+// 获取当前页面的URL
+const url = window.location.href;
+// 生成唯一号码
+const uniqueNumber = generateUniqueNumber(url);
+// 显示号码
+document.getElementById('uniqueNumber').textContent = uniqueNumber.toString();
+</script>
+
 </body>
 </html>
