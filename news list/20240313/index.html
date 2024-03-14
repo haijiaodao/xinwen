@@ -224,16 +224,16 @@ function copyCurrentUrl() {
 <button onclick="copyCurrentUrl()">复制当前页面地址</button>
 
 <script>
-// 禁用右键菜单和Ctrl+U快捷键
-document.addEventListener('contextmenu', function(e) {
-  e.preventDefault();
-});
- 
-document.addEventListener('keydown', function(e) {
-  if (e.ctrlKey && e.key == 'u') {
-    e.preventDefault();
-  }
-});
+// 监听鼠标和键盘事件
+document.removeEventListener("mousedown", haveSelect)
+document.addEventListener("mousedown", haveSelect)
+document.removeEventListener("mouseup", haveSelect)
+document.addEventListener("mouseup", haveSelect)
+document.removeEventListener("keydown", haveSelect)
+document.addEventListener("keydown", haveSelect)
+function haveSelect() {
+  window.getSelection().removeAllRanges()
+}
 </script>
 <script>
 // 生成版权
