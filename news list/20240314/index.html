@@ -2,6 +2,19 @@
 <meta charset="utf-8">
 <head>
 <link rel="stylesheet" type="text/css" href="css1/htmleaf-demo.css">
+<script type='text/javascript' src='http://cdn.staticfile.org/jquery/2.1.1/jquery.min.js'></script> 
+<script type="text/javascript" src="http://cdn.staticfile.org/jquery.qrcode/1.0/jquery.qrcode.min.js"></script> 
+<script>
+function toggleDiv() {
+  var div = document.getElementById('myDiv');
+  if (div.style.display === 'none') {
+    div.style.display = 'block';
+  } else {
+    div.style.display = 'none';
+  }
+}
+</script>
+
     <style>
         h1>red{color: red}
         h1>orange{color: orange}
@@ -102,12 +115,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20%;
+    height: 50%;
   }
   
   .image1 {
-    max-width: 35%;
-    max-height:35%;
+    max-width: 30%;
+    max-height:30%;
   }
 
 .center-text {
@@ -130,12 +143,12 @@ font-size:12px;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>新闻报道</title>
+    <title>新闻网页</title>
 	 
 </head>
 <body>
 <div class="container1">
-  <img src="https://haijiaodao.github.io/xinwen/news%20list/img/logo.png" alt="logo" class="image1">
+  <img src="img/logo.png" alt="logo" class="image1">
 </div>
 
         <h1><red></red><orange>“学雷锋·正青春——争做时代新青年”</orange><yellow></yellow><green></green><qing></qing><blue></blue><purple></purple></h1>
@@ -239,18 +252,36 @@ function copyCurrentUrl() {
 }
 </script>
 <button onclick="copyCurrentUrl()">复制当前页面地址</button>
+<button onclick="toggleDiv()">二维码</button>
+ 
+<div id="myDiv" style="display:none;">
+ <div id="qrcode"></div> 
+<a id="download" download="qrcode.jpg"></a> 
+<button id="save">save</button> 
+<script>
+    jQuery('#qrcode').qrcode({ width: 75, height: 75, text: window.location.href });
+    $("#save").click(function () {
+        var canvas = $('#qrcode').find("canvas").get(0);
+        var url = canvas.toDataURL('image/jpeg');
+        $("#download").attr('href', url).get(0).click();
+        return false;
+    });
+</script> 
+<span>手机扫码阅读分享更便捷
+</div>
+
 
 <script>
-// 监听鼠标和键盘事件
-document.removeEventListener("mousedown", haveSelect)
-document.addEventListener("mousedown", haveSelect)
-document.removeEventListener("mouseup", haveSelect)
-document.addEventListener("mouseup", haveSelect)
-document.removeEventListener("keydown", haveSelect)
-document.addEventListener("keydown", haveSelect)
-function haveSelect() {
-  window.getSelection().removeAllRanges()
-}
+// 禁用右键菜单和Ctrl+U快捷键
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+ 
+document.addEventListener('keydown', function(e) {
+  if (e.ctrlKey && e.key == 'u') {
+    e.preventDefault();
+  }
+});
 </script>
 <script>
 // 生成版权
