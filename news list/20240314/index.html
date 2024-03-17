@@ -62,31 +62,19 @@ position:relative;
             top:10px; left:0px;
         }
 
- .sfd{
+  .sfd{
             display: flex; /* 使用flex布局 */
             justify-content: center; /* 水平居中对齐 */
         }
         
         img{
-            width: 380px; /* 设置图片宽度 */
+            width: 48%; /* 设置图片宽度 */
             height: auto; /* 保持高度自动计算 */
             margin: 10px; /* 设置图片之间的间距 */
                    }
-.shadow {
-  /* 阴影的偏移量 */
-  box-shadow: 5px 5px 5px grey;
-  /* 阴影的模糊半径 */
-  border-radius: 10px;
-  /* 图片边框 */
-  border: 3px solid #ddd;
-  /* 图片的边距 */
-  margin: 20px;
-  /* 图片的填充方式 */
-  object-fit: cover;
-}
 
 body {
-    width: 800px;           /* 宽度 */
+    width: 60%;           /* 宽度 */
     height: 100%;          /* 高度 */
     margin: 20px auto;      /* 上下间距20px，左右自动 */
     padding: 20px;          /* 内边距 */
@@ -102,12 +90,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20%;
+    height: 50%;
   }
   
   .image1 {
-    max-width: 35%;
-    max-height:35%;
+    max-width: 30%;
+    max-height:30%;
   }
 
 .center-text {
@@ -125,6 +113,27 @@ text-align:right;
 width:800px;
 font-size:12px;
 }
+@media (max-width: 600px) {
+body {
+    width: 80%;           /* 宽度 */
+    height: 100%;          /* 高度 */
+    margin: 20px auto;      /* 上下间距20px，左右自动 */
+    padding: 20px;          /* 内边距 */
+    border: 20px solid #dddddd;/* 边框 */
+    position: relative;     /* 相对定位 */
+    top: 5px;             /* 相对于最近定位祖先元素向下偏移100px */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* 水平偏移 垂直偏移 阴影模糊半径 颜色 */
+ text-shadow: 0px 0px 1px #BEBEBE;
+ }
+
+   img{
+            width: 50%; /* 设置图片宽度 */
+            height: auto; /* 保持高度自动计算 */
+            margin: 10px; /* 设置图片之间的间距 */
+                   }
+  }
+}
+
 
     </style>
     <meta charset="UTF-8">
@@ -221,13 +230,14 @@ document.write("发布时间: " + document.lastModified + "")
 		<header class="htmleaf-header" style="color:red">
 			
 			<div class="htmleaf-links" style="color:red">
-				<a class="htmleaf-icon icon-htmleaf-home-outline" style="color:#000" href="" title="首页" target="_blank"><span>首页</span></a>
+				<a class="htmleaf-icon icon-htmleaf-home-outline" style="color:#000" href="https://haijiaodao.github.io/xinwen/index.html" title="首页" target="_blank"><span>首页</span></a>
 
                                <a class="icon fa fa-paper-plane-o" style="color:black" href="" title="/" target="_blank"></a>
 
-				<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" style="color:#000" href="" title="返回" target="_blank"><span> 返回</span></a>
+				<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" style="color:#000" href="https://haijiaodao.github.io/xinwen/newslist/index.html" title="返回" target="_blank"><span> 返回</span></a>
 			</div><h3 style="color: red;"></h3>
 		</header>
+
 	</div>
 <script>
 function copyCurrentUrl() {
