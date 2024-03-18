@@ -262,18 +262,20 @@ function copyCurrentUrl() {
 
 <button onclick="toggleDiv()">二维码</button>
  <div id="myDiv" style="display:none;">
- <div id="qrcodeCanvas"></div> 
-<a id="download" download="qrcode.jpg"></a> 
-<button id="save">save</button> 
+<canvas id="qrcode"></canvas>
+
 <script>
-    $('#qrcodeCanvas').qrcode({ 
-render : "canvas",//也可以替换为table
-width: 75, 
-height: 75, 
-
-text: window.location.href, 
-
-    });
+window.onload = function() {
+  // 获取当前URL
+  var url = window.location.href;
+ 
+  // 生成二维码
+  new QRCode(document.getElementById("qrcode"), {
+    text: url,
+    width: 128,
+    height: 128
+  });
+};
 </script> 
 
 <span>手扫码
