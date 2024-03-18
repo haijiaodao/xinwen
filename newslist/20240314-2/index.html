@@ -4,7 +4,9 @@
 <link rel="stylesheet" type="text/css" href="css1/htmleaf-demo.css">
 <script type='text/javascript' src='http://cdn.staticfile.org/jquery/2.1.1/jquery.min.js'></script> 
 <script type="text/javascript" src="http://cdn.staticfile.org/jquery.qrcode/1.0/jquery.qrcode.min.js">
-<script src='http://libs.baidu.com/jquery/1.9.0/jquery.min.js'></script> </script> 
+<script src='http://libs.baidu.com/jquery/1.9.0/jquery.min.js'></script>
+<script src="jquery-qrcode-master/jquery.qrcode.min.js"></script>
+
 <script>
 function toggleDiv() {
   var div = document.getElementById("myDiv");
@@ -265,16 +267,30 @@ function copyCurrentUrl() {
  <div id="qrcodeCanvas"></div> 
 
 <script>
- jQuery('#qrcodeCanvas').qrcode({ width: 75, height: 75, text: window.location.href });
-    $("#save").click(function () {
-        var canvas = $('#qrcodeCanvas').find("canvas").get(0);
-        var url = canvas.toDataURL('image/jpeg');
-        $("#download").attr('href', url).get(0).click();
-        return false;
+		//把链接转换为二维码
+		jQuery('.qrcodeCanvas').qrcode({
+			width: 100,
+			height: 100,
+			render: 'canvas', //设置渲染方式 table canvas 
+			typeNumber: -1, //计算模式 
+			correctLevel: 0, //纠错等级 
+			background: '#ffffff', //背景颜色 
+			foreground: '#000000', //前景颜色 
+			text: window.location.href, //链接
+		});
+	</script>
+<script>
+    $('#qrcodeCanvas').qrcode({ 
+render : "canvas",//也可以替换为table
+width: 75, 
+height: 75, 
+
+text: window.location.href, 
+
     });
 </script> 
 
-<span>扫码
+<span>码
 </div>
 
 
