@@ -73,9 +73,20 @@ position:relative;
             height: auto; /* 保持高度自动计算 */
             margin: 10px; /* 设置图片之间的间距 */
                    }
-
+  .shadow {
+  /* 阴影的偏移量 */
+  box-shadow: 5px 5px 5px grey;
+  /* 阴影的模糊半径 */
+  border-radius: 10px;
+  /* 图片边框 */
+  border: 3px solid #ddd;
+  /* 图片的边距 */
+  margin: 20px;
+  /* 图片的填充方式 */
+  object-fit: cover;
+}
 body {
-    width: 60%;           /* 宽度 */
+    width: 50%;           /* 宽度 */
     height: 100%;          /* 高度 */
     margin: 20px auto;      /* 上下间距20px，左右自动 */
     padding: 20px;          /* 内边距 */
