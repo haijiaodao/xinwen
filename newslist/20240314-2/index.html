@@ -6,7 +6,10 @@
 <script type="text/javascript" src="http://cdn.staticfile.org/jquery.qrcode/1.0/jquery.qrcode.min.js">
 <script src='http://libs.baidu.com/jquery/1.9.0/jquery.min.js'></script>
 <script src="jquery-qrcode-master/jquery.qrcode.min.js"></script>
+<script src="http://static.javascriptcn.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+<script src="http://static.javascriptcn.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
 
+版权声明：本文为原创文章，版权由本站（JavaScript中文网）拥有，严禁未经允许复制、转载、传播、篡改等任何行为，如需转载，请联系本站管理员获取书面授权
 <script>
 function toggleDiv() {
   var div = document.getElementById("myDiv");
@@ -266,19 +269,6 @@ function copyCurrentUrl() {
  <div id="myDiv" style="display:none;">
  <div id="qrcodeCanvas"></div> 
 
-<script>
-		//把链接转换为二维码
-		jQuery('.qrcodeCanvas').qrcode({
-			width: 100,
-			height: 100,
-			render: 'canvas', //设置渲染方式 table canvas 
-			typeNumber: -1, //计算模式 
-			correctLevel: 0, //纠错等级 
-			background: '#ffffff', //背景颜色 
-			foreground: '#000000', //前景颜色 
-			text: window.location.href, //链接
-		});
-	</script>
 <script>
     $('#qrcodeCanvas').qrcode({ 
 render : "canvas",//也可以替换为table
