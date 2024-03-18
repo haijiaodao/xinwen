@@ -266,10 +266,12 @@ function copyCurrentUrl() {
 <a id="download" download="qrcode.jpg"></a> 
 <button id="save">save</button> 
 <script>
-    $('#qrcodeCanvas').qrcode({ 
-width: 75, 
-height: 75, 
-text: window.location.href, 
+   jQuery('#qrcodeCanvas').qrcode({ width: 75, height: 75, text: window.location.href });
+    $("#save").click(function () {
+        var canvas = $('#qrcodeCanvas').find("canvas").get(0);
+        var url = canvas.toDataURL('image/jpeg');
+        $("#download").attr('href', url).get(0).click();
+        return false;
     });
 </script> 
 
