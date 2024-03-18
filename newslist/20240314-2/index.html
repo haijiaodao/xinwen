@@ -266,16 +266,17 @@ function copyCurrentUrl() {
 <a id="download" download="qrcode.jpg"></a> 
 <button id="save">save</button> 
 <script>
-   jQuery('#qrcodeCanvas').qrcode({ width: 75, height: 75, text: window.location.href });
-    $("#save").click(function () {
-        var canvas = $('#qrcodeCanvas').find("canvas").get(0);
-        var url = canvas.toDataURL('image/jpeg');
-        $("#download").attr('href', url).get(0).click();
-        return false;
+    $('#qrcodeCanvas').qrcode({ 
+render : "canvas",//也可以替换为table
+width: 75, 
+height: 75, 
+
+text: window.location.href, 
+
     });
 </script> 
 
-<span>手机扫码阅读
+<span>手扫码
 </div>
 
 
