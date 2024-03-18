@@ -3,14 +3,15 @@
 <head>
 <link rel="stylesheet" type="text/css" href="css1/htmleaf-demo.css">
 <script type='text/javascript' src='http://cdn.staticfile.org/jquery/2.1.1/jquery.min.js'></script> 
-<script type="text/javascript" src="http://cdn.staticfile.org/jquery.qrcode/1.0/jquery.qrcode.min.js"></script> 
+<script type="text/javascript" src="http://cdn.staticfile.org/jquery.qrcode/1.0/jquery.qrcode.min.js">
+<script src='http://libs.baidu.com/jquery/1.9.0/jquery.min.js'></script> </script> 
 <script>
 function toggleDiv() {
-  var div = document.getElementById('myDiv');
-  if (div.style.display === 'none') {
-    div.style.display = 'block';
+  var div = document.getElementById("myDiv");
+  if (div.style.display === "none") {
+    div.style.display = "block";
   } else {
-    div.style.display = 'none';
+    div.style.display = "none";
   }
 }
 </script>
@@ -258,21 +259,22 @@ function copyCurrentUrl() {
   <button><a href="https://haijiaodao.github.io/github.io/zhifuyemian/1.html" class"no123" title="打赏，支持一下">
  打赏</button></a>
   </span>
+
 <button onclick="toggleDiv()">二维码</button>
- 
-<div id="myDiv" style="display:none;">
- <div id="qrcode"></div> 
+ <div id="myDiv" style="display:none;">
+ <div id="qrcodeCanvas"></div> 
 <a id="download" download="qrcode.jpg"></a> 
 <button id="save">save</button> 
 <script>
-    jQuery('#qrcode').qrcode({ width: 75, height: 75, text: window.location.href });
+    $('#qrcodeCanvas').qrcode({ width: 75, height: 75, text: window.location.href, });
     $("#save").click(function () {
-        var canvas = $('#qrcode').find("canvas").get(0);
+        var canvas = $('#qrcodeCanvas').find("canvas").get(0);
         var url = canvas.toDataURL('image/jpeg');
         $("#download").attr('href', url).get(0).click();
         return false;
     });
 </script> 
+
 <span>手机扫码阅读分享更便捷
 </div>
 
