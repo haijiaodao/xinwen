@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>表格处理</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+<script>
+// 使用fetch获取服务器上的Excel文件
+fetch('http://https://haijiaodao.github.io/xinwen/excel/20241J.xlsx')
+  .then(response => response.arrayBuffer()) // 转换为ArrayBuffer
+  .then(data => {
+    // 使用SheetJS解析ArrayBuffer
+    const workbook = XLSX.read(data, { type: 'buffer' });
+    // 假设我们只读取第一个工作表
+    const firstSheetName = workbook.SheetNames[0];
+    const worksheet = workbook.Sheets[firstSheetName];
+    // 将工作表转换为JSON
+    const jsonData = XLSX.utils.sheet_to_json(worksheet);
+    
+    // 在前端显示数据，例如添加到表格中
+    const table = document.getElementById('your-table');
+    jsonData.forEach(row => {
+      const tr = document.createElement('tr');
+      Object.values(row).forEach(value => {
+        const td = document.createElement('td');
+        td.textContent = value;
+        tr.appendChild(td);
+      });
+      table.appendChild(tr);
+    });
+  })
+  .catch(error => console.error('Error reading or parsing Excel file:', error));
+</script>
+<body>
+    <h2>信息</h2>
+    <p></p>
+  <table id="your-table" border="1"></table>
+</body>
+</html>
