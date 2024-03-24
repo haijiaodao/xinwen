@@ -1,0 +1,86 @@
+
+body {
+  background-color: #00C5CD;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #464646;
+}
+
+.tab-wrapper {
+  margin: 60px auto;
+  width: 70%;
+  max-width:500px;
+}
+
+.tab-menu li {
+  position:relative;
+  background-color: #fff;
+  color:#bcbcbc;
+  display: inline-block;
+  padding: 20px 49.79px;
+  opacity: 0.8;
+  cursor:pointer;
+  z-index:0;
+}
+span{
+float:right;
+  font-size: 14px; /* 设置文字大小为20像素 */
+  color: #00C5CD; /* 设置文字颜色为红色 */
+}
+a {
+    text-decoration: none; /* 去除下划线 */
+    color: inherit; /* 去除颜色，使用父元素的颜色 */
+  }
+.news-list {
+  /* 样式根据需求添加，例如边距、背景等 */
+}
+ 
+.news-item {
+  /* 每条新闻的容器样式 */
+  margin-bottom: 10px;
+  padding: 50px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+}
+ 
+.news-title {
+  /* 新闻标题样式 */
+  margin: 0;
+}
+ 
+.news-summary {
+  /* 新闻摘要样式 */
+  color: #666;
+  margin: 5px 0 0;
+}
+.tab-menu li:hover {
+  color:#464646;
+}
+
+.tab-menu li.active {
+  color:#464646;
+  opacity: 1;
+}
+
+.tab-menu li.active:hover {
+  color:#464646;
+}
+
+.tab-content>div {
+  background-color: #fff;
+  box-sizing:border-box;
+  width: 100%;
+  padding: 50px;   
+  min-height:200px;
+}
+
+.line {
+  position:absolute;
+  width: 0;
+  height: 7px;
+  background-color: aqua;
+  top: 0;
+  left: 0;
+}
+
+
