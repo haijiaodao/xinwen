@@ -61,8 +61,12 @@
   border-radius: 0 0 12px 12px;
   padding: 15px 15px 20px;
   display: grid;
-  row-gap: 8px;
+  row-gap: 0px;
+text-decoration: none;
 }
+ a {
+            text-decoration: none; /* 移除下划线 */
+        }
 .leaderboard__profile {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
@@ -74,6 +78,7 @@
   cursor: pointer;
   transition: transform 0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98), box-shadow 0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98);
   background-color: #fff;
+margin:4px 2px;
 }
 .leaderboard__profile:hover {
   transform: scale(1.2);
@@ -95,11 +100,11 @@
 .leaderboard__value {
   color: #35d8ac;
   font-weight: 700;
-  font-size: 34px;
+  font-size: 18px;
   text-align: right;
 }
 .leaderboard__value > span {
-  opacity: .8;
+  opacity: .7;
   font-weight: 600;
   font-size: 13px;
   margin-left: 3px;
@@ -123,3 +128,7 @@ p {
   padding-right: 2ch;    /* 右侧空出4个字符的空白 */
   color: #00868B;        /* 颜色代码，这里需要替换为具体的颜色代码 */
 }
+span a {
+    text-decoration: none;
+    color: inherit; /* 如果需要保持文本颜色不变，可以添加这个属性 */
+  }
