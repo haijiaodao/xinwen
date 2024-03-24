@@ -3,6 +3,13 @@
 <head>
 <link rel="stylesheet" type="text/css" href="css1/htmleaf-demo.css">
     <style>
+	    body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
         h1>red{color: red}
         h1>orange{color: orange}
         h1>yelllow{color: yellow}
@@ -155,6 +162,14 @@ body {
     <title>新闻报道</title>
 	 
 </head>
+<script>
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+        });
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
 <body>
 <div class="container1">
   <img src="https://haijiaodao.github.io/xinwen/newslist/img/logo2.png" alt="logo" class="image1">
