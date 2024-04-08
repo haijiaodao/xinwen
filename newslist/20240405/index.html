@@ -41,14 +41,14 @@ text-align:justify;
 .sfd{
             display: flex; /* 使用flex布局 */
             justify-content: center; /* 水平居中对齐 */
-margin-top: 10px; /* 上间距 */
-    margin-bottom: 10px; /* 下间距 */
+margin-top: 0.6rem; /* 上间距 */
+    margin-bottom: 0.6rem; /* 下间距 */
         }
         
    .image2{
             width: 32rem; /* 设置图片宽度 */
             height: auto; /* 保持高度自动计算 */
-            margin: 10px; /* 设置图片之间的间距 */
+            margin: 0.6rem; /* 设置图片之间的间距 */
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 设置阴影样式 */
 
         }
@@ -57,15 +57,50 @@ margin-top: 10px; /* 上间距 */
   .image1 {
     max-width: 15%;
     max-height:15%;
-position: absolute; /* 相对于最近的已定位祖先元素 */
-  top: 50px; /* 距离顶部100像素 */
-  left: 150px; /* 距离左侧150像素 */
+position:relative; /* 相对于最近的已定位祖先元素 */
+  top: 2rem; /* 距离顶部100像素 */
+  left: 4rem; /* 距离左侧150像素 */
   }
 
 .subheading {
   display: block;
   color: #232323;
-  font: 700 18px sans-serif;
+  font: 700 1.06rem sans-serif;
+}
+@media (max-width: 672px) {
+body{
+    width: 100%;           /* 宽度 */
+    height: 100%;          /* 高度 */
+    margin: 20px auto;      /* 上下间距20px，左右自动 */
+    padding: 0px;          /* 内边距 */
+    border: 0px solid #dddddd;/* 边框 */
+    position: relative;     /* 相对定位 */
+    top: 0px;             /* 相对于最近定位祖先元素向下偏移100px */
+ text-shadow: 0px 0px 1px #BEBEBE;
+ }
+label{
+    width: 100%;           /* 宽度 */
+    height: 100%;          /* 高度 */
+    margin: 10px auto;      /* 上下间距20px，左右自动 */
+    padding: 0px;          /* 内边距 */
+    border: 0px solid #dddddd;/* 边框 */
+    position: relative;     /* 相对定位 */
+    top: 0px;             /* 相对于最近定位祖先元素向下偏移100px */
+     text-shadow: 0px 0px 1px #BEBEBE;
+ }
+
+    .image2{
+            width: 85%; /* 设置图片宽度 */
+            height: auto; /* 保持高度自动计算 */
+            margin: 0.5rem; /* 设置图片之间的间距 */
+                   }
+
+  }
+}
+@media screen and (max-width: 1280px) {
+  image1.hide-at-small-resolution {
+    display: none;
+  }
 }
 </style>
 <script src="./grayscale.js"></script>
