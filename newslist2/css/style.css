@@ -14,12 +14,43 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+ 
+.left-button, .right-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: rgba(30,144,255,.5);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 0px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 6px 30px 0 rgba(0,0,0,.12);
+}
+ 
+.left-button {
+  order: -1;
+}
+ 
+.right-button {
+  order: 1;
+}
+ 
+.left-button:hover, .right-button:hover {
+  background-color: #66B3FF;
+}
 .pb-70 {
-    padding-bottom: 70px!important;
+    padding-bottom: 30px!important;
 }
 .pt-80 {
-    padding-top: 80px!important;
+    padding-top: 30px!important;
 }
 .font__weight-thin {
     font-weight: 100;
