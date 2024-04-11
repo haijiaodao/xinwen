@@ -15,6 +15,14 @@
 
 </head>
 <script>
+function setBackgroundTransparency(opacity) {
+    // 获取页面的body元素
+    var body = document.getElementsByTagName('body')[0];
+    // 设置背景的透明度
+    body.style.backgroundColor = 'rgba(255, 255, 255, ' + opacity + ')';
+}
+</script>
+<script>
 function adjustBackgroundOpacity(opacity) {
     // 获取页面的body元素
     var body = document.body;
@@ -40,22 +48,17 @@ html {
 body {
         filter: gray;   /* 兼容IE7、IE8、IE9 。且必须得加到body元素上，加到html元素上不起作用。选择器直接写body如果部分元素没有生效的话，可以写成body *{} */            
     }
-body{background-size:cover;background-repeat:no-repeat;background-color:#B6B2AB;background-image:linear-gradient(135deg,#B6B2AB 0,#B3AFA7 25%,#B8B5AF 25%,#78736B 50%,#6F6862 50%,#58504B 75%,#5F574E 75%,#625A51 100%);min-height:60vh}
+body
+{background-size:cover;background-repeat:no-repeat;background-color:#B6B2AB;background-image:linear-gradient(135deg,#B6B2AB 0,#B3AFA7 25%,#B8B5AF 25%,#78736B 50%,#6F6862 50%,#58504B 75%,#5F574E 75%,#625A51 100%);min-height:60vh}
 body {
-
-background:url(https://source.unsplash.com/random/1600x900);
-
-background-repeat: no-repeat;
-
-background-size: cover; /* 背景图片覆盖整个容器 */
-
-background-attachment:fixed;
-
-background-position:50% 50%;
-
-transition: background-color 0.5s ease; /* 平滑过渡效果 */
-
-
+    /* 兜底，IE和Firefox浏览器 */
+    background-image: url(https://source.unsplash.com/random/1600x900);
+    --transparent: url(data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==);
+    /* Safari最近版本已经不需要私有前缀了 */
+    background-image: cross-fade(var(--transparent), url(https://source.unsplash.com/random/1600x900), 40%);
+    /* 如使用自定义属性，-webkit-语句需要放在没有私有前缀语句的下面 */
+    background-image: -webkit-cross-fade(var(--transparent), url(https://source.unsplash.com/random/1600x900), 40%);
+    background-size: cover;
 }
 
 #overlay {
@@ -64,9 +67,9 @@ transition: background-color 0.5s ease; /* 平滑过渡效果 */
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.2); /* 黑色半透明 */
+    background: rgba(255, 255, 255, 0.5); /* 黑色半透明 */
     pointer-events: none; /* 使透明层不接收鼠标事件 */
-z-index: 1;  /* 确保图标在其他内容之上 */
+z-index: -1;  /* 确保图标在其他内容之上 */
   }
 
  .float-icon {
@@ -130,6 +133,7 @@ body{
  text-shadow: 0px 0px 1px #BEBEBE;
 
  }
+
 label{
     width: 100%;           /* 宽度 */
     height: 100%;          /* 高度 */
@@ -157,7 +161,7 @@ label{
 }
 </style>
 
-<script>
+
 <script>
   // JavaScript 代码来添加透明层
   function addOverlay() {
@@ -169,11 +173,11 @@ label{
   // 调用函数以添加透明层
   addOverlay();
 </script>
-</script>
+
 
 <body class="bg-orange">
 <div id="overlay"></div>
-<div style="background-color: #fff; opacity: 0.5;"></div> 
+
 <div class="container1">
   <img src="https://haijiaodao.github.io/xinwen/newslist/img/logo2.png" alt="logo" class="image1">
 </div>
