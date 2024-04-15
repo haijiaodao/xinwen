@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML5视频播放器随页面滚动固定页面右下角效果|DEMO_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1>兴办民事解民忧 <span>为大雪受困过往群众送温暖</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-htmleaf-home-outline" href="https://haijiaodao.github.io/xinwen/index.html" title="首页" target="_blank"><span> 首页</span></a>
+				<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" href="https://haijiaodao.github.io/xinwen/newslist2/index.html" title="返回" target="_blank"><span> 返回</span></a>
+			</div>
+		</header>
+		<h3 style="text-align: center;padding: 1em 0;">摄影：S. 时间：2024年初春</h3>
+		<div id="site">
+			<div id="videoBox" class="box">
+				<video width="400" controls>
+					<source src="video/3.mp4" type="video/mp4"> 
+					你的浏览器不支持 HTML5 video
+				</video>
+			</div>
+
+			<div id="bloc">
+
+				<div id="commentsBox" class="box">
+						<div><p>开展党纪学习教育，是贯彻落实党中央决策部署的重要举措，是加强党的纪律建设的重要内容，也是推动全面从严治党向纵深发展、巩固拓展党史学习教育成果的实际行动。4月15日，武威处党总支对开展党纪学习教育作了全面部署，为做好这项工作提供了明确要求。山临所全体党员干部要切实提高政治站位，坚决扛起政治责任，强化使命担当，认真抓好落实，把中央办公厅《关于在全党开展党纪学习的通知》和《甘肃省开展党纪学习教育工作方案》要求，以及武威处党总支的相关部署，作为此次学习教育扎实开展打下坚实基础的切入点，把党纪学习教育取得的实效转化为收费运营工作中干事创业的强劲动力。</p></div>
+						
+				</div>
+				
+				
+
+			</div>
+			
+		</div>
+			</div>
+	
+	<script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+	<script type="text/javascript">
+		var ha = ( $('#videoBox').offset().top + $('#videoBox').height() );
+
+		$(window).scroll(function(){  
+
+			if ( $(window).scrollTop() > ha + 500 ) { 
+		    $('#videoBox').css('bottom','0'); 
+			} else if ( $(window).scrollTop() < ha + 200) {  
+		    $('#videoBox').removeClass('out').addClass('in');     
+			} else {       
+		  	$('#videoBox').removeClass('in').addClass('out');   
+		    $('#videoBox').css('bottom','-500px');             
+		  };  
+
+		});
+	</script>
+</body>
+</html>
