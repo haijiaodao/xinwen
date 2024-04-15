@@ -9,7 +9,7 @@ body {
 
 #site {
   width: 600px;
-  margin: 50px auto;
+  margin: 10px auto;
 }
 
 #bloc {
@@ -20,6 +20,10 @@ body {
 
 .box {
   margin: 10px;
+  line-height: 1.5; /* 设置行间距为1.5倍字体大小 */
+  font-size:14px;
+  font:normal bolder 14px Arial;
+  font-weight:lighter;
 }
 
 #videoBox {
