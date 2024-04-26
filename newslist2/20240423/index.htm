@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>新闻报道</title>
+  <link rel="stylesheet" href="assets/css/wraparound.css">
+<link rel="stylesheet" type="text/css" href="css1/htmleaf-demo.css">
+
+
+  <style>
+
+body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: #313131
+
+font-size: 0.6em;
+
+vertical-align: middle;
+
+font-weight: normal;
+background-attachment: fixed;
+	background-position: 50% 50%;
+	background-size:cover;background-repeat:no-repeat;background-color:#B6B2AB;
+
+	background-image:url(images/bg.jpg);
+	font-weight: 400;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+    }
+
+    p {
+      line-height: 1.5;
+      letter-spacing: 1px;
+      text-indent: 2em; 
+    }
+
+    h2 {
+      height: 3rem;
+      font-weight: 200
+    }
+
+    h3 {
+      font-weight: 200
+    }
+
+    section {
+      background-color: #efefef;
+      padding: 1rem;
+      margin-bottom: 5rem
+    }
+
+    .content-wrapper {
+      min-width: 740px;
+      margin: 0 auto
+    }
+
+    .content {
+      width: 600px;
+      margin: 0 auto
+    }
+
+    .thick {
+      height: 50px
+    }
+
+    .thickest {
+      height: 80px
+    }
+
+    .blue {
+      background-color: #CE0000;
+      color: #f3efe1
+
+    }
+
+    .orange {
+      height: 2rem;
+      color: #fff;
+      background-color: #FF2D2D;
+      margin-bottom: .5rem
+    }
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%; /* 指定宽度为视口宽度的50% */
+    height: auto; /* 高度自动调整以保持图像比例 */
+padding: 5px; /* 文字与图片间距 */
+  }
+    .plastic {
+      font-size: 1rem;
+      background-color: #ecf31ec0;
+      color: #d44bdb;
+      box-shadow: inset 0 calc(var(--diff-from-zero-level) * -10px) 2px 2px rgba(0, 17, 255, 0.2)
+    }
+
+    .plastic::before,
+    .plastic::after {
+      background-color: #33d8e7;
+      color: #dedede;
+      filter: none
+    }
+   
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+ 
+.image-container img {
+  display: block; /* 避免底部空白 */
+  width: 98%; /* 或指定宽度 */
+}
+ 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1); /* 半透明背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+ 
+.text {
+  padding: 10px;
+  text-align: center;
+ color: #fff; /* 红色文本 */
+  font-size: 24px; /* 文本大小为24像素 */
+  text-shadow: 2px 2px 2px #000000; /* x偏移量  y偏移量 模糊半径 颜色 */
+/* 设置文本透明度 */
+  opacity: 0.3;
+ 
+  /* 设置文本位置 */
+  position: relative;
+  top: 120px; /* 向下移动200像素 */
+  left: 20px; /* 向右移动20像素 */
+}
+
+  </style>
+
+</head>
+<script>
+setInterval(() => {
+  debugger;
+}, 4000);
+</script>
+<script language="javascript">
+function MM()
+{
+  if(event.srcElement.id=='sfd') //判断右击事件发生在哪个对像上面
+{
+  alert("对不起，本图片不能复制，版权所有！")
+ document.oncontextmenu=new Function("event.returnValue=false;");   //禁用右键功能
+}
+else
+{
+  document.oncontextmenu=new Function("event.returnValue=true;");  //启用右键功能
+} 
+}
+</script>
+<script language="JavaScript"> 
+function getCookieVal (offset) 
+{ 
+var endstr = document.cookie.indexOf (";", offset); 
+if (endstr == -1) 
+endstr = document.cookie.length; 
+return unescape(document.cookie.substring(offset, endstr)); 
+} 
+function GetCookie (name) 
+{ 
+var arg = name + "="; 
+var alen = arg.length; 
+var clen = document.cookie.length; 
+var i = 0; 
+while (i < clen) 
+{ 
+var j = i + alen; 
+if (document.cookie.substring(i, j) == arg) 
+return getCookieVal (j); 
+i = document.cookie.indexOf(" ", i) + 1; 
+if (i == 0) 
+break; 
+} 
+return null; 
+} 
+function SetCookie (name, value) 
+{ 
+var argv = SetCookie.arguments; 
+var argc = SetCookie.arguments.length; 
+var expires = (2 < argc) ? argv[2] : true; 
+var path = (3 < argc) ? argv[3] : true; 
+var domain = (4 < argc) ? argv[4] : true; 
+var secure = (5 < argc) ? argv[5] : true; //安全模式生效 
+document.cookie = name + "=" + escape (value) + 
+((expires == null) ? "" : ("; expires=" + expires.toGMTString())) + 
+((path == null) ? "" : ("; path=" + path)) + 
+((domain == null) ? "" : ("; domain=" + domain)) + 
+((secure == true) ? "; secure" : ""); 
+} 
+function ResetCounts(name) 
+{ 
+visits = 0; 
+SetCookie(expdate , "/", true, true); 
+location.reload(); 
+} 
+</script> 
+<script language="JavaScript"> 
+var expdate = new Date(); 
+var visits; 
+expdate.setTime(expdate.getTime() + (24*60*60 * 1000)); //COOKIES超期时间设置,此处为1天 
+if(!(visits = GetCookie("visits"))) 
+visits = 0; 
+visits++; 
+SetCookie(expdate, "/", true, true); 
+</script>
+
+<script>
+
+// 禁用右键菜单和拖拽查看源代码
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+ 
+document.addEventListener('dragstart', function(e) {
+  e.preventDefault();
+});
+</script>
+
+
+<body oncontextmenu="MM()">
+
+
+  <div class="content-wrapper">
+    <div class="content">
+     <br>
+      <section>
+
+        <h3 class="wraparound thick blue">立责于心 履责于行 牢记誓言 甘于奉献</h3>
+<h5>来源：山临所办公室&emsp; 时间：2024年4月26日</h5>
+        <p style=" text-indent: 2em; ">4月25日上午，山临所党支部召开党纪党规专题学习暨警示教育会，切实抓好干部职工的党风廉政教育，进一步筑牢思想防线，增强干拒腐防变能力，推动收费运营工作高质量发展。</p>
+
+<div class="image-container">
+ <img id="sfd" src="img/1.jpg" alt="Your Image Description" class="center-image">
+  <div class="overlay">
+    <div class="text">新闻网&copy;版权保护
+<!--
+<script language="javascript">
+function randomString(len) {
+　　len = len || 16;
+　　var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';    /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
+　　var maxPos = $chars.length;
+　　var pwd = '';
+　　for (i = 0; i < len; i++) {
+　　　　pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+　　}
+　　return pwd;
+}
+document.write(randomString(16));
+</script>
+-->
+
+
+</div>
+  </div>
+</div>
+
+<span class="wraparound orange">
+警示教育筑牢防线</span>
+<p style=" text-indent: 2em; ">会上，组织学习了《中国共产党廉洁自律准则》《中国共产党纪律处分条例》《党章》等党纪法规，通报了近期行业内典型案例，以案示警，以案明纪、以案促改，进一步促进全所党员干部职工明底线、知敬畏，持续推动全面从严治党向纵深发展。</p>
+<div class="image-container">
+ <img id="sfd" src="img/2.jpg" alt="Your Image Description" class="center-image">
+  <div class="overlay">
+    <div class="text">新闻网&copy;版权保护
+</div>
+  </div>
+</div>
+        <span class="wraparound orange">纪律规矩铭刻于心</span>
+<p style=" text-indent: 2em; ">会议要求，强化学习筑防线，严格约束自己，把党章、纪律处分条例、廉洁自律规定等作为日常行为准则，以案为鉴、警钟长鸣，坚决做到不踩纪律红线、不碰法律高压线，自觉抵制各种不正之风和不良思想的侵蚀；严格履职强监管，班子成员要以身作则、以上率下，履行好“一岗双责”职责，加强对干部职工的教育管理和监督，及时掌握干部职工思想动态和队伍稳定状况，充分运用谈话提醒、约谈批评等措施，有效预防和遏制违纪违法问题发生，锻造忠诚、干净、担当的高速收费干部队伍。</p>
+<div class="image-container">
+ <img id="sfd" src="img/3.jpg" alt="Your Image Description" class="center-image">
+  <div class="overlay">
+    <div class="text">新闻网&copy;版权保护
+</div>
+  </div>
+  <span class="wraparound orange">严守党纪甘于奉献</span>
+</div><p style=" text-indent: 2em; ">通过此次学习教育，山临所党员干部职工接受了一次深刻的党性教育和精神洗礼，纪法意识得到进一步增强。大家纷纷表示，要严守党纪国法，严格遵守党风廉政建设各项规章制度，扎实干好本职工作，知敬畏、存戒惧、守底线，立足岗位、甘于奉献，永葆忠诚干净担当的优良品格，为全面推进全所收费运营工作提质增效贡献自己的力量。</p>
+<div class="image-container">
+ <img id="sfd" src="img/4.jpg" alt="Your Image Description" class="center-image">
+  <div class="overlay">
+    <div class="text">新闻网&copy;版权保护
+</div>
+  </div>
+</div>      
+<br>
+<span style="text-align:right;font-size: 12px;color:#BEBEBE">&emsp;©<!-- -->著作权归作者所有,转载或内容合作请联系作者。<span style="text-align:right;font-size: 12px;color:#8B0000">&copy;网内版权号：<span id="uniqueNumber"></span>
+<br>
+ <button class="my-button"><a href="" class="no123" title="感谢点赞">
+ 点赞</button></a>
+  <button class="my-button"><a href="https://haijiaodao.github.io/xinwen/huiyuanzhuanlan/huiyuanzhifu4/index.html" class"no123" title="打赏，支持一下">
+ 打赏</button></a>
+
+
+</div>
+<div>
+		<header class="htmleaf-header" style="color:red">
+			
+<div class="htmleaf-links" style="color:red">
+<a class="htmleaf-icon icon-htmleaf-home-outline" style="color:#000" href="" title="首页" target="_blank"><span>首页</span></a>
+<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" style="color:#000" href="" title="返回" target="_blank"><span> 返回</span></a>
+			</div><h3 style="color: red;"></h3>
+		</header>
+	</div>
+
+
+</strong>
+
+<br>
+</div>
+<script>
+function copyCurrentUrl() {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    console.log('复制成功');
+  }).catch(function(error) {
+    console.error('复制失败', error);
+  });
+}
+
+// 监听鼠标和键盘事件
+document.removeEventListener("mousedown", haveSelect)
+document.addEventListener("mousedown", haveSelect)
+document.removeEventListener("mouseup", haveSelect)
+document.addEventListener("mouseup", haveSelect)
+document.removeEventListener("keydown", haveSelect)
+document.addEventListener("keydown", haveSelect)
+function haveSelect() {
+  window.getSelection().removeAllRanges()
+}
+</script>
+<script>
+// 生成版权
+function generateUniqueNumber(url) {
+  // 使用URL的hashCode作为号码
+  let hash = 0;
+  for (let i = 0; i < url.length; i++) {
+    hash = ((hash << 5) - hash) + url.charCodeAt(i);
+    hash |= 0; // 转换为32位整数
+  }
+  return Math.abs(hash);
+}
+ 
+// 获取当前页面的URL
+const url = window.location.href;
+// 生成唯一号码
+const uniqueNumber = generateUniqueNumber(url);
+// 显示号码
+document.getElementById('uniqueNumber').textContent = uniqueNumber.toString();
+</script>
+			
+				    </div>
+		
+      </section>
+      <div style="height: 1vh"></div>
+
+    </div>
+  </div>
+  <script src="assets/js/wraparound.js"></script>
+</body>
+</html>

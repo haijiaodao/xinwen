@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Encrypted URL</title>
+   
+<script type=”text/javascript”>// <![CDATA[
+function send(){
+
+var url = "2024.html";
+
+var userName = $("#userName").html();
+
+window.open(encodeURI(url + "?userName=" + userName)); }
+
+// ]]>
+
+</script>
+
+<body>
+<script>
+var urlinfo = window.location.href;//获取url
+var userName = urlinfo.split(“?”)[1].split(“=”)[1];
+$(“#userName”).html(decodeURI(userName));
+</script>    
+</body>
+</html>

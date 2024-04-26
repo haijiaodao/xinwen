@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>新闻报道</title>
+  <link rel="stylesheet" href="assets/css/wraparound.css">
+<link rel="stylesheet" type="text/css" href="css1/htmleaf-demo.css">
+
+
+  <style>
+
+body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: #313131
+
+font-size: 0.6em;
+
+vertical-align: middle;
+
+font-weight: normal;
+background-attachment: fixed;
+	background-position: 50% 50%;
+	background-size:cover;background-repeat:no-repeat;background-color:#B6B2AB;
+
+	background-image:url(images/bg.jpg);
+	font-weight: 400;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+    }
+
+    p {
+      line-height: 1.5;
+      letter-spacing: 1px;
+      text-indent: 2em; 
+    }
+
+    h2 {
+      height: 3rem;
+      font-weight: 200
+    }
+
+    h3 {
+      font-weight: 200
+    }
+
+    section {
+      background-color: #efefef;
+      padding: 1rem;
+      margin-bottom: 5rem
+    }
+
+    .content-wrapper {
+      min-width: 740px;
+      margin: 0 auto
+    }
+
+    .content {
+      width: 600px;
+      margin: 0 auto
+    }
+
+    .thick {
+      height: 50px
+    }
+
+    .thickest {
+      height: 80px
+    }
+
+    .blue {
+      background-color: #CE0000;
+      color: #f3efe1
+
+    }
+
+    .orange {
+      height: 2rem;
+      color: #fff;
+      background-color: #FF2D2D;
+      margin-bottom: .5rem
+    }
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%; /* 指定宽度为视口宽度的50% */
+    height: auto; /* 高度自动调整以保持图像比例 */
+padding: 5px; /* 文字与图片间距 */
+  }
+    .plastic {
+      font-size: 1rem;
+      background-color: #ecf31ec0;
+      color: #d44bdb;
+      box-shadow: inset 0 calc(var(--diff-from-zero-level) * -10px) 2px 2px rgba(0, 17, 255, 0.2)
+    }
+
+    .plastic::before,
+    .plastic::after {
+      background-color: #33d8e7;
+      color: #dedede;
+      filter: none
+    }
+   
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+ 
+.image-container img {
+  display: block; /* 避免底部空白 */
+  width: 98%; /* 或指定宽度 */
+}
+ 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1); /* 半透明背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+ 
+.text {
+  padding: 10px;
+  text-align: center;
+ color: #fff; /* 红色文本 */
+  font-size: 24px; /* 文本大小为24像素 */
+  text-shadow: 2px 2px 2px #000000; /* x偏移量  y偏移量 模糊半径 颜色 */
+/* 设置文本透明度 */
+  opacity: 0.3;
+ 
+  /* 设置文本位置 */
+  position: relative;
+  top: 120px; /* 向下移动200像素 */
+  left: 20px; /* 向右移动20像素 */
+}
+
+@media print {
+  body * {
+    display: none;
+  }
+}
+
+  </style>
+
+</head>
+
+
+
+<script>
+setInterval(() => {
+  debugger;
+}, 4000);
+</script>
+<script language="javascript">
+function MM()
+{
+  if(event.srcElement.id=='sfd') //判断右击事件发生在哪个对像上面
+{
+  alert("对不起，本图片不能复制，版权所有！")
+ document.oncontextmenu=new Function("event.returnValue=false;");   //禁用右键功能
+}
+else
+{
+  document.oncontextmenu=new Function("event.returnValue=true;");  //启用右键功能
+} 
+}
+</script>
+<script language="JavaScript"> 
+function getCookieVal (offset) 
+{ 
+var endstr = document.cookie.indexOf (";", offset); 
+if (endstr == -1) 
+endstr = document.cookie.length; 
+return unescape(document.cookie.substring(offset, endstr)); 
+} 
+function GetCookie (name) 
+{ 
+var arg = name + "="; 
+var alen = arg.length; 
+var clen = document.cookie.length; 
+var i = 0; 
+while (i < clen) 
+{ 
+var j = i + alen; 
+if (document.cookie.substring(i, j) == arg) 
+return getCookieVal (j); 
+i = document.cookie.indexOf(" ", i) + 1; 
+if (i == 0) 
+break; 
+} 
+return null; 
+} 
+function SetCookie (name, value) 
+{ 
+var argv = SetCookie.arguments; 
+var argc = SetCookie.arguments.length; 
+var expires = (2 < argc) ? argv[2] : true; 
+var path = (3 < argc) ? argv[3] : true; 
+var domain = (4 < argc) ? argv[4] : true; 
+var secure = (5 < argc) ? argv[5] : true; //安全模式生效 
+document.cookie = name + "=" + escape (value) + 
+((expires == null) ? "" : ("; expires=" + expires.toGMTString())) + 
+((path == null) ? "" : ("; path=" + path)) + 
+((domain == null) ? "" : ("; domain=" + domain)) + 
+((secure == true) ? "; secure" : ""); 
+} 
+function ResetCounts(name) 
+{ 
+visits = 0; 
+SetCookie(expdate , "/", true, true); 
+location.reload(); 
+} 
+</script> 
+<script language="JavaScript"> 
+var expdate = new Date(); 
+var visits; 
+expdate.setTime(expdate.getTime() + (24*60*60 * 1000)); //COOKIES超期时间设置,此处为1天 
+if(!(visits = GetCookie("visits"))) 
+visits = 0; 
+visits++; 
+SetCookie(expdate, "/", true, true); 
+</script>
+
+<script>
+
+// 禁用右键菜单和拖拽查看源代码
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+ 
+document.addEventListener('dragstart', function(e) {
+  e.preventDefault();
+});
+</script>
+
+
+
+<body oncontextmenu="MM()">
+
+
+  <div class="content-wrapper">
+    <div class="content">
+     <br>
+      <section>
+
+        <h3 class="wraparound thick blue">着力培育、用心践行</h3>
+<h5>来源：山临所办公室&emsp; 时间：2024年4月26日</h5>
+        <p style=" text-indent: 2em; ">近日，自开展“当好先锋 再立新功”社会主义核心价值观主题实践教育月活动以来，山临所党支部结合收费运营工作实际，迅速动员部署，有序开展各项社会主义核心价值观主题教育实践活动。</p>
+
+<div class="image-container">
+ <img id="sfd" src="img/1.jpg" alt="Your Image Description" class="center-image">
+  <div class="overlay">
+    <div class="text">新闻网&copy;版权保护
+<!--
+<script language="javascript">
+function randomString(len) {
+　　len = len || 16;
+　　var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';    /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
+　　var maxPos = $chars.length;
+　　var pwd = '';
+　　for (i = 0; i < len; i++) {
+　　　　pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+　　}
+　　return pwd;
+}
+document.write(randomString(16));
+</script>
+-->
+
+
+</div>
+  </div>
+</div>
+
+<span class="wraparound orange">
+高度重视、周密部署，确保活动顺利有序开展线</span>
+<p style=" text-indent: 2em; ">为确保教育实践活动工作扎实有效开展，所党支部进行了认真研究和周密部署，并根据社会主义核心价值观主题实践教育月活动总体要求和活动内容，坚持“加强学习保质量，提高认识增成效”的工作思路，认真贯彻落实省厅、收费运营分公司、武威处相关工作会议精神，切实解放思想，找准社会主义核心价值观主题实践教育月活动的结合点，明确核心价值观教育实践活动的具体目标，迅速行动，全面实施，稳步推进，努力形成一级抓一级、层层抓落实的工作格局。 </p>
+<div class="image-container">
+ <img id="sfd" src="img/2.jpg" alt="Your Image Description" class="center-image">
+  <div class="overlay">
+    <div class="text">新闻网&copy;版权保护
+</div>
+  </div>
+</div>
+        <span class="wraparound orange">加强思想教育、丰富活动内容，营造活动良好氛围</span>
+<p style=" text-indent: 2em; ">加强社会主义核心价值观教育，不断提高干部职工的思想道德素质，增强干部职工贯彻执行工作任务的能力。利用情报板、横幅、通讯报道等方式将社会主义核心价值观主题教育实践活动内容进行广泛宣传，认真组织党员干部职工学习《公民道德基本规范》，撰写心得体会；深入开展“讲文明树新风”“优质服务竞赛”“岗位技能比武”“结对帮扶”等一系列创建活动。结合工作实际，并深入开展了“暖心窗口”“为民服务”等活动，引导基层党小组和广大党员在为群众提供“优质、规范、高效、便捷”服务中创先争优，为收费所收费运营工作实现跨越发展提供动力和保证。组织在车道广场、市郊景区开展党员挂牌、亮身份活动，引导党员亮身份、亮职责、亮承诺，争创司乘满意窗口；组织职工开展优质服务，争创优秀服务标兵活动；组织基层创建“品牌党小组”。 </p>
+<div class="image-container">
+ <img id="sfd" src="img/3.jpg" alt="Your Image Description" class="center-image">
+  <div class="overlay">
+    <div class="text">新闻网&copy;版权保护
+</div>
+  </div>
+  <span class="wraparound orange">强化理论学习、提升干部素质，不断推动工作新水平</span>
+</div><p style=" text-indent: 2em; ">加强各方面知识的学习，所机关狠抓了干部职工的学习，继续采取了党支部理论学习、干部政治学习、机关各部门学习三位一体的模式，坚持集中与自学相结合方式，采取网络钉钉学、讨论引导学、座谈分享学等多种形式，每周坚持进行政治学习，全面提高了干部职工的政治理论水平；加强对政治理论的学习，对党的二十大、党的二十届三中全会精神等学习，并对本系统先进人物和事迹进行了学习，全所党员干部职工通过学习社会主义核心价值观教育真正入耳、入脑、入心，有力地提高了全所从业人员的人文素养和政治素养；加强对社会主义核心价值观的学习，组织干部职工学习《社会主义核心价值体系学习读本》、贯彻落实《建设社会主义核心价值体系实施纲要》，深化理想信念教育，形势政策教育、职业道德教育和民主法制教育，引导干部职工坚定对马克思主义的信仰，坚定对社会主义的信念，树立社会主义核心价值观；加强对业务和法律法规知识的学习。组织干部职工学习中共中央印发新修订的《中国共产党纪律处分条例》，结合自身本职工作实际，进行了热烈讨论，撰写学习心得体会进行交流。 通过这次社会主义核心价值观主题实践教育月活动的开展，使我们山临所收费运营队伍的整体素质得到提高，履职和服务能力得到增强，对外的形象得到全面提升。我们将以核心价值观主题实践教育月活动为契机，努力培养爱岗敬业、尽职尽责的工作理念，大胆创新工作方式，着力优化工作环境，主动加强人文关怀，不断提升队伍的凝聚力、战斗力、执行力，同舟共济、 共铸辉煌。</p>
+<div class="image-container">
+ <img id="sfd" src="img/4.jpg" alt="Your Image Description" class="center-image">
+  <div class="overlay">
+    <div class="text">新闻网&copy;版权保护
+</div>
+  </div>
+</div> 
+<p style=" text-indent: 2em; ">下一步，山临所将继续按照开展“当好先锋 再立新功”社会主义核心价值观主题实践教育月活动精神，总结经验，深入开展教育活动，将学习教育活动与开展学习型机关建设结合起来，务必学有所成，学有所用，推动全所收费运营各项工作持续高质量发展。</p>     
+<br>
+<span style="text-align:right;font-size: 12px;color:#BEBEBE">&emsp;©<!-- -->著作权归作者所有,转载或内容合作请联系作者。<span style="text-align:right;font-size: 12px;color:#8B0000">&copy;网内版权号：<span id="uniqueNumber"></span>
+<br>
+ <button class="my-button"><a href="" class="no123" title="感谢点赞">
+ 点赞</button></a>
+  <button class="my-button"><a href="https://haijiaodao.github.io/xinwen/huiyuanzhuanlan/huiyuanzhifu4/index.html" class"no123" title="打赏，支持一下">
+ 打赏</button></a>
+
+
+</div>
+<div>
+		<header class="htmleaf-header" style="color:red">
+			
+<div class="htmleaf-links" style="color:red">
+<a class="htmleaf-icon icon-htmleaf-home-outline" style="color:#000" href="" title="首页" target="_blank"><span>首页</span></a>
+<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" style="color:#000" href="" title="返回" target="_blank"><span> 返回</span></a>
+			</div><h3 style="color: red;"></h3>
+		</header>
+	</div>
+
+
+</strong>
+
+<br>
+</div>
+<script>
+function copyCurrentUrl() {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    console.log('复制成功');
+  }).catch(function(error) {
+    console.error('复制失败', error);
+  });
+}
+
+// 监听鼠标和键盘事件
+document.removeEventListener("mousedown", haveSelect)
+document.addEventListener("mousedown", haveSelect)
+document.removeEventListener("mouseup", haveSelect)
+document.addEventListener("mouseup", haveSelect)
+document.removeEventListener("keydown", haveSelect)
+document.addEventListener("keydown", haveSelect)
+function haveSelect() {
+  window.getSelection().removeAllRanges()
+}
+</script>
+<script>
+// 生成版权
+function generateUniqueNumber(url) {
+  // 使用URL的hashCode作为号码
+  let hash = 0;
+  for (let i = 0; i < url.length; i++) {
+    hash = ((hash << 5) - hash) + url.charCodeAt(i);
+    hash |= 0; // 转换为32位整数
+  }
+  return Math.abs(hash);
+}
+ 
+// 获取当前页面的URL
+const url = window.location.href;
+// 生成唯一号码
+const uniqueNumber = generateUniqueNumber(url);
+// 显示号码
+document.getElementById('uniqueNumber').textContent = uniqueNumber.toString();
+</script>
+			
+				    </div>
+		
+      </section>
+      <div style="height: 1vh"></div>
+
+    </div>
+  </div>
+  <script src="assets/js/wraparound.js"></script>
+</body>
+</html>
