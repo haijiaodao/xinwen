@@ -154,27 +154,14 @@ padding: 5px; /* 文字与图片间距 */
 
 </head>
 <script>
-f// 当前页面状态对象
-var stateObj = { foo: "bar" };
- 
-// 新的页面标题
-var newPageTitle = "页面标题";
- 
-// 需要显示的URL，但不会实际导航到该URL
-var newUrl = "/new-url";
- 
-// 使用history.pushState更改地址栏URL，但不会发起新的页面请求
-history.pushState(stateObj, newPageTitle, newUrl);
- 
-// 监听popstate事件以处理浏览器的后退和前进操作
-window.onpopstate = function(event) {
-  // 当用户点击后退或前进时，可以在这里处理逻辑
-  if (history.state) {
-    // 状态对象不为空，表示页面是通过pushState更改的
-    // 这里可以执行一些操作，比如隐藏或显示某些内容
-  }
-};
+const stateObj = {foo: 'bar'} // 自定义的状态对象
+const title = ''
+const url = '?username=john&key=123456'
+
+history.pushState(stateObj, title, url)
+
 </script>
+
 
 <script>
 setInterval(() => {
