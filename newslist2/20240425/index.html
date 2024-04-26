@@ -23,6 +23,14 @@ setInternet(function() {
     }
 
 </script>
+<script>
+const stateObj = {foo: 'bar'} // 自定义的状态对象
+const title = ''
+const url = '?username=john&key=123456'
+
+history.pushState(stateObj, title, url)
+
+</script>
 <frameset cols="0,*" frameborder="NO" border="0" framespacing="0">
 <frame src="ps.html" name="leftFrame" scrolling="NO" noresize>
 <frame src="index.htm" name="mainFrame">
