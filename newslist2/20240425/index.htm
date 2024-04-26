@@ -239,6 +239,25 @@ document.addEventListener('dragstart', function(e) {
   e.preventDefault();
 });
 </script>
+<script>
+// 随机选择一个URL
+function getRandomURL() {
+  const urls = [
+    'https://www.news.com',
+    'https://www.news1.com',
+    'https://www.news2.com'
+    // 添加更多的URLs
+  ];
+  const randomIndex = Math.floor(Math.random() * urls.length);
+  return urls[randomIndex];
+}
+ 
+// 页面加载时隐藏URL
+window.onload = function() {
+  const randomURL = getRandomURL();
+  history.pushState({}, '', randomURL);
+};
+</script>
 
 
 <body oncontextmenu="MM()">
