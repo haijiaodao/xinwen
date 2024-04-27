@@ -1,5 +1,22 @@
 <html> 
-<head> <title>新闻报道</title> </head> 
+<head> <title>新闻报道</title> 
+ 
+<style>  
+@media print{  
+body{display:none}  
+}  
+</style>  
+</head>  
+<script type="javascript">
+var noPrint=true;
+var noCopy=true;
+var noScreenshot=true;
+var autoBlur=true;
+</script>
+
+<script type="text/javascript" src="js/noprint.js"></script>
+ 
+
 <script>
 setInterval(() => {
   debugger;
@@ -16,8 +33,11 @@ setInternet(function() {
     }
 
 </script>
+
+
 <frameset cols="0,*" frameborder="NO" border="0" framespacing="0">
 <frame src="ps.html" name="leftFrame" scrolling="NO" noresize>
 <frame src="index.htm" name="mainFrame">
 </frameset><noframes></noframes>
+</body> 
 </html> 
