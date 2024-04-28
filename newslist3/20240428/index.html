@@ -14,6 +14,22 @@ var noCopy=true;
 var noScreenshot=true;
 var autoBlur=true;
 </script>
+<script>
+// 禁用鼠标左键点击
+document.addEventListener('click', function(event) {
+  event.preventDefault();
+}, { capture: true });
+ 
+// 禁用鼠标拖动
+document.addEventListener('drag', function(event) {
+  event.preventDefault();
+}, { capture: true });
+ 
+// 禁用鼠标滚轮滚动
+document.addEventListener('wheel', function(event) {
+  event.preventDefault();
+}, { passive: false }); // 注意：passive 设置为 false 以允许调用 preventDefault
+</script>
 
 <script type="text/javascript" src="js/noprint.js"></script>
  
