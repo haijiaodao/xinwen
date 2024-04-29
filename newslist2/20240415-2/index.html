@@ -19,6 +19,30 @@
     display: inline-block;
     width: 100%;
   }
+.video-container {
+  position: relative;
+  width: 100%;
+}
+ 
+#myVideo {
+  width: 100%;
+  display: block;
+}
+ 
+#overlay {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background: rgba(0, 0, 0, 0); /* 半透明遮罩层 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:  rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  z-index: 1;
+}
 </style>
 <body>
 	<div class="htmleaf-container">
@@ -31,11 +55,13 @@
 		</header>
 		<h3 style="text-align: center;padding: 1em 0;">摄影：S. 时间：2024年初春</h3>
 		<div id="site">
+<div class="video-container">
 			<div id="videoBox" class="box">
 				<video width="400" controls>
 					<source src="video/3.mp4" type="video/mp4"> 
 					你的浏览器不支持 HTML5 video
 				</video>
+<div id="overlay">新闻网©版权保护</div></div>
 			</div>
 
 			<div id="bloc">
