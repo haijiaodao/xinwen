@@ -33,7 +33,7 @@
 .article-item .footer .tags .tag:hover{color:#fff;background:#6bc30d}
 .col-other{width:300px}
 .col-other .other-item{position:relative;background-color:#fff;margin-top:20px;overflow:hidden}
-.col-other .other-item .search{padding:20px;background-color:grey;position:relative}
+.col-other .other-item .search{padding:20px;background-color:rgba(144,144,144, 0.6);position:relative}
 .col-other .other-item .search .search-wrap{display:block;height:40px;padding:0 20px;background-color:#fff;border-radius:40px;position:relative;z-index:5}
 .search .search-wrap input{border:none;height:40px;line-height:40px;width:100%;box-shadow:none;background-color:transparent}
 .search .search-wrap .search-icon{font-size:18px;position:absolute;width:30px;height:30px;line-height:30px;text-align:center;right:5px;top:5px;color:#787977;-webkit-transition:all .3s;transition:all .3s;cursor:pointer}
