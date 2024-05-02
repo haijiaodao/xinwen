@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Olive ribbon</title>
+  <link rel="stylesheet" href="./style.css">
+<link rel="icon" type="image/png" sizes="32x32" href="https://haijiaodao.github.io/xinwen/favicon-32x32.png">
+<link rel="stylesheet" type="text/css" href="css1/htmleaf-demo.css">
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font-size:0.8em;letter-spacing:1px;font-family:"STXihei";line-height:1.8em;}
+
+h2,h3{font-size:1em;font-weight:normal;color:#a40000;margin:1em auto;position:relative;}
+h3{color:#888;font-weight:bold;}
+/* ibox */
+.ibox{width:680px;height:182px;background:fff;margin:1em auto;border:1em solid fff;position:relative;overflow:hidden;}
+.ibox .showbox{position:absolute;left:0;width:2550px;height:190px;background:#fff;}
+.ibox .showbox ul li{float:left;margin:7px;display:inline;}
+.ibox .showbox ul li a{display:block;width:156px;height:156px;overflow:hidden;}
+.ibox .showbox ul li a img{border:0px solid #a40000;}
+.ibox .showbox ul li a:hover img{border:solid 3px #3366cc;}
+.ibox .btnbox{height:34px;overflow:hidden;float:right;}
+.ibox span{padding:3px 5px;background:#;cursor:pointer;float:left;margin:0 0px;display:inline;height:20px;line-height:20px;margin: 2px; /* 上下左右外边距都设置为20px */}
+.ibox span.num{background:#;line-height:18px;}
+.ibox span.num li{float:left;display:inline;margin:0 5px;padding:1px 5px;line-height:18px;}
+.ibox span.num .numcur{background:#;color:#ADADAD;}
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; /* 指定宽度为视口宽度的50% */
+    height: auto; /* 高度自动调整以保持图像比例 */
+padding: 0px; /* 文字与图片间距 */
+  }
+    .plastic {
+      font-size: 1rem;
+      background-color: #ecf31ec0;
+      color: #d44bdb;
+      box-shadow: inset 0 calc(var(--diff-from-zero-level) * -10px) 2px 2px rgba(0, 17, 255, 0.2)
+    }
+
+    .plastic::before,
+    .plastic::after {
+      background-color: #33d8e7;
+      color: #dedede;
+      filter: none
+    }
+   
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+ 
+.image-container img {
+  display: block; /* 避免底部空白 */
+  width: 100%; /* 或指定宽度 */
+}
+ 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0); /* 半透明背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+ 
+.text {
+  padding: 10px;
+  text-align: center;
+ color: #fff; /* 红色文本 */
+  font-size: 24px; /* 文本大小为24像素 */
+  text-shadow: 2px 2px 2px #000000; /* x偏移量  y偏移量 模糊半径 颜色 */
+/* 设置文本透明度 */
+  opacity: 0.3;
+ 
+  /* 设置文本位置 */
+  position: relative;
+  top: 50px; /* 向下移动200像素 */
+  left: 0px; /* 向右移动20像素 */
+}
+.handwriting-text {
+
+  color: #930000; /* 文字颜色 */
+  font-size: 12px; /* 字体大小 */
+  letter-spacing: 2px; /* 字母间距 */
+text-indent: 2em; 
+}
+
+p {
+  margin-bottom: 23px;
+      letter-spacing: 1px;
+      text-indent: 2em; 
+      text-align: justify; 
+}
+
+
+</style>
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    //@Mr.Think***变量
+    var $cur = 1;//初始化显示的版面
+    var $i = 5;//每版显示数
+    var $len = $('.showbox>ul>li').length;//计算列表总长度(个数)
+    var $pages = Math.ceil($len / $i);//计算展示版面数量
+    var $w = $('.ibox').width();//取得展示区外围宽度
+    var $showbox = $('.showbox');
+    var $num = $('span.num li')
+    var $pre = $('span.pre')
+    var $next = $('span.next');
+    var $autoFun;
+    //@Mr.Think***调用自动滚动
+    autoSlide();
+    //@Mr.Think***向前滚动
+    $pre.click(function(){
+        if (!$showbox.is(':animated')) {  //判断展示区是否动画
+            if ($cur == 1) {   //在第一个版面时,再向前滚动到最后一个版面
+                $showbox.animate({
+                    left: '-=' + $w * ($pages - 1)
+                }, 500); //改变left值,切换显示版面,500(ms)为滚动时间,下同
+                $cur = $pages; //初始化版面为最后一个版面
+            }
+            else {
+                $showbox.animate({
+                    left: '+=' + $w
+                }, 500); //改变left值,切换显示版面
+                $cur--; //版面累减
+            }
+            $num.eq($cur - 1).addClass('numcur').siblings().removeClass('numcur'); //为对应的版面数字加上高亮样式,并移除同级元素的高亮样式
+        }
+    });
+    //@Mr.Think***向后滚动
+    $next.click(function(){
+        if (!$showbox.is(':animated')) { //判断展示区是否动画
+            if ($cur == $pages) {  //在最后一个版面时,再向后滚动到第一个版面
+                $showbox.animate({
+                    left: 0
+                }, 500); //改变left值,切换显示版面,500(ms)为滚动时间,下同
+                $cur = 1; //初始化版面为第一个版面
+            }
+            else {
+                $showbox.animate({
+                    left: '-=' + $w
+                }, 500);//改变left值,切换显示版面
+                $cur++; //版面数累加
+            }
+            $num.eq($cur - 1).addClass('numcur').siblings().removeClass('numcur'); //为对应的版面数字加上高亮样式,并移除同级元素的高亮样式
+        }
+    });
+    //@Mr.Think***数字点击事件
+    $num.click(function(){
+        if (!$showbox.is(':animated')) { //判断展示区是否动画
+            var $index = $num.index(this); //索引出当前点击在列表中的位置值
+            $showbox.animate({
+                left: '-' + ($w * $index)
+            }, 500); //改变left值,切换显示版面,500(ms)为滚动时间
+            $cur = $index + 1; //初始化版面值,这一句可避免当滚动到第三版时,点击向后按钮,出面空白版.index()取值是从0开始的,故加1
+            $(this).addClass('numcur').siblings().removeClass('numcur'); //为当前点击加上高亮样式,并移除同级元素的高亮样式
+        }
+    });
+    //@Mr.Think***停止滚动
+    clearFun($showbox);
+    clearFun($pre);
+    clearFun($next);
+    clearFun($num);
+    //@Mr.Think***事件划入时停止自动滚动
+    function clearFun(elem){
+        elem.hover(function(){
+            clearAuto();
+        }, function(){
+            autoSlide();
+        });
+    }
+    //@Mr.Think***自动滚动
+    function autoSlide(){
+        $next.trigger('click');
+        $autoFun = setTimeout(autoSlide, 5000);//此处不可使用setInterval,setInterval是重复执行传入函数,这会引起第二次划入时停止失效
+    }
+    //@Mr.Think***清除自动滚动
+    function clearAuto(){
+        clearTimeout($autoFun);
+    }
+});
+</script>
+</head><script>
+setInterval(() => {
+  debugger;
+}, 4000);
+</script>
+<script>
+
+// 禁用右键菜单和拖拽查看源代码
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+ 
+document.addEventListener('dragstart', function(e) {
+  e.preventDefault();
+});
+</script>
+
+<script language="javascript">
+function MM()
+{
+  if(event.srcElement.id=='sfd') //判断右击事件发生在哪个对像上面
+{
+  alert("对不起，本图片不能复制，版权所有！")
+ document.oncontextmenu=new Function("event.returnValue=false;");   //禁用右键功能
+}
+else
+{
+  document.oncontextmenu=new Function("event.returnValue=true;");  //启用右键功能
+} 
+}
+</script>
+<br><br>
+<body oncontextmenu="MM()">
+
+<!-- partial:index.partial.html -->
+<div class="badge-space">
+</div>
+<div class="ribbon color"></div>
+<div class="sfd color1"><br>
+<h1>五四·凝聚奋进力量</h1>
+<p class="handwriting-text">
+      来源：山临所办公室&emsp; 时间：2024年4月29日  </p>
+
+<p>无奋斗，不青春！
+<p>青年是国家的未来，是民族的希望。一个国家的进步，刻印着青年的足迹；一个民族的未来，寄望于青春的力量。高速公路行业不同的时空，总闪动着青年的身影，他们乐于奉献、开拓进取，他们朝气蓬勃、意气风发。
+<p>一面团旗是一种信仰
+<p>一枚团徽是一份力量
+<p>一张合影是一段青春
+<p>为纪念五四运动105周年，建团102周年，传承“五四”精神，凝聚青春力量，山临高速公路收费所团支部开展“五四”青年节系列活动。
+<p>我和团旗、团徽合个影
+5月4日，山临所团支部组织各团小组团员青年以团旗、团徽为主要标识，开展“我与团旗、团徽合个影”主题打卡活动，展现新时代青年风采。
+<p>活动期间团员、青年热情参与，分别在梨园口纪念馆、中国西路军高台烈士纪念馆、收费岗亭记录下自己与团旗、团徽的合照，定格美好瞬间。团员、青年微笑的脸庞与鲜红的团旗交相辉映，展示出了青年朝气蓬勃和昂扬向上的精神风貌。
+<p>在活动后，所团支部、各站团小组分别组织团员、青年开展观影活动，通过集体观看爱国主旋律电影《长空之王》《惊天救援》，激励广大青年职工树立远大理想、热爱伟大祖国、担当时代责任、勇于砥砺奋斗，要求共青团员牢记党的嘱托和团的宗旨，继承光荣传统，坚定“永远跟党走”的信念，在各自的工作岗位上勤奋学习、努力工作。
+<p>通过开展“五四”青年节系列活动，充分彰显了团员、青年们积极阳光、向上向善的青春风采，进一步激发团员青年的荣誉感和爱国热情，树立了甘肃高速公路共青团员的身份意识和社会责任意识。</p>
+
+<div class="ibox">
+	<div class="btnbox">
+		<span class="pre"></span>
+		<span class="num">
+			<ol>
+				<li class="numcur"></li>
+				<li></li>
+				<li></li>
+			</ol>
+		</span>
+		<span class="next"></span>
+	</div>
+	<div class="image-container">
+
+	<div style="clear:both;height:0;overflow:hidden;"></div>
+	
+    <div class="showbox">
+        <ul>
+            <li><a href="" target="_blank"><img width="150" height="150" alt="" src="images/smalld120ac28adc7863174531e90ca30fb35.jpg" /></a></li>
+            <li><a href="" target="_blank"><img width="150" height="150" alt="" src="images/small861fb36ea5b2491877623752f84c1297.jpg" /></a></li>
+            <li><a href="" target="_blank"><img width="150" height="150" alt="" src="images/smalldb89cf912e07ed70f0c933c33e0cb976.jpg" /></a></li>
+            <li><a href="" target="_blank"><img width="150" height="150" alt="" src="images/small7ec25ef488c710d8d8ac3e5a33d6034b.jpg" /></a></li>
+            <li><a href="" target="_blank"><img width="150" height="150" alt="" src="images/small3a1184db401138d6443a1b5f42cb289b.jpg" /></a></li>
+			<li><a href="" target="_blank"><img width="150" height="150" alt="" src="images/smalld120ac28adc7863174531e90ca30fb35.jpg" /></a></li>
+            <li><a href="" target="_blank"><img width="150" height="150" alt="" src="images/small861fb36ea5b2491877623752f84c1297.jpg" /></a></li>
+            <li><a href="" target="_blank"><img width="150" height="150" alt="" src="images/smalldb89cf912e07ed70f0c933c33e0cb976.jpg" /></a></li>
+            <li><a href="" target="_blank"><img width="150" height="150" alt="" src="images/small7ec25ef488c710d8d8ac3e5a33d6034b.jpg" /></a></li>
+            <li><a href="" target="_blank"><img width="150" height="150" alt="" src="images/small3a1184db401138d6443a1b5f42cb289b.jpg" /></a></li>
+			<li><a href="" target="_blank"><img width="150" height="150" alt="" src="images/smalld120ac28adc7863174531e90ca30fb35.jpg" /></a></li>
+            <li><a href="" target="_blank"><img width="150" height="150" alt="" src="images/small861fb36ea5b2491877623752f84c1297.jpg" /></a></li>
+            <li><a href="" target="_blank"><img width="150" height="150" alt="" src="images/smalldb89cf912e07ed70f0c933c33e0cb976.jpg" /></a></li>
+            <li><a href=""><img width="150" height="150" alt="" src="images/small7ec25ef488c710d8d8ac3e5a33d6034b.jpg" /></a></li>
+            <li><a href="" target="_blank"><img width="150" height="150" alt="" src="images/small3a1184db401138d6443a1b5f42cb289b.jpg" /></a></li>
+        </ul>
+    </div>
+</div>
+<div class="overlay">
+    <div class="text">新闻网&copy;版权保护
+</div></div>
+
+
+</div>
+<!-- Slider -->
+<span style="text-align:right;font-size: 12px;color:#BEBEBE">&emsp;&emsp;&emsp;©<!-- -->著作权归作者所有,转载或内容合作请联系作者。<span style="text-align:right;font-size: 12px;color:#8B0000">&copy;网内版权号：<span id="uniqueNumber"></span><span></span>
+<p><header class="htmleaf-header" style="color:red">
+			
+<div class="htmleaf-links" style="color:red">
+<a class="htmleaf-icon icon-htmleaf-home-outline" style="color:#000" href="" title="首页" target="_blank"><span>首页</span></a>
+<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" style="color:#000" href="" title="返回" target="_blank"><span> 返回</span></a>
+			</div><h3 style="color: red;"></h3>
+		</header>
+</div>
+
+
+      
+</div>
+<!-- footer ends -->
+
+<script>
+function copyCurrentUrl() {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    console.log('复制成功');
+  }).catch(function(error) {
+    console.error('复制失败', error);
+  });
+}
+
+// 监听鼠标和键盘事件
+document.removeEventListener("mousedown", haveSelect)
+document.addEventListener("mousedown", haveSelect)
+document.removeEventListener("mouseup", haveSelect)
+document.addEventListener("mouseup", haveSelect)
+document.removeEventListener("keydown", haveSelect)
+document.addEventListener("keydown", haveSelect)
+function haveSelect() {
+  window.getSelection().removeAllRanges()
+}
+</script>
+<script>
+// 生成版权
+function generateUniqueNumber(url) {
+  // 使用URL的hashCode作为号码
+  let hash = 0;
+  for (let i = 0; i < url.length; i++) {
+    hash = ((hash << 5) - hash) + url.charCodeAt(i);
+    hash |= 0; // 转换为32位整数
+  }
+  return Math.abs(hash);
+}
+ 
+// 获取当前页面的URL
+const url = window.location.href;
+// 生成唯一号码
+const uniqueNumber = generateUniqueNumber(url);
+// 显示号码
+document.getElementById('uniqueNumber').textContent = uniqueNumber.toString();
+</script>
+
+</div>
+
+  
+</body>
+</html>
