@@ -5,12 +5,37 @@
 		<title>新闻报道</title>
 		<!--meta-->
 		<meta charset="utf-8" />		
-		<!--style-->
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link href="css/style.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="css/default.css">
 <link rel="icon" type="image/png" sizes="32x32" href="https://haijiaodao.github.io/xinwen/favicon-32x32.png">
-
+		<script type="text/javascript" src="js1/jquery.min.js"></script>
+		<script type="text/javascript" src="js1/Lunbo.js" ></script>
+		
+		<style type="text/css">
+			* {padding: 0;margin: 0;}
+			body {background: #f3f3f3;}
+			.Box {position: relative;}
+			.Box .content {width: 580px;margin: 0 auto;}
+			.Box h2 {text-align: center;margin-bottom: 35px;padding-top: 250px;}
+			.Box .Box_con {position: relative;}
+			.Box .Box_con .btnl {position: absolute;}
+			.Box .Box_con .btn {display: block;width: 41px;height: 41px;position: absolute;top: 80px;cursor: pointer;}
+			.Box .Box_con .btnl {background: url(img/jtl02.png) no-repeat center;left: -72px;}
+			.Box .Box_con .btnr {background: url(img/jtr02.png) no-repeat center;right: -72px;}
+			.Box .Box_con .btnl:hover {background: url(img/jtl03.png) no-repeat center;}
+			.Box .Box_con .btnr:hover {background: url(img/jtr03.png) no-repeat center;}
+			.Box .Box_con .conbox {position: relative;overflow: hidden;}
+			.Box .Box_con .conbox ul {position: relative;list-style: none;}
+			.Box .Box_con .conbox ul li {float: left;width: 285px;height: 200px;margin-left: 20px;overflow: hidden;}
+			.Box .Box_con .conbox ul li:first-child {margin-left: 0;}
+			.Box .Box_con .conbox ul li img {display: block;width: 285px;height: 200px;transition: all 0.5s;}
+			.Box .Box_con .conbox ul li:hover img {transform: scale(1.1);}
+			
+			.Box .BoxSwitch {margin-top: 10px;text-align: center;}
+			.Box .BoxSwitch span {display: inline-block;*display: inline;*zoom: 1;vertical-align: middle;width: 30px;height: 3px;background: #ccc;margin: 0 5px;cursor: pointer;}
+			.Box .BoxSwitch span.cur {background: red;}
+		</style>
 	</head>
 <script>
 setInterval(() => {
@@ -109,7 +134,44 @@ else
 	    		
 	    		<h1> 大海中，一滴水珠洋溢
 </h1>
-	    		
+	<div class="Box">
+    	<div class="content">
+    				
+    		<div class="Box_con clearfix">
+    			<span class="btnl btn" id="btnl"></span>
+    			<span class="btnr btn" id="btnr"></span>
+    			
+    			<div class="conbox" id="BoxUl">
+	    			<ul>
+	    				<li class="cur"><img src="img/1.jpg" alt=""/></li>
+	    				
+	    				<li class="cur"><img src="img/2.jpg" alt=""/></li>
+	    				
+	    				<li class="cur"><img src="img/3.jpg" alt=""/></li>
+	    			
+	    				<li class="cur"><img src="img/4.jpg" alt=""/></li>
+	    				
+	    				<li class="cur"><img src="img/5.jpg" alt=""/></li>
+    				</ul>
+    			</div>
+    			
+    			<p class="BoxSwitch" id="BoxSwitch">
+    				<span class="cur"></span>
+    				<span></span>
+    				<span></span>
+    				<span></span>
+    			</p>
+    			
+    		</div>
+    		
+    	</div>
+    </div>
+	
+    <script type="text/javascript">
+    	//滚动元素id，左切换按钮，右切换按钮，切换元素个数id,滚动方式，切换方向，是否自动滚动，滚动距离，滚动时间，滚动间隔，显示个数
+    	LbMove('BoxUl','btnl','btnr','BoxSwitch',true,'left',true,305,1000,5000,4);
+    </script>
+    		
 	    		<p>为让志愿服务精神在新时代绽放更加璀璨的光芒，在“五一小长假”来临之际，山临所团支部号召团员青年笃定践行“为人民服务”的志愿服务精神，勇做走在时代前列的奋进者，组织开展了“传承志愿精神 争做时代新人”志愿服务主题活动，此次公益活动为市民提供了从志愿服务精神宣传到“差异化收费政策”咨询解答服务活动，志愿者们用争做文明市民的实际行动，参与创建文明城市的过程；开展“形式多样的志愿服务，深入社区帮助孩子种植多肉，为老人修鞋、理发、维修小家电、贴手机膜、剪指甲到防电信诈谝宣传等便民服务。</p>
 
 	    		<p>每一项的服务志愿者们都热情周到不怕麻烦，以自己最好的能力服务居民，活动传播了“奉献、友爱、互助、进步”的志愿服务精神，以实际行动解民忧、暖民心，让长者切实感受到社区的温暖和良好的社会道德风尚，得到了群众的一致赞许。
