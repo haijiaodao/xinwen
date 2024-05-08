@@ -1,0 +1,36 @@
+body{padding:0;margin:0;font-family: 'Roboto', sans-serif;}
+
+.arkaplan {
+  position:fixed; 
+  top:0; 
+  z-index:0; 
+  width:100%; 
+  padding-top:50%; 
+  background: url(../img/sky-background.jpg) center center no-repeat; 
+  transform:scale(1);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.ornek{
+  position:relative;
+  background-color:rgba(255,255,255,1);
+  left:0;
+  right:0;
+  top:50;
+bottom: 10px;
+  margin-left:auto;
+  margin-right:auto;
+  width:40%;
+  padding: 60px 40px;
+}
+
+.ornek h1{
+  color:#3498db;
+}
+
+.ornek p{
+  color:#34495e;
+}
