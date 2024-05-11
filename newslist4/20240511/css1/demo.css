@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    height: 700px;
+width: 1200px;
+    background: ;
+    overflow: hidden;
+    color: #fff;
+    font-family: "Open Sans";
+    font-size: 18px;
+ max-height: 700px; /* 设置一个最大高度 */
+max-width: 1000px; /* 设置一个最大高度 */
+    overflow-y: auto;  /* 内容超出时允许垂直滚动 */
+    border: 0px solid #fff; /* 边框，为了清楚地展示DIV的范围 */
+    padding: 10px; /* 内边距 */
+margin-bottom: 10px; /* 设置下间距为20像素 */
+
+}
+
+span.sfd {
+    font-weight: 700;
+    margin-bottom: 2em;
+    text-align: center;
+color:red;
+}
+p,h3,h4 {
+    font-weight: 100;
+    margin-bottom: 0.5em;
+    text-justify: inter-word; /* 单词之间的两端对齐 */
+text-indent:2em
+}
+h5 {
+    font-weight: 700;
+    margin-bottom: 0.5em;
+text-align: center;
+}
+.box {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 200%;
+    max-width: 800px;
+    padding: 5px;
+    border: 2px solid #fff;
+margin-top: 100px;
+margin-bottom: 20px; /* 设置下间距为20像素 */
+}
+
+.box:before,
+.box:after {
+    content: "•";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    font-size: 14px;
+    color: red;
+    border: 2px solid #fff;
+    line-height: 12px;
+    top: 5px;
+    text-align: center;
+
+    clear: both;
+}
+
+.box:before {
+    left: 5px;
+}
+
+.box:after {
+    right: 5px;
+
+}
+
+.box .box-inner {
+    position: relative;
+    border: 2px solid #fff;
+    padding: 40px;
+}
+
+.box .box-inner:before,
+.box .box-inner:after {
+    content: "•";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    font-size: 14px;
+    color: red;
+    border: 2px solid #fff;
+    line-height: 12px;
+    bottom: -2px;
+    text-align: center;
+}
+
+.box .box-inner:before {
+    left: -2px;
+}
+
+.box .box-inner:after {
+    right: -2px;
+}
