@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻报道</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/demo.css">
+<link rel="stylesheet" type="text/css" href="css1/htmleaf-demo.css">
+<link rel="icon" type="image/png" sizes="32x32" href="https://haijiaodao.github.io/xinwen/favicon-32x32.png">
+</head>
+
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+  }
+  .centered-div {
+    width: 900px;
+    margin: auto;
+    height: auto;
+ text-align: justify;
+  text-indent: 2em; /* 设置段落缩进，2em 大约等于两个字符的空格 */
+    /* 其他样式 */
+  }
+</style>
+<script>
+setInterval(() => {
+  debugger;
+}, 4000);
+</script>
+<script language="javascript">
+function MM()
+{
+  if(event.srcElement.id=='sfd') //判断右击事件发生在哪个对像上面
+{
+  alert("对不起，本图片不能复制，版权所有！")
+ document.oncontextmenu=new Function("event.returnValue=false;");   //禁用右键功能
+}
+else
+{
+  document.oncontextmenu=new Function("event.returnValue=true;");  //启用右键功能
+} 
+}
+</script>
+<script language="JavaScript"> 
+function getCookieVal (offset) 
+{ 
+var endstr = document.cookie.indexOf (";", offset); 
+if (endstr == -1) 
+endstr = document.cookie.length; 
+return unescape(document.cookie.substring(offset, endstr)); 
+} 
+function GetCookie (name) 
+{ 
+var arg = name + "="; 
+var alen = arg.length; 
+var clen = document.cookie.length; 
+var i = 0; 
+while (i < clen) 
+{ 
+var j = i + alen; 
+if (document.cookie.substring(i, j) == arg) 
+return getCookieVal (j); 
+i = document.cookie.indexOf(" ", i) + 1; 
+if (i == 0) 
+break; 
+} 
+return null; 
+} 
+function SetCookie (name, value) 
+{ 
+var argv = SetCookie.arguments; 
+var argc = SetCookie.arguments.length; 
+var expires = (2 < argc) ? argv[2] : true; 
+var path = (3 < argc) ? argv[3] : true; 
+var domain = (4 < argc) ? argv[4] : true; 
+var secure = (5 < argc) ? argv[5] : true; //安全模式生效 
+document.cookie = name + "=" + escape (value) + 
+((expires == null) ? "" : ("; expires=" + expires.toGMTString())) + 
+((path == null) ? "" : ("; path=" + path)) + 
+((domain == null) ? "" : ("; domain=" + domain)) + 
+((secure == true) ? "; secure" : ""); 
+} 
+function ResetCounts(name) 
+{ 
+visits = 0; 
+SetCookie(expdate , "/", true, true); 
+location.reload(); 
+} 
+</script> 
+<script language="JavaScript"> 
+var expdate = new Date(); 
+var visits; 
+expdate.setTime(expdate.getTime() + (24*60*60 * 1000)); //COOKIES超期时间设置,此处为1天 
+if(!(visits = GetCookie("visits"))) 
+visits = 0; 
+visits++; 
+SetCookie(expdate, "/", true, true); 
+</script>
+
+<script>
+
+// 禁用右键菜单和拖拽查看源代码
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+ 
+document.addEventListener('dragstart', function(e) {
+  e.preventDefault();
+});
+</script>
+
+
+
+<!--
+<script language="javascript">
+function randomString(len) {
+　　len = len || 16;
+　　var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';    /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
+　　var maxPos = $chars.length;
+　　var pwd = '';
+　　for (i = 0; i < len; i++) {
+　　　　pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+　　}
+　　return pwd;
+}
+document.write(randomString(16));
+</script>
+-->
+<body oncontextmenu="MM()">
+<body class="light">
+  <div class="content-wrapper">
+    <div class="content">
+
+</div>
+  </div>
+</div>
+
+   
+
+    <div class="pen-container">
+
+ <div class="container"><div class="centered-div">
+
+<h1 class="title" style=color:red>💟暖心守护“平安路”</h1>
+<h5 style=color:#ccc>🔸来源：新闻网🔸时间：2024年5月13日</h5>
+<p>♐5月5日凌晨24时，甘肃高速迎来了五一假期最后一波返程高峰。随着公路上绵延不绝的车流平安驶入千家万户，甘肃高速人的五一服务保畅工作也画上了圆满的句号。
+<p>五一期间，全省高速公路累计通行车辆高达1078.94万辆，较去年同期增长5.81%。节假日保畅工作顺利完成的背后，是高速公路运营分公司进行的周密谋划和部署。早在假期前夕，该公司便紧锣密鼓地推动各经营管理单位，在充电桩增设、交通安全强化、服务设施提质、司乘出行体验等多方面优化升级，持续打造平安、顺畅、高品质的美好出行范例。
+充电“零焦虑”——绿色出行“加满能量”
+<p>新能源汽车在高速公路上行驶能否没有“充电焦虑”，是很多司机关注的问题。而这一焦虑正在甘肃高速上逐渐得到化解。
+<p>“开电动汽车出门，就怕半路没电堵在高速上，现在高速上不仅有充电桩，还有应急救援充电车可以使用，真是太方便了！”5月2日上午，在甘肃高速山临路段，车主魏先生通过应急人员送来的“移动充电宝”，顺利为自己的爱车充上了电。
+
+<p>为充分满足新能源汽车用户假期出行需求，运营分公司为引进数台“V2V车车充”设施，可在两辆车之间实现电量传输，充电5分钟即可续航20公里，方便“趴窝”车辆就近前往收费站、服务区进行充电补能，打造了高速公路车辆充能新场景。
+目前，甘肃省开通运营服务区已实现充电设施全覆盖，充电桩1095套、充电停车位1733个，基本满足公路出行需求。今年五一，甘肃高速又在主线服务区额外补充投入66个移动充电桩，并配备224名专职人员进行服务区充电引导与设施运维，不断增强设备“硬实力”，保障司乘绿色、无忧、畅通出行。
+<p>服务“不打烊”——暖心场景“全方位”开启
+<p>“无论什么时候来都有热水供应，洗完澡再用洗衣机洗衣服，还能在休息室的沙发上好好睡上一觉，休息好了再上路，真好！”五一假期，甘肃高速张掖服务区“司机之家”内，卡友曹玉良夫妇正与工作人员亲切交谈。保安大哥杨师傅更是热情地邀请他们品尝当地的特色美食潜江小龙虾。
+<p>目前，甘肃高速已建成并通过验收“司机之家”共27处，为过往司乘提供热水、洗衣机、按摩椅、简餐等24小时不间断的暖心服务，让每一位司乘都能感受到“家”的温馨与舒适。
+
+<p>五一期间，甘肃高速上的暖心服务与特色场景更是处处可见。在高速上，便民服务台前整齐摆放着“暖心药”“爱心餐”等物资，随时为需要的司乘提供帮助，收费员正将手中的气球、鲜花、旅游手册等小礼品一一分发，以真诚的笑容与服务赢得了司乘的声声赞扬……
+<p>五一期间，甘肃高速共设置便民服务点738处，发放宣传手册22236份，服务司乘29655人次。一连串数字背后，是对湖北高速人坚守岗位、热情服务的见证。
+
+<p>出行“新风尚”——高速“领航员”直播亮相
+<p>五一期间，山临所收费员纷纷化身高速“领航员”，实时更新所在路段实时路况、周边旅游信息，让司乘可以通过直播画面判断道路拥堵情况，合理安排出行时间、线路，提升出行效率。
+<p>不仅如此，多个收费站还巧妙融合本土文化，身着少数民族服饰直播带货，热情推介沿途美景，为观众带来了一场场别出心裁的视听盛宴。据统计，整个五一假期内，甘肃高速直播时长共计74.78小时，观看人数达159039人，共收获司乘点赞676008次，反响热烈。
+<br>
+<span style="text-align:right;font-size: 12px;color:#BEBEBE">&emsp;©<!-- -->著作权归作者所有,转载或内容合作请联系作者。<span style="text-align:right;font-size: 12px;color:#8B0000">&copy;网内版权号：<span id="uniqueNumber"></span>
+<br>
+ <button class="my-button"><a href="" class="no123" title="感谢点赞">
+ 点赞</button></a>
+  <button class="my-button"><a href="https://haijiaodao.github.io/xinwen/huiyuanzhuanlan/huiyuanzhifu4/index.html" class"no123" title="打赏，支持一下">
+ 打赏</button></a>
+
+
+</div>
+
+
+        <div class="plane plane-1">
+            <i></i>
+        </div>
+
+        <div class="plane plane-2">
+            <i></i>
+        </div>
+
+        <div class="plane plane-3">
+            <i></i>
+        </div>
+
+        <div class="plane plane-4">
+            <i></i>
+        </div>
+
+        <div class="plane plane-5">
+            <i></i>
+        </div>
+
+        <div class="plane plane-6">
+            <i></i>
+        </div>
+
+        <div class="plane plane-7">
+            <i></i>
+        </div>
+
+        <div class="plane plane-8">
+            <i></i>
+        </div>
+
+        <div class="plane plane-9">
+            <i></i>
+        </div>
+
+        <div class="plane plane-10">
+            <i></i>
+        </div>
+
+        
+    </div>
+<div>
+		<header class="htmleaf-header" style="color:red">
+			
+<div class="htmleaf-links" style="color:red">
+<a class="htmleaf-icon icon-htmleaf-home-outline" style="color:#000" href="" title="首页" target="_blank"><span>首页</span></a>
+<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" style="color:#000" href="" title="返回" target="_blank"><span> 返回</span></a>
+			</div><h3 style="color: red;"></h3>
+		</header>
+	</div>
+</div>
+
+
+    </div>
+<script>
+function copyCurrentUrl() {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    console.log('复制成功');
+  }).catch(function(error) {
+    console.error('复制失败', error);
+  });
+}
+
+// 监听鼠标和键盘事件
+document.removeEventListener("mousedown", haveSelect)
+document.addEventListener("mousedown", haveSelect)
+document.removeEventListener("mouseup", haveSelect)
+document.addEventListener("mouseup", haveSelect)
+document.removeEventListener("keydown", haveSelect)
+document.addEventListener("keydown", haveSelect)
+function haveSelect() {
+  window.getSelection().removeAllRanges()
+}
+</script>
+<script>
+// 生成版权
+function generateUniqueNumber(url) {
+  // 使用URL的hashCode作为号码
+  let hash = 0;
+  for (let i = 0; i < url.length; i++) {
+    hash = ((hash << 5) - hash) + url.charCodeAt(i);
+    hash |= 0; // 转换为32位整数
+  }
+  return Math.abs(hash);
+}
+ 
+// 获取当前页面的URL
+const url = window.location.href;
+// 生成唯一号码
+const uniqueNumber = generateUniqueNumber(url);
+// 显示号码
+document.getElementById('uniqueNumber').textContent = uniqueNumber.toString();
+</script>
+
+
+</body>
+
+</html>
