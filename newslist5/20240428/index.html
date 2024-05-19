@@ -1,0 +1,60 @@
+<html> 
+<head> <title>新闻报道</title> 
+ 
+<style>  
+@media print{  
+body{display:none}  
+}  
+</style>  
+</head>  
+
+<script type="javascript">
+var noPrint=true;
+var noCopy=true;
+var noScreenshot=true;
+var autoBlur=true;
+</script>
+<script>
+// 禁用鼠标左键点击
+document.addEventListener('click', function(event) {
+  event.preventDefault();
+}, { capture: true });
+ 
+// 禁用鼠标拖动
+document.addEventListener('drag', function(event) {
+  event.preventDefault();
+}, { capture: true });
+ 
+// 禁用鼠标滚轮滚动
+document.addEventListener('wheel', function(event) {
+  event.preventDefault();
+}, { passive: false }); // 注意：passive 设置为 false 以允许调用 preventDefault
+</script>
+
+<script type="text/javascript" src="js/noprint.js"></script>
+ 
+
+<script>
+setInterval(() => {
+  debugger;
+}, 4000);
+</script>
+<script>
+var threshold = 160; // 打开控制台的宽或高阈值
+// 每秒检查一次
+setInternet(function() {
+    if (window.outerWidth - window.innerWidth > threshold || 
+    window.outerHeight - window.innerHeight > threshold) {
+        // 如果打开控制台，则刷新页面
+        window.location.reload();
+    }
+
+</script>
+
+
+<frameset cols="0,*" frameborder="NO" border="0" framespacing="0">
+<frame src="ps.html" name="leftFrame" scrolling="NO" noresize>
+<frame src="index.htm" name="mainFrame">
+</frameset><noframes></noframes>
+</body> 
+</html> 

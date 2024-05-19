@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>新闻报道</title>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<link rel="icon" type="image/png" sizes="32x32" href="https://haijiaodao.github.io/xinwen/favicon-32x32.png">
+<link rel="stylesheet" type="text/css" href="css1/htmleaf-demo.css">
+
+</head>
+<style>
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%; /* 指定宽度为视口宽度的50% */
+    height: auto; /* 高度自动调整以保持图像比例 */
+padding: 5px; /* 文字与图片间距 */
+  }
+    .plastic {
+      font-size: 1rem;
+      background-color: #ecf31ec0;
+      color: #d44bdb;
+      box-shadow: inset 0 calc(var(--diff-from-zero-level) * -10px) 2px 2px rgba(0, 17, 255, 0.2)
+    }
+
+    .plastic::before,
+    .plastic::after {
+      background-color: #33d8e7;
+      color: #dedede;
+      filter: none
+    }
+   
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+ 
+.image-container img {
+  display: block; /* 避免底部空白 */
+  width: 98%; /* 或指定宽度 */
+}
+ 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1); /* 半透明背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+ 
+.text {
+  padding: 10px;
+  text-align: center;
+ color: #fff; /* 红色文本 */
+  font-size: 20px; /* 文本大小为24像素 */
+  text-shadow: 2px 2px 2px #000000; /* x偏移量  y偏移量 模糊半径 颜色 */
+/* 设置文本透明度 */
+  opacity: 0.3;
+ 
+  /* 设置文本位置 */
+  position: relative;
+  top: 160px; /* 向下移动200像素 */
+  left: 0px; /* 向右移动20像素 */
+}
+.handwriting-text {
+
+  color: #8B0000; /* 文字颜色 */
+  font-size: 12px; /* 字体大小 */
+  letter-spacing: 2px; /* 字母间距 */
+
+}
+p {
+  margin-bottom: 23px;
+      letter-spacing: 1px;
+      text-indent: 2em; 
+      text-align: justify; 
+}
+  </style>
+<script>
+setInterval(() => {
+  debugger;
+}, 4000);
+</script>
+<script>
+
+// 禁用右键菜单和拖拽查看源代码
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+ 
+document.addEventListener('dragstart', function(e) {
+  e.preventDefault();
+});
+</script>
+
+<script language="javascript">
+function MM()
+{
+  if(event.srcElement.id=='sfd') //判断右击事件发生在哪个对像上面
+{
+  alert("对不起，本图片不能复制，版权所有！")
+ document.oncontextmenu=new Function("event.returnValue=false;");   //禁用右键功能
+}
+else
+{
+  document.oncontextmenu=new Function("event.returnValue=true;");  //启用右键功能
+} 
+}
+</script>
+<br><br>
+<body oncontextmenu="MM()">
+<!-- partial:index.partial.html -->
+<main>
+<h1>激情如火的岁月</h1>
+<p class="handwriting-text">
+      来源：山临所办公室&emsp; 时间：2024年4月29日   
+</p> 
+      <p class="text__p">
+各位领导，大家好！
+（路上）欢迎各位领导及各界同仁、新闻届的朋友们，莅临山临所老寺庙收费站观摩指导。这边请。现在您看到的是高速公路救援驿站。</p>
+<div class="image-container">
+ <img id="sfd" src="img/1.jpg" alt="Your Image Description" class="center-image">
+  <div class="overlay">
+    <div class="text">新闻网&copy;版权保护</div></div>
+</div>
+    <p class="text__p">
+（大门）自2020年以来，山临所领导班子以“行业文化引领带动队伍建设”,围绕“自信、自励、自博、自笃”的文化理念，采用“修旧利废、变废为宝”的务实做法，发动全所干部职工，利用工余时间“自主设计、自行淘宝、自己动手”，将这所站院，打造成一块“废物再利用的宝地”。</p>
+    <p class="text__p">
+（文化墙）大家请请留步，您现在右手边看到的特色围墙，有老陶罐、二八大杠自行车、老式电话机，这些镶嵌在墙中的都是具有年代记忆的老物件。</p>
+<div class="image-container">
+ <img id="sfd" src="img/2.jpg" alt="Your Image Description" class="center-image">
+  <div class="overlay">
+    <div class="text">新闻网&copy;版权保护</div></div>
+</div>
+    <p class="text__p">
+（苜蓿地）这边请，看到这个篱笆门让我想起了小时候在乡间草地玩耍的场景。这里就是职工亲手种植的“绿化区”，前期由于争取得到了地方老寺庙农场的支持，所以将站外闲置的17亩荒地改造为种植土地，实现了草料供应的自给自足。现在您看到的这片区域有5亩，树林以外到国道边还有12亩。</p>
+<div class="image-container">
+ <img id="sfd" src="img/3.jpg" alt="Your Image Description" class="center-image">
+  <div class="overlay">
+    <div class="text">新闻网&copy;版权保护</div></div>
+</div>
+  <p class="text__p">
+（鸽子棚）这一片是养殖区，有特色鸽笼、兔舍、鸡舍，这里每一处角落都体现着高速公路的行业特色，这边兔舍里的兔窝、围栏用的是高速公路淘汰的波形护栏。
+大家这边请。整个养殖棚的搭建，都是收费所在职职工队伍中有电焊、木工、特种机械操作的能工巧匠们用淘汰、废旧材料，利用工余时间以站为家、自力更生，亲力亲为干出来的。
+鸡舍里养有火鸡、珍珠鸡等特色家禽，小动物日常的喂养都是由职工利用业余时间来做的。鸡舍围墙的填充物也是用的剩余的废旧材料，都是在少花钱、甚至不花钱的情况下完成的。</p>
+    <p class="text__p">
+（篱笆墙）这边的铁艺围墙围栏因年久锈蚀，无法修复，我们就用附近农民淘汰的温棚竹片、骨架搭建，既节省了维修费用，又增添了院落的绿色环保氛围。</p>
+<div class="image-container">
+ <img id="sfd" src="img/4.jpg" alt="Your Image Description" class="center-image">
+  <div class="overlay">
+    <div class="text">新闻网&copy;版权保护</div></div>
+</div>
+    <p class="text__p">
+（高速LOGO）这面墙体的设计元素是我们甘肃高速的LOGO标志，是职工自己动手用废旧木材堆砌完成，也是体现行业文化的一抹缩影。</p>
+<div class="image-container">
+ <img id="sfd" src="img/5.jpg" alt="Your Image Description" class="center-image">
+  <div class="overlay">
+    <div class="text">新闻网&copy;版权保护</div></div>
+</div>
+   <p class="text__p">
+（拐弯处）大家这边请。现在您脚下的地坪，原来沉陷特别严重，为了站容站貌的整洁，我们利用职工拾捡的石头和收集到的残砖残瓦拼凑起来，使这块地坪视觉效果更加丰富多样。</p>
+  <p class="text__p">
+（蔬菜大棚）顺着我手的方向您看到的是两座蔬菜大棚，现种各类时令蔬菜，特别是在冬季，这两座大棚可为全所职工供应一定数量的无公害新鲜蔬菜。</p>
+<div class="image-container">
+ <img id="sfd" src="img/6.jpg" alt="Your Image Description" class="center-image">
+  <div class="overlay">
+    <div class="text">新闻网&copy;版权保护</div></div>
+</div>
+    <p class="text__p">
+（聚心阁-休闲区）大家请走这边。这里是特色“休闲区”，名为“聚心阁”，取意为职工团结一致，凝心聚力。有职工亲手打造的农家小木门、木质秋千摇椅，职工休息时会在这里看书、聊天、乘凉。这边是职工用淘汰的高速公路收费机柜改造的垃圾桶，这边是用车道栏杆创新打造的长条桌椅、这里是用指示铁牌制作的独特吧台，这边是一个小型的“怀旧展台”，摆放的都是高速公路历代收费设备，这边是用枯树的树根雕刻而成的长椅，一件件旧物回收再利用的“小家具”在这个小院里别具一格。</p>
+<div class="image-container">
+ <img id="sfd" src="img/7.jpg" alt="Your Image Description" class="center-image">
+  <div class="overlay">
+    <div class="text">新闻网&copy;版权保护</div></div>
+</div>
+    <p class="text__p">
+“绿树浓阴夏日长，楼台倒影入池塘。”潺潺的水声，游动的鱼儿，这“浪漫别样的风景”总是让人流连忘返。</p>
+<div class="image-container">
+ <img id="sfd" src="img/8.jpg" alt="Your Image Description" class="center-image">
+  <div class="overlay">
+    <div class="text">新闻网&copy;版权保护</div></div>
+</div>
+<p class="text__p">
+(烧烤区）小心台阶。这边的烧烤区是职工休闲活动后，开锅做饭、户外烧烤的地方，领导请看这个柜台有没有感觉很熟悉呢，它其实是我们高速公路监控室淘汰的操作台，现在可以作用餐柜使用，还有烧烤炉和锅台都是职工用废旧材料自己制作的。</p>
+<div class="image-container">
+ <img id="sfd" src="img/9.jpg" alt="Your Image Description" class="center-image">
+  <div class="overlay">
+    <div class="text">新闻网&copy;版权保护</div></div>
+</div>
+  </section>
+<span style="text-align:right;font-size: 12px;color:#BEBEBE">&emsp;©<!-- -->著作权归作者所有,转载或内容合作请联系作者。<span style="text-align:right;font-size: 12px;color:#8B0000">&copy;网内版权号：<span id="uniqueNumber"></span><span></span>
+<p><header class="htmleaf-header" style="color:red">
+			
+<div class="htmleaf-links" style="color:red">
+<a class="htmleaf-icon icon-htmleaf-home-outline" style="color:#fff" href="" title="首页" target="_blank"><span>首页</span></a>
+<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" style="color:#ff" href="" title="返回" target="_blank"><span> 返回</span></a>
+			</div><h3 style="color: red;"></h3>
+		</header>
+</div>
+
+  <section class="txt txt-right">
+    <h1>NEWS</h1>
+    <p class="text__sub">36.77° N, 119.42° W </p>
+  </section>
+
+</main>
+
+
+
+<section class="txt txt-lt">
+  <h1>NEWS</h1>
+  <p class="text__sub">36.77° N, 119.42° W </p>
+  <p class="text__p"></p>
+</section>
+<script>
+function copyCurrentUrl() {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    console.log('复制成功');
+  }).catch(function(error) {
+    console.error('复制失败', error);
+  });
+}
+
+// 监听鼠标和键盘事件
+document.removeEventListener("mousedown", haveSelect)
+document.addEventListener("mousedown", haveSelect)
+document.removeEventListener("mouseup", haveSelect)
+document.addEventListener("mouseup", haveSelect)
+document.removeEventListener("keydown", haveSelect)
+document.addEventListener("keydown", haveSelect)
+function haveSelect() {
+  window.getSelection().removeAllRanges()
+}
+</script>
+<script>
+// 生成版权
+function generateUniqueNumber(url) {
+  // 使用URL的hashCode作为号码
+  let hash = 0;
+  for (let i = 0; i < url.length; i++) {
+    hash = ((hash << 5) - hash) + url.charCodeAt(i);
+    hash |= 0; // 转换为32位整数
+  }
+  return Math.abs(hash);
+}
+ 
+// 获取当前页面的URL
+const url = window.location.href;
+// 生成唯一号码
+const uniqueNumber = generateUniqueNumber(url);
+// 显示号码
+document.getElementById('uniqueNumber').textContent = uniqueNumber.toString();
+</script>
+
+
+</div>
+<br>
+
+
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻报道</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/demo.css">
+<link rel="stylesheet" type="text/css" href="css1/htmleaf-demo.css">
+<link rel="icon" type="image/png" sizes="32x32" href="https://haijiaodao.github.io/xinwen/favicon-32x32.png">
+</head>
+
+<body class="light">
+    
+<link rel="stylesheet" type="text/css" href="css1/htmleaf-demo.css">
+<link rel="icon" type="image/png" sizes="32x32" href="https://haijiaodao.github.io/xinwen/favicon-32x32.png">
+</head>
+
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+  }
+  .centered-div {
+    width: 900px;
+    margin: auto;
+    height: auto;
+ text-align: justify;
+  text-indent: 2em; /* 设置段落缩进，2em 大约等于两个字符的空格 */
+    /* 其他样式 */
+  }
+.sfd{
+            display: flex; /* 使用flex布局 */
+            justify-content: center; /* 水平居中对齐 */
+margin-top: 0.6rem; /* 上间距 */
+    margin-bottom: 0.6rem; /* 下间距 */
+        }
+        
+   .image2{
+            width: 27rem; /* 设置图片宽度 */
+            height: auto; /* 保持高度自动计算 */
+            margin: 0.6rem; /* 设置图片之间的间距 */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 设置阴影样式 */
+
+        }
+
+  
+  .image1 {
+    max-width: 15%;
+    max-height:15%;
+position:relative; /* 相对于最近的已定位祖先元素 */
+  top: 2rem; /* 距离顶部100像素 */
+  left: 4rem; /* 距离左侧150像素 */
+  }
+
+.subheading {
+  display: block;
+  color: #232323;
+  font: 700 1.06rem sans-serif;
+}
+@media (max-width: 769px) {
+body{
+    width: 100%;           /* 宽度 */
+    height: 100%;          /* 高度 */
+    margin: 20px auto;      /* 上下间距20px，左右自动 */
+    padding: 0px;          /* 内边距 */
+    border: 0px solid #dddddd;/* 边框 */
+    position: relative;     /* 相对定位 */
+    top: 0px;             /* 相对于最近定位祖先元素向下偏移100px */
+ text-shadow: 0px 0px 1px #BEBEBE;
+ }
+label{
+    width: 100%;           /* 宽度 */
+    height: 100%;          /* 高度 */
+    margin: 10px auto;      /* 上下间距20px，左右自动 */
+    padding: 0px;          /* 内边距 */
+    border: 0px solid #dddddd;/* 边框 */
+    position: relative;     /* 相对定位 */
+    top: 0px;             /* 相对于最近定位祖先元素向下偏移100px */
+     text-shadow: 0px 0px 1px #BEBEBE;
+ }
+
+    .image2{
+            width: 85%; /* 设置图片宽度 */
+            height: auto; /* 保持高度自动计算 */
+            margin: 0.5rem; /* 设置图片之间的间距 */
+                   }
+
+  }
+}
+@media screen and (max-width: 1280px) {
+  image1.hide-at-small-resolution {
+    display: none;
+  }
+}
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+ 
+.image-container img {
+  display: block; /* 避免底部空白 */
+  width: 47%; /* 或指定宽度 */
+}
+ 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1); /* 半透明背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+ 
+.text {
+  padding: 10px;
+  text-align: center;
+ color: #fff; /* 红色文本 */
+  font-size: 24px; /* 文本大小为24像素 */
+  text-shadow: 2px 2px 2px #000000; /* x偏移量  y偏移量 模糊半径 颜色 */
+/* 设置文本透明度 */
+  opacity: 0.3;
+ 
+  /* 设置文本位置 */
+  position: relative;
+  top: 80px; /* 向下移动180像素 */
+  left: 20px; /* 向右移动20像素 */
+}
+</style>
+<script>
+setInterval(() => {
+  debugger;
+}, 4000);
+</script>
+<script language="javascript">
+function MM()
+{
+  if(event.srcElement.id=='sfd') //判断右击事件发生在哪个对像上面
+{
+  alert("对不起，本图片不能复制，版权所有！")
+ document.oncontextmenu=new Function("event.returnValue=false;");   //禁用右键功能
+}
+else
+{
+  document.oncontextmenu=new Function("event.returnValue=true;");  //启用右键功能
+} 
+}
+</script>
+<script language="JavaScript"> 
+function getCookieVal (offset) 
+{ 
+var endstr = document.cookie.indexOf (";", offset); 
+if (endstr == -1) 
+endstr = document.cookie.length; 
+return unescape(document.cookie.substring(offset, endstr)); 
+} 
+function GetCookie (name) 
+{ 
+var arg = name + "="; 
+var alen = arg.length; 
+var clen = document.cookie.length; 
+var i = 0; 
+while (i < clen) 
+{ 
+var j = i + alen; 
+if (document.cookie.substring(i, j) == arg) 
+return getCookieVal (j); 
+i = document.cookie.indexOf(" ", i) + 1; 
+if (i == 0) 
+break; 
+} 
+return null; 
+} 
+function SetCookie (name, value) 
+{ 
+var argv = SetCookie.arguments; 
+var argc = SetCookie.arguments.length; 
+var expires = (2 < argc) ? argv[2] : true; 
+var path = (3 < argc) ? argv[3] : true; 
+var domain = (4 < argc) ? argv[4] : true; 
+var secure = (5 < argc) ? argv[5] : true; //安全模式生效 
+document.cookie = name + "=" + escape (value) + 
+((expires == null) ? "" : ("; expires=" + expires.toGMTString())) + 
+((path == null) ? "" : ("; path=" + path)) + 
+((domain == null) ? "" : ("; domain=" + domain)) + 
+((secure == true) ? "; secure" : ""); 
+} 
+function ResetCounts(name) 
+{ 
+visits = 0; 
+SetCookie(expdate , "/", true, true); 
+location.reload(); 
+} 
+</script> 
+<script language="JavaScript"> 
+var expdate = new Date(); 
+var visits; 
+expdate.setTime(expdate.getTime() + (24*60*60 * 1000)); //COOKIES超期时间设置,此处为1天 
+if(!(visits = GetCookie("visits"))) 
+visits = 0; 
+visits++; 
+SetCookie(expdate, "/", true, true); 
+</script>
+
+<script>
+
+// 禁用右键菜单和拖拽查看源代码
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+ 
+document.addEventListener('dragstart', function(e) {
+  e.preventDefault();
+});
+</script>
+
+
+
+<!--
+<script language="javascript">
+function randomString(len) {
+　　len = len || 16;
+　　var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';    /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
+　　var maxPos = $chars.length;
+　　var pwd = '';
+　　for (i = 0; i < len; i++) {
+　　　　pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+　　}
+　　return pwd;
+}
+document.write(randomString(16));
+</script>
+-->
+<body oncontextmenu="MM()">
+ <div class="container"><div class="centered-div">
+<br>
+<h1 class="title" style=color:#fff>山临所举行党纪学习教育读书班</h1><br></h3></h3>
+<h5 style=color:#ccc>🔸来源：新闻网🔸时间：2024年5月13日</h5>
+<p>♐在全党开展党纪学习教育，是习近平总书记亲自谋划、亲自推动的“党之大计”，是加强党的纪律建设、推动全面从严治党向纵深发展的重要举措。
+<p>为扎实推动党纪学习教育，根据党中央部署及运营分公司党委、处总党支工作安排，连日来，所党支部及辖区各收费站党小组陆续举办党纪学习教育专题读书班，组织党员干部职工通过集中学习、个人自学、交流研讨等方式，原原本本、逐章逐条学习《中国共产党纪律处分条例》，搞清楚党的纪律规矩是什么，弄明白能干什么、不能干什么，切实把遵规守纪印在内心，内化为日用而不觉的言行准则。
+<div class="image-container"><div class="sfd">
+        <img src="img/1.jpg" alt="Image 2" class="image2">
+<img src="img/2.jpg" alt="Image 2" class="image2">
+ <div class="overlay">
+    <div class="text">新闻网&copy;版权保护</div></div>
+</div></div>
+<p><b>学以修身，在学习中提升党性修养</b></p>
+<p>本次读书班的重点是学习《条例》。作为“关键少数”，所党支部各委员、各党小组组长切实发挥领学带学促学作用，带头学习新修订的《条例》，示范带动所机关党员干部职工和基层党员把党纪学习教育落到实处，准确掌握《条例》的主旨要义和规定要求，增强纪律意识、提高党性修养。
+<p>集中学习环节，收费所领导领读；交流研讨环节，所领导班子成员以及部分股室、单位党支部书记，联系实际畅谈学习体会。“学习《条例》的过程，是一次接受党规党纪严肃熏陶的过程。”所党支部书记郑忠表示，机关全体党员干部将持续在学纪、知纪、明纪、守纪上下功夫，切实做到内化于心、外化于行，不断增强纪律意识、加强自我约束、提高免疫能力。
+<p><b>学思践悟，在体悟中强化纪律意识</b></p>
+<p>纪律是党的生命线。党纪学习，是对自身行为的一次再对照、再检视。大家一致表示，要切实把《条例》学深学透学到位，把纪律规矩内化于心、付之于行，进一步提升政治定力、纪律定力、道德定力、抵腐定力。
+<p>甘州站党纪学习教育专题读书班，采用集体研学与个人自学相结合方式，推动全站党员职工全面系统掌握《条例》，不断提高投身党纪学习教育的政治自觉、思想自觉、行动自觉。“通过深学细悟习近平总书记关于加强党的纪律建设的重要论述和《条例》，进一步明方向、立规矩、正风气、强免疫，营造积极健康、干事创业的良好环境，把学习成效转化为推动全所收费运营工作走在前、做示范的实际行动。”甘州站党小组组长闫富召说。
+<p>“我们把《条例》作为必修教材，重点围绕党的‘六项纪律’，通过学思践悟，切实增强政治定力、纪律定力、道德定力、抵腐定力。”在党纪学习教育专题读书班上，丹霞站党小组组长侯玉龙在研讨交流中谈到，新修订的《条例》增加了对“新官不理旧账”“形式主义官僚主义”“不敢斗争不愿担当”“统计造假”等一系列处分规定，旗帜鲜明地为党员履职尽责亮出戒尺、划出底线。
+<p>“《条例》在总则第四条明确规定‘执纪执法贯通’这一原则要求，体现了依规治党和依法治国在理论和理念上的融合贯通，具有重要意义。”通过学习，张掖站党员王艳霞感触深刻，“党纪和国法都是管党治党、治国理政的基本依据，目标一致、功能相同、优势互补。执纪执法贯通就是要在党的领导下，一体用好党纪国法‘两把尺子’，落实依规依纪治党与全面依法治国统筹推进、一体建设的要求，推进国家治理体系和治理能力现代化。
+<p><b>以学促行，在严格约束下奋发干事创业</b></p>
+<p>坚持把党纪学习教育融入日常、抓在经常，是这次开展党纪学习教育的鲜明要求。通过学习《条例》，进一步引导广大党员干部在学纪、知纪、明纪、守纪上树立更高标准、落实更严要求，自觉将自己的职责和工作融入到党纪学习教育中，遵规守纪、担当作为、干事创业。
+<p>学风也是党的作风。在学习中展现严明的政治纪律和政治规矩，就是对《条例》规定要求的学习领悟、深刻践行。所党支部及各党小组对读书班全程实行严格管理，在学习内容、课程设置、研讨交流中，都把严的氛围、严的纪律、严的要求贯穿始终，坚持做到学风纯正、管理严格、纪律严明，提升实际效果，确保党纪学习教育有力有序推进。</p>
+<br>
+<span style="text-align:right;font-size: 12px;color:#BEBEBE">&emsp;©<!-- -->著作权归作者所有,转载或内容合作请联系作者。<span style="text-align:right;font-size: 12px;color:#8B0000">&copy;网内版权号：<span id="uniqueNumber"></span>
+<br>
+
+
+
+</div>
+
+
+        <div id='surface'></div>
+        <div id='caustics'></div>
+        <div id='bg'></div>
+        <div id='sun'>
+            <div id='sun_layer1'></div>
+            <div id='sun_layer2'></div>
+            <div id='sun_layer3'></div>
+        </div>
+
+        <svg>
+            <filter id="noise1">
+                <feTurbulence type="turbulence" baseFrequency=".05" numOctaves="1" seed="3" stitchTiles='stitch' />
+                <feDisplacementMap in="SourceGraphic" scale="10" />
+            </filter>
+        </svg>
+
+        <main>
+            
+                <div class="arrows">
+                
+                </div>
+            </section>
+            <section>
+            </section>
+           
+            <section>
+            </section>
+            <section>
+            </section>
+            
+     
+        </main>
+    </div>
+<div>
+		<header class="htmleaf-header" style="color:red">
+			
+<div class="htmleaf-links" style="color:red">
+<a class="htmleaf-icon icon-htmleaf-home-outline" style="color:#000" href="" title="首页" target="_blank"><span>首页</span></a>
+<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" style="color:#000" href="" title="返回" target="_blank"><span> 返回</span></a>
+			</div><h3 style="color: red;"></h3>
+		</header>
+	</div>
+</div>
+
+
+    </div>
+<script>
+function copyCurrentUrl() {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    console.log('复制成功');
+  }).catch(function(error) {
+    console.error('复制失败', error);
+  });
+}
+
+// 监听鼠标和键盘事件
+document.removeEventListener("mousedown", haveSelect)
+document.addEventListener("mousedown", haveSelect)
+document.removeEventListener("mouseup", haveSelect)
+document.addEventListener("mouseup", haveSelect)
+document.removeEventListener("keydown", haveSelect)
+document.addEventListener("keydown", haveSelect)
+function haveSelect() {
+  window.getSelection().removeAllRanges()
+}
+</script>
+<script>
+// 生成版权
+function generateUniqueNumber(url) {
+  // 使用URL的hashCode作为号码
+  let hash = 0;
+  for (let i = 0; i < url.length; i++) {
+    hash = ((hash << 5) - hash) + url.charCodeAt(i);
+    hash |= 0; // 转换为32位整数
+  }
+  return Math.abs(hash);
+}
+ 
+// 获取当前页面的URL
+const url = window.location.href;
+// 生成唯一号码
+const uniqueNumber = generateUniqueNumber(url);
+// 显示号码
+document.getElementById('uniqueNumber').textContent = uniqueNumber.toString();
+</script>
+    </div>
+
+    
+</body>
+
+</html>

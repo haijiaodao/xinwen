@@ -1,0 +1,147 @@
+* {
+  font-family: "Titillium Web", sans-serif;
+}
+
+.flex-center, .banner, body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background: #EB5544;
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+
+}
+
+main {
+  background: #EEE6E5;
+  box-shadow: 0 4px 40px 4px rgba(0, 0, 0, 0.6);
+  height: 595vh;
+  width: 50%;
+  max-width: 650px;
+  padding: 32px;
+  box-sizing: border-box;
+  position: relative;
+ top: 30px;
+}
+main:before {
+  content: "";
+  background: #EEE6E5;
+  border-radius: 50%;
+  height: 2px;
+  width: 16px;
+  margin: 4px 0 0 4px;
+  position: absolute;
+  top: -32px;
+  left: -104px;
+  opacity: 0.8;
+}
+main:after {
+  content: "";
+  background: #EEE6E5;
+  border-radius: 50%;
+  height: 2px;
+  width: 16px;
+  margin: 4px 0 0 4px;
+  position: absolute;
+  left: -104px;
+  opacity: 0.8;
+}
+
+/*BANNER*/
+.banner {
+  background: #eb5544;
+  height: 75%;
+}
+.banner .banner__img {
+  height: 95%;
+  opacity: 1;
+}
+
+/*TEXT*/
+.text {
+  margin: 8px 0 0;
+}
+.text h1 {
+  color: #EB5544;
+  font-size: 26px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+  position: relative;
+}
+.text h1:after {
+  content: "";
+  background: #EB5544;
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+  margin: 4px 0 0 4px;
+  position: absolute;
+}
+.text .text__sub {
+  color: #EB5544;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin: 4px 0 8px;
+}
+.text .text__p {
+  color: #EB5544;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+}
+
+/*TEXT RIGHT*/
+.txt {
+  position: absolute;
+  opacity: 0.8;
+}
+.txt h1 {
+  color: #EEE6E5;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+  position: relative;
+}
+.txt h1:after {
+  content: "";
+  background: #EEE6E5;
+  border-radius: 50%;
+  height: 4px;
+  width: 4px;
+  margin: 4px 0 0 4px;
+  position: absolute;
+}
+.txt p {
+  color: #EEE6E5;
+  font-size: 8px;
+  margin: 4px 0 8px;
+}
+
+.txt-right {
+  transform: rotate(270deg);
+  top: 20vh;
+  left: -134px;
+}
+
+.txt-lt {
+  transform: rotate(90deg);
+  width: 200px;
+  top: 8vh;
+  right: 5px;
+}
+.txt-lt h1 {
+  font-size: 80px;
+  letter-spacing: 4px;
+}
+.txt-lt .text__sub {
+  font-size: 18px;
+  margin: -8px 0 8px;
+}
