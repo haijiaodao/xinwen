@@ -56,7 +56,9 @@ else
 <body oncontextmenu="MM()">
 
 <div id="page-wrap">
-	
+<!--startprint-->
+<div></div>
+<!--endprint-->	
 	<h1> 家庭助廉承诺书<span>Family Integrity Commitment Letter</span></h1>
 	<div id="tab_design">
 		<a class="blind" href="#contents"></a>
@@ -145,7 +147,32 @@ document.getElementById('uniqueNumber').textContent = uniqueNumber.toString();
 
   </div>
 </div>
-
+<script>
+        function printPage() {
+            var printWindow = window.open('', '_blank');
+            printWindow.document.write('<html><head><title>Print Page</title>');
+            printWindow.document.write('</head><body >');
+            printWindow.document.write(document.documentElement.outerHTML);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();
+            printWindow.close();
+        }
+    </script>
+<script>
+        function doPrint() { 
+    bdhtml=window.document.body.innerHTML; 
+    sprnstr="<!--startprint-->"; //开始打印标识字符串有17个字符
+    eprnstr="<!--endprint-->"; //结束打印标识字符串
+    prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr)+17); //从开始打印标识之后的内容
+    prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr)); //截取开始标识和结束标识之间的内容
+    window.document.body.innerHTML=prnhtml; //把需要打印的指定内容赋给body.innerHTML
+    window.print(); //调用浏览器的打印功能打印指定区域
+    window.document.body.innerHTML=bdhtml;//重新给页面内容赋值；
+    return false;
+}
+    </script>
 
 
 	</div><!-- e: #tab_design -->	
