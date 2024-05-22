@@ -12,6 +12,27 @@
   <link rel="stylesheet" href="css/style.css">
 
 </head>
+<style>
+.progress-bar-container {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background: #4682B4;
+    z-index: 999;
+}
+.progress-bar {
+    height: 3px;
+    background: #ff0000;
+    animation-name: width;
+    /* animation timeline is tied to vertical scroll position */
+    animation-timeline: scroll(y);
+}
+@keyframes width {
+    from { width: 0 }
+    to   { width: 100% }
+}
+
+</style>
 <script>
 setInterval(() => {
   debugger;
@@ -46,6 +67,12 @@ else
 <br>
 <body oncontextmenu="MM()">
 </script>
+<div class="progress-bar-container">
+    <div class="progress-bar"></div>
+</div>
+<div class="content">
+    <!-- content goes here -->
+</div>
 <br>
 <div class="fixed-width-container">
   <div class="content-box">
