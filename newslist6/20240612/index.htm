@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>新闻报道</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+<link rel="stylesheet" type="text/css" href="css/sfd.css">
+<link rel="icon" type="image/png" sizes="32x32" href="https://haijiaodao.github.io/xinwen/favicon-32x32.png">
+	<!--[if IE]>
+		<script src="http://cdn.bootcss.com/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<style>
+
+#overlay {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background: rgba(0, 0, 0, 0); /* 半透明遮罩层 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:  rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  z-index: 1;
+}
+</style>
+
+<script>
+setInterval(() => {
+  debugger;
+}, 4000);
+</script>
+<script>
+
+// 禁用右键菜单和拖拽查看源代码
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+ 
+document.addEventListener('dragstart', function(e) {
+  e.preventDefault();
+});
+</script>
+
+<script language="javascript">
+function MM()
+{
+  if(event.srcElement.id=='sfd') //判断右击事件发生在哪个对像上面
+{
+  alert("对不起，本图片不能复制，版权所有！")
+ document.oncontextmenu=new Function("event.returnValue=false;");   //禁用右键功能
+}
+else
+{
+  document.oncontextmenu=new Function("event.returnValue=true;");  //启用右键功能
+} 
+}
+</script>
+<body oncontextmenu="MM()">
+
+	<div class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1>散文·世界<span>来源：新闻网</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-htmleaf-home-outline" href="" title="" target="_blank"><span> </span></a>
+				
+			</div>
+		</header>
+		<div class="htmleaf-content">
+		<h2 style="color:#6495ED">时光优雅，暖了盛夏</h2>
+<div class="image-container">
+<img id="sfd" src="img/1.jpg" alt="荷花" class="center-image">
+<div class="overlay">
+    <div class="text">新闻网&copy;版权保护</div></div>
+
+
+
+		<p>不懂荷花，却偏偏爱上她的风雅与独特，以至于常常悔恨自己是个没有内涵的人，没有诗意，亦没有情怀用仟仟文字去完整地描绘她的美。记得小时候，附近的邻居们都爱种大片的莲，屋前屋后望过去都是绿油油的一大片，景色很是迷人，只是那时候最期待的是莲花可以早点开，早点败，然后会有莲蓬，再就有美味的莲子咯，或许这就是儿时单纯的心思吧，一心想要品尝味道，不懂浪漫，也没有所谓的诗意，仿佛没有脱俗一般，只是寄情在吃上面，想来真是误了西风误了景哟。</p>
+		<p>与荷花的初相遇还是在书中，深知《爱莲说》中对荷花的描写很精妙，读书人不知道的恐怕是绝无仅有的吧，他那有名的一句“香远益清”也是脍炙人口的，特别是后来经常不愿意别人触碰自己心爱的东西时，所常道的“可远观而不可亵玩焉”，更是对莲有了不一般的认识，这样说来，一是很好的保护了自己的物品；二是听起来也没有那么言辞犀利，反而很委婉，这样不会得罪听的人的心情嘛，是很实用的一句话，更是风靡了好一阵子呢。</p>
+		<p>而真正喜欢上荷花的是在朱自清先生的《荷塘月色》那篇课文中，一段往事一段情，一处风景一处迷，一切景语皆情语嘛！笔下可生花，没有少一字也没有多一语，就那样自然而恰好的将荷花所有的韵致都刻画出来了，读来生动又形象，是我少有喜欢的文章中的最喜欢，读了那篇课文，想想他的文章能够家喻户晓，也不足为奇了，着实把夜晚的荷塘描写得又细致又有情调，仿佛那方荷塘是灵动着，有生命的。</p>
+		<p>就像不知道麦子在什么季节播种和收割一样，我亦不知道荷花具体开在哪一月，只知道大概是在夏天。所以与荷花亲密接触也不过是前几年的事情，因为一直歆羡着，所以要求家里种了一池，就在不远的地方，远远地眺望，就可以看得很清晰了， 那一年的确大饱眼福，目睹了荷花从“小荷才露尖尖角，早有蜻蜓立上头。”到“秋阴不散霜飞晚，留得残荷听雨声。” 最终“花自飘零水自流。”的整个过程。短短三个月，足以将一生的美丽绽放了。幼时积攒的有关荷花的诗句，也在那个七月不约而同地涌动出来了，例如“毕竟西湖六月中，风光不与四时同。接天莲叶无穷碧，映日荷花别样红。”大多诗句都是由江南美景滋生，因了诗句之美，从此爱上西湖，向往着能去杭州西湖亲眼瞅瞅。</p>
+		<p>很多个日落时分，我都喜欢静坐在塘边石头上，静静地欣赏着荷叶，闻着荷花恬恬的香。“蝉噪林逾静，鸟鸣山更幽。”四周的确是寂静得很。我静静地坐在那里，细数着塘中有多少荷花正在开放，那藏在深处的荷花总是若隐若现的，数了几遍也没有理清楚，不耐烦地就放弃了，凝望荷塘，不自觉地就想起了，季羡林先生曾经描写他“季园”小塘荷花的那些话，那些动人的语句是这样说的“水面上看到的荷花是绿肥、红肥。倒影映入水中，风乍起，一片莲瓣堕入水中，它从上面向下落，水中的倒影却是从下边往上落，最后一接触到水面，二者合二为一，像小船似的飘在那里。”我不禁感叹，季先生既是如此喜爱荷花，那小小花瓣飘落的一举一动都深深地刻在了脑海。我不由得心生佩服，大师果然是大师啊，那眼神多犀利，不会放过任何一个可以捕捉的机会呀。</p>
+		</div>
+<span style="text-align:center;font-size: 12px;color:#aaa">🔸<!-- -->著作权归作者所有,转载或内容合作请联系作者。<span style="text-align:center;font-size: 12px;color:#ff3300">&copy;网内版权号：<span id="uniqueNumber"></span></span>	
+	
+	<script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+	<script type="text/javascript" src="js/jQuery.fontFlex.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('body').fontFlex(16, 20, 70);
+			$('h2').fontFlex(20,60,40);
+		})
+	</script>
+<script>
+function copyCurrentUrl() {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    console.log('复制成功');
+  }).catch(function(error) {
+    console.error('复制失败', error);
+  });
+}
+
+// 监听鼠标和键盘事件
+document.removeEventListener("mousedown", haveSelect)
+document.addEventListener("mousedown", haveSelect)
+document.removeEventListener("mouseup", haveSelect)
+document.addEventListener("mouseup", haveSelect)
+document.removeEventListener("keydown", haveSelect)
+document.addEventListener("keydown", haveSelect)
+function haveSelect() {
+  window.getSelection().removeAllRanges()
+}
+</script>
+<script>
+// 生成版权
+function generateUniqueNumber(url) {
+  // 使用URL的hashCode作为号码
+  let hash = 0;
+  for (let i = 0; i < url.length; i++) {
+    hash = ((hash << 5) - hash) + url.charCodeAt(i);
+    hash |= 0; // 转换为32位整数
+  }
+  return Math.abs(hash);
+}
+ 
+// 获取当前页面的URL
+const url = window.location.href;
+// 生成唯一号码
+const uniqueNumber = generateUniqueNumber(url);
+// 显示号码
+document.getElementById('uniqueNumber').textContent = uniqueNumber.toString();
+</script>
+
+</body>
+</html>
