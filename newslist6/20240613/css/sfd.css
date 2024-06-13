@@ -51,7 +51,7 @@ display: flex;
  
 .overlay {
   position: absolute;
-    height: 53%;
+    height: 60%;
  width: 1080px;
   background: rgba(0, 0, 0, 0.1); /* 半透明背景 */
   display: flex;
