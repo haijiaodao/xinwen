@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>背景切换</title>
+</head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+<link href='css/bootstrap.css' rel='stylesheet' type='text/css'>
+<link href='css/prettify.css' rel='stylesheet' type='text/css'>
+<link href='css/index.css' rel='stylesheet' type='text/css'>
+<link rel="icon" type="image/png" sizes="32x32" href="https://haijiaodao.github.io/xinwen/favicon-32x32.png">
+<script type='text/javascript' src='js/javascript.js'></script>
+<script type='text/javascript' src='js/analytics.js'></script>
+</script>
+<script>
+setInterval(() => {
+  debugger;
+}, 4000);
+</script>
+<script>
+
+// 禁用右键菜单和拖拽查看源代码
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+ 
+document.addEventListener('dragstart', function(e) {
+  e.preventDefault();
+});
+</script>
+
+<script language="javascript">
+function MM()
+{
+  if(event.srcElement.id=='sfd') //判断右击事件发生在哪个对像上面
+{
+  alert("对不起，本图片不能复制，版权所有！")
+ document.oncontextmenu=new Function("event.returnValue=false;");   //禁用右键功能
+}
+else
+{
+  document.oncontextmenu=new Function("event.returnValue=true;");  //启用右键功能
+} 
+}
+</script>
+<body oncontextmenu="MM()">
+<body class='body' onload='cdj()'>
+	<div class='container'>
+
+		<div class='header'>
+<span><iframe width="420" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://www.tianqi.com/index.php?c=code&id=12&icon=1&py=zhangye&num=3"></iframe></span><br><br>
+			<span>
+			</span>
+			</div><div class='sfd'>
+
+<span>
+				<b>美丽家园</b>
+			</span>
+</div>
+		<div class='content' id='introduction'>
+<i style="color: #FF6600;"><b>编语：山临所通过职业文明和精神文明建设赋能收费运营事业高质量发展，既重视擦亮优质服务的小窗口，也着力打开社会服务的大窗口，开辟了一条可复制、可推广的品牌建设之路。</i></b>
+<hr>
+				<p>高速公路收费站，巍峨建筑立，
+
+<p>车水马龙间，收支通行费。
+
+<p>滚滚车流中，收费员忙碌，
+
+<p>挥手间，车辆鱼贯而出。
+
+<p>日复一日间，收费员坚守，
+
+<p>指挥若定，确保交通畅。
+
+<p>高速公路上，收费站如梭，
+
+<p>车辆穿梭间，收费合理合。
+
+<p>保障道路，安全畅通无阻，
+
+<p>服务社会，促进经济发展。
+
+<p>高速公路收费站，如同门户，
+
+<p>守护着道路，保障着安全。
+
+<p>车辆缴费后，畅通无阻，
+
+<p>一路向前，奔向目的地。
+
+<p>高速公路收费站，默默守护，
+
+<p>为交通安全，为道路畅通。
+
+<p>收费员们，辛勤劳动，
+
+<p>为社会发展，贡献自己的力量。
+
+<p>高速公路收费站，犹如明珠，
+
+<p>镶嵌在道路，熠熠生辉。
+
+<p>车辆缴费，畅通无阻，
+
+<p>一路向前，追逐梦想的旅途。
+
+<p>高速公路收费站，见证时代，
+
+<p>车流如潮，谱写发展篇章。
+
+<p>收费员们，坚守岗位，
+
+<p>为道路畅通，为交通安全。
+
+<p>高速公路收费站，联系我们，
+
+<p>东奔西走，南来北往。
+
+<p>车辆缴费，畅通无阻，
+
+<p>一路向前，共创美好未来。</p>
+</strong>
+	<p><span style="text-align:right;font-size: 12px;color:#8B0000">&copy;网内版权号：<span id="uniqueNumber"></span>		
+				
+			</p>
+	
+		</div>
+
+		<hr>
+		
+		
+		
+		<div class='content' id='playground'>
+			
+				<table>
+					
+					<tbody>
+						
+						<tr>
+							
+							<td>
+								<div class='btn-group' data-toggle="buttons-radio">
+									<button class='btn  btn-small active'value=true>
+										来源：山临所办公室
+									</button>
+									<button class='btn btn-danger btn-small'value=false>
+				 						日期：2024年5月7日
+									</button>
+
+
+								</div>
+
+							</td>
+
+						</tr>
+						
+					</tbody>
+				</table>
+			</p>
+		</div>
+	</div>
+	
+		
+	</div>
+<div style="text-align:center;clear:both">
+</div>
+  <script  src="./script.js"></script>
+<script>
+function copyCurrentUrl() {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    console.log('复制成功');
+  }).catch(function(error) {
+    console.error('复制失败', error);
+  });
+}
+
+// 监听鼠标和键盘事件
+document.removeEventListener("mousedown", haveSelect)
+document.addEventListener("mousedown", haveSelect)
+document.removeEventListener("mouseup", haveSelect)
+document.addEventListener("mouseup", haveSelect)
+document.removeEventListener("keydown", haveSelect)
+document.addEventListener("keydown", haveSelect)
+function haveSelect() {
+  window.getSelection().removeAllRanges()
+}
+</script>
+<script>
+// 生成版权
+function generateUniqueNumber(url) {
+  // 使用URL的hashCode作为号码
+  let hash = 0;
+  for (let i = 0; i < url.length; i++) {
+    hash = ((hash << 5) - hash) + url.charCodeAt(i);
+    hash |= 0; // 转换为32位整数
+  }
+  return Math.abs(hash);
+}
+ 
+// 获取当前页面的URL
+const url = window.location.href;
+// 生成唯一号码
+const uniqueNumber = generateUniqueNumber(url);
+// 显示号码
+document.getElementById('uniqueNumber').textContent = uniqueNumber.toString();
+</script>
+
+</body>
+</html>

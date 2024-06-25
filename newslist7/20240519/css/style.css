@@ -1,0 +1,56 @@
+body {
+
+
+  background: linear-gradient(45deg, #00082f 0%, #4ad6ff 100%);
+  height: auto;
+
+}
+
+
+
+.doodle {
+  z-index: 1;
+}
+.fixed-width-container {
+  position: relative; /* 设置相对定位 */
+}
+ 
+.content-box {
+  width: 650px; /* 设置固定宽度 */
+  margin: 0 auto; /* 水平居中 */
+  background-color: rgba(255, 255, 255, 0); /* 半透明背景，可以调整rgba的最后一个参数来改变透明度 */
+ padding: 50px;
+height: auto; /* 高度自适应 */
+
+
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.57 );
+  backdrop-filter: blur( 15px );
+  border-radius: 0px;
+}
+ 
+.content-box::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+ 
+/* 高度自适应 */
+.content-box:empty::after {
+  content: ' ';
+  display: block;
+  height: 100%;
+}
+p {
+  text-align: justify; /* 两端对齐 */
+  color: #fff; /* 颜色：红色 */
+  font-size: 18px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #000000;
+}
+h1{
+  text-align: center;
+text-shadow: 2px 2px 2px #fff;
+  color: #003366; /* 颜色：红色 */
+}

@@ -1,0 +1,427 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>图片插件</title>
+<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://haijiaodao.github.io/xinwen/favicon-32x32.png">
+<link rel="stylesheet" type="text/css" href="css1/htmleaf-demo.css">
+</head>
+<style>
+  p.left-align {
+    text-align: left;
+    padding-left: 20px; /* 左侧留出距离 */
+  }
+ 
+  p.center-align {
+    text-align: center;
+    padding-left: 20px; /* 左侧留出距离 */
+    padding-right: 20px; /* 右侧留出距离 */
+  }
+ 
+  p.justify-align {
+    text-align: justify;
+    padding-left: 630px; /* 左侧留出距离 */
+    padding-right: 630px; /* 右侧留出距离 */
+    text-justify: inter-word; /* 单词之间的两端对齐 */
+text-indent:2em
+  }
+  pre{
+    text-align: justify;
+    padding-left: 630px; /* 左侧留出距离 */
+    padding-right: 630px; /* 右侧留出距离 */
+    text-justify: inter-word; /* 单词之间的两端对齐 */
+text-indent:2em
+  }
+h1{
+
+</style>
+<script>
+setInterval(() => {
+  debugger;
+}, 4000);
+</script>
+<script>
+
+// 禁用右键菜单和拖拽查看源代码
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+ 
+document.addEventListener('dragstart', function(e) {
+  e.preventDefault();
+});
+</script>
+
+<script language="javascript">
+function MM()
+{
+  if(event.srcElement.id=='sfd') //判断右击事件发生在哪个对像上面
+{
+  alert("对不起，本图片不能复制，版权所有！")
+ document.oncontextmenu=new Function("event.returnValue=false;");   //禁用右键功能
+}
+else
+{
+  document.oncontextmenu=new Function("event.returnValue=true;");  //启用右键功能
+} 
+}
+</script><br>
+<body oncontextmenu="MM()">
+<body style="text-align:center">
+
+<br>
+<div>
+		<header class="htmleaf-header" style="color:red">
+			
+<div class="htmleaf-links" style="color:red">
+<a class="htmleaf-icon icon-htmleaf-home-outline" style="color:#fff" href="" title="首页" target="_blank"><span>首页</span></a>
+<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" style="color:#ff" href="" title="返回" target="_blank"><span> 返回</span></a>
+			</div><h3 style="color: red;"></h3>
+		</header>
+	</div>
+<br>
+<h1 style="font-size: 24px; color: #000;font-family:verdana">公文写作规范</h1><br>
+
+<p class="justify-align">
+一、公文的定义及种类
+
+1.公文定义。公文是公务文书的简称。公文是具有特定效力和规范体式的文书，是传达方针政策，公布法规和规章，指导、布置和商洽工作，请示和答复问题，报告、通报和交流情况等的重要工具。
+
+2.公文种类。为了使各种公文都能有稳定的性质、特定的用途并使更多的人都能对这些性质和用途有准确的了解，以便利于正确有效地形成和办理公文，客观上需要人们对常用的每一种公文都赋予一个能概括表明其性质、用途的统一规范的称谓，这种称谓叫文种。党政机关法定的公文有15个文种：决议、决定、命令、公报、公告、通告、意见、通知、通报、报告、请示、批复、议案、函、纪要。
+
+3.常见文种。通知、意见（如：下发的文件）；报告、请示、计划、总结、简报、方案等（报送的材料）。
+
+4.公文特点。公文的格式、种类、行文规则、办理等都是全国统一的，一般按照中共中央办公厅、国务院办公厅印发的新的国家规范《党政机关公文格式》执行。无论从事专业工作，还是从事行政事务，都要学会通过公文来传达政令政策、处理公务，以协调各种关系，使工作正确高效地进行。
+二、公文格式（适用于报送的计划、总结、简报、方案、请示、报告等）
+
+公文格式，即公文规格样式，是指公文中各个组成部分的构成方式，它和文种是公文外在形式的两个重要方面，直接关系到公文效用的发挥。包括公文组成、公文用纸和装订要求等。
+
+</p>
+
+    <div id="wrapper">
+        <div id="slider-wrapper">
+            <div id="slider" class="nivoSlider">
+                <a href="http://www.mobanwang.com/" target="_blank"><img src="images/toystory.jpg" alt="" /></a>
+                <a href="/" target="_blank"><img src="images/up.jpg" alt="" title="" /></a>
+                <a href="/" target="_blank"><img src="images/walle.jpg" alt="" /></a>
+                <a href="/" target="_blank"><img src="images/nemo.jpg" alt="" title="" /></a>
+            </div>
+            </div>
+    </div>
+<script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+	$(window).load(function() {
+		$('#slider').nivoSlider();
+	});
+</script>
+
+<p class="justify-align">（一）公文用纸及版面要求
+
+1.公文用纸。指的公文用纸的幅面尺寸，一般采用A4型纸，即297mm×210mm。
+
+2.页面。上3.7cm,下3.5cm.左2.8cm,右2.6cm。文字资料一律纵向横排，每页22行，每行28个字，段落设置为固定值28磅。
+
+3.页码。插入页码时设置为：位置：页面底端;对齐方式：外侧；格式：数字左右各有一条一字线；选择4号宋体。这样设置的页码单页码居右，双页码居左，适合双面打印和左侧装订。
+
+4.文字颜色。如无特殊说明，公文中的颜色均为黑色。
+
+5.印刷和装订。双面印刷，左侧装订，一般为平订，两钉外订眼距版面上下边缘各70CM处，与书脊间的距离为3mm-5mm。
+
+6.公文中的横排表格。表格横排时，页码位置与公文其他页码保持一致，双面打印时，单页码表头在订口一边，双页码表头在切口一边，方便翻阅。
+</p>
+
+
+<p class="justify-align">
+(二)公文格式各要素编排规则
+
+1.标题。字体为方正小标宋简体，字号为二号，顶格居中排列。标题有三要素：发文机关、事由和文种。标题较长时多行居中排布，成梯形或菱形，不能排成上下长度一样的长方形或上下长、中间短的沙漏形，回行时要词意完整，长短适宜。
+
+2.主送机关。字体为仿宋GB2312，字号为三号。编排于标题下空一行位置，居左顶格。主送机关较多回行时仍顶格，最后一个机关名称后标全角冒号。
+
+3.正文。公文首页必须显示正文。字体为仿宋GB2312，字号为3号。编排于主送机关名称下一行（不脱行），每个自然段左空2字，回行顶格。正文中的结构层次依次用“一、”“（一）”“1.”“（1）”标注；如三层结构可用“一、；（一）；1.”划分；二层结构可用“一、；（一）”或“一、；1.”划分。其中，一级结构用黑体字，二级结构用楷体字，第三层和第四层用仿宋GB2312字体。
+
+4.附件说明。如有附件，在正文下空一行左空二字编排“附件”二字，后标全角冒号和附件名称。如有多个附件，使用阿拉伯数字标注附件顺序号。附件名称后不加标点符号。附件名称较长需回行时，应当与上一行附件名称的首字对齐。
+
+5.发文机关署名、日期及印章。成文日期一般右空4字编排，用阿拉伯数字将年、月、日标全，年份标全称，月、日不编虚位（即1不能编为01）。发文机关署名在成文日期之上，以日期为准居中编排。印章端正、居中下压发文机关署名和日期，印章顶端不压正文。（特殊情况说明：当公文排版后所剩空白处不能容下发文机关署名和日期时，可以采取调整行距、字距的措施解决）
+
+6.附件。附件另面编排，“附件”二字及顺序号用三号黑体字顶格编排在左上角第一行，附件标题居中编排于“附件”下空一行位置，附件顺序号和附件标题应当与附件说明的表述一致，附件格式要求同正文。
+</p>
+
+<div class="image-container">
+<div class="sss">
+
+                <a href="" target="_blank"><img src="images/toystory.jpg" alt="" /></a>
+
+    </div></div>
+
+<p class="justify-align">
+
+三、请示和报告
+
+（一）请示和报告的异同
+
+请示和报告同属一个行文方向：上行文，虽行文方向相同，但两者之间有着严格的区别，具体表现在：
+
+1.侧重点不同：请示属于请示性公文，侧重于提出问题和请求指示、批准；报告属于陈述性公文，侧重于汇报工作，陈述意见或建议。
+
+2.行文目的不同：请示的目的是请求上级机关批准某项工作或者解决某个问题；报告的目的是让上级机关了解下情，掌握情况，便于及时指导。
+
+3.行文时间不同：请示必须事前行文；报告可以在事后或者事情发展过程中行文。
+
+4.内容要求不同：请示只能一文一事，报告可以一文一事也可以一文数事。
+
+5.报送要求不同。请示一般只写一个主送机关；报告可以报送一个或多个上级机关。
+
+6.标题不同：一般来讲请示的标题中不写报告二字，就是x x x关于x x x x x x的请示；报告的标题中不写请示二字，就是x xx关于x x x xx x的报告。
+
+7.结束用语不同。请示的结尾一般用“妥否，请批示”或“特此请示，请予批准”等形式，请示的结束用语必须明确表明需要上级机关回复的迫切要求；报告的结尾多用“特此报告”等形式，一般不写需要上级必须予以答复的词语。
+
+8.处理结果不同。请示属于“办件”，指上级机关应对请示类公文及时予以批复；报告属于“阅件”，对报告类公文上级机关一般以批转形式予以答复，但也没必要件件予以答复。
+
+（二）请示和报告案例分析 略
+</p>
+
+<div class="image-container1">
+<div class="sss">
+
+                <a href="" target="_blank"><img src="images/1.jpg" alt="" /></a>
+
+    </div></div>
+
+<p class="justify-align">
+
+四、简报规范
+
+简报由报头、正文、报尾三部分组成。
+
+1.报头。占首页三分之一的上方版面，用间隔红线与正文部分隔开，报头内容有：
+
+（1）报名：“ＸＸＸ”简报、“ＸＸＸ”简讯，一般用大字套红，醒目大方。
+
+（2）期数：报名的正下方，注明总期数，总期数用括号括入。
+
+（3）编发单位：横隔线左上方位置。
+
+（4）印发日期：横隔线右上方位置。
+
+2.正文。是简报的文章部分，编排原则是：每篇文章疏密间隔要恰当，标题字大小一样。
+
+3.报尾。注明发文单位和印刷份数。
+</p>
+
+<div class="image-container2">
+<div class="sss">
+
+                <a href="" target="_blank"><img src="images/1.jpg" alt="" /></a>
+
+    </div></div>
+
+<p class="justify-align">
+
+五、标点符号
+
+标点符号是公文的有机组成部分，也是公文起草者最容易忽视的部分。笔者在公文审核过程中，经常碰到文笔流畅但标点符号屡犯错误的情况，归纳起来，常见的标点符号使用错误有以下十二个：
+
+常见错误一：多个书名号或引号并列时使用顿号分隔
+
+例1：各中小学要积极贯彻落实《中华人民共和国预防未成年人犯罪法》、《中华人民共和国未成年人保护法》、《中华人民共和国义务教育法》及相关要求。（错误）
+
+各中小学要积极贯彻落实《中华人民共和国预防未成年人犯罪法》《中华人民共和国未成年人保护法》《中华人民共和国义务教育法》及相关要求。（正确）
+
+例2：公安部门要加强校园“警务室”、“护学岗”、“安全网”建设，落实护校制度。（错误）
+
+公安部门要加强校园“警务室”“护学岗”“安全网”建设，落实护校制度。（正确）
+
+解析：标有引号的并列成分之间、标有书名号的并列成分之间通常不用顿号。若有其他成分插在并列的引号之间或并列的书名号之间，宜用顿号。
+
+常见错误二：在标示数值和起止年限时使用连接号不规范
+
+例3：制定并实施学校安防达标建设三年行动计划（2015-2018年）。（错误）
+
+制定并实施学校安防达标建设三年行动计划（2015—2018年）。（正确）
+
+例4：要加快工程进度，确保科技园3-5年内建成。（错误）
+
+要加快工程进度，确保科技园3～5年内建成。（正确）
+
+解析：标示时间、地域的起止一般用一字线（占一个字符位置），标示数值范围起止一般用浪纹线。
+</p>
+
+<div class="image-container2">
+<div class="sss">
+
+                <a href="" target="_blank"><img src="images/1.jpg" alt="" /></a>
+
+    </div></div>
+
+<p class="justify-align">
+常见错误三：在并列分句中使用逗号统领
+
+例5：各职能部门在查处取缔无证无照经营工作中要各司其职、互相配合，工商部门负责查处取缔未取得有效许可证擅自从事经营活动的行为；工信部门负责依法监督管理无线电和电子电器产品维修行业；公安部门负责依法监督管理旅馆业、公章刻制业。（错误）
+
+各职能部门在查处取缔无证无照经营工作中要各司其职、互相配合；工商部门负责查处取缔未取得有效许可证擅自从事经营活动的行为；工信部门负责依法监督管理无线电和电子电器产品维修行业；公安部门负责依法监督管理旅馆业、公章刻制业。（正确）
+
+解析：用分号隔开的几个并列分句不能由逗号统领或总结。
+
+常见错误四：在并列分句中使用句号后再使用分号
+
+例6：一是养老保险安置。对进入企业工作的失地农民要同企业员工一样纳入企业职工基本养老保险；二是医疗保险安置。城镇居民医疗保险制度已建立，可参加城镇居民医疗保险。（错误）
+
+一是养老保险安置。对进入企业工作的失地农民要同企业员工一样纳入企业职工基本养老保险。
+
+二是医疗保险安置。城镇居民医疗保险制度已建立，可参加城镇居民医疗保险。（正确）
+
+解析：分项列举的各项或多项已包含句号时，各项的末尾不能再用分号。
+
+常见错误五：同一形式的括号套用
+
+例7：围绕政府半年工作开展回头看，认真总结上半年工作，科学谋划下半年工作。（责任单位：各镇（街道））（错误）
+
+围绕政府半年工作开展回头看，认真总结上半年工作，科学谋划下半年工作。[责任单位：各镇（街道）]（正确）
+
+解析：同一形式的括号应尽量避免套用，必须套用括号时，应采用不同的括号形式配合使用。
+</p>
+
+<div class="image-container2">
+<div class="sss">
+
+                <a href="" target="_blank"><img src="images/1.jpg" alt="" /></a>
+
+    </div></div>
+
+<p class="justify-align">
+常见错误六：阿拉伯数字表示次序时使用点号不当
+
+例8:1、督促主办单位按时办结。（错误）
+
+1．督促主办单位按时办结。（正确）
+
+例9：（1）、督促协办单位按时办结。（错误）
+
+（1）督促协办单位按时办结。（正确）
+
+解析：带括号的汉字数字或阿拉伯数字表示次序语时不加点号，不带括号的阿拉伯数字、拉丁字母做次序语，后面用下角点（圆心点）。
+
+常见错误七：在图、表说明文字末尾使用句号
+
+例10：（图表略）
+
+注：以上各项数据统计截至时间为2017年12月31日；城市人口指常住户籍人口；规模工业企业个数统计为新口径。（错误）
+
+注：以上各项数据统计截至时间为2017年12月31日；城市人口指常住户籍人口；规模工业企业个数统计为新口径（正确）
+
+解析：图或表的短语式说明文字，中间可用逗号，但末尾不用句号。即使有时说明文字较长，前面的语段已出现句号，最后结尾处仍不用句号。
+
+常见错误八：在标示发文年号时使用括号不规范
+
+例11：根据×发[2018]X号文件精神，……（错误）
+
+根据×发〔2018〕X号文件精神，……（正确）
+
+解析：标示公文发文字号中的发文年份时，应使用六角括号。
+
+常见错误九：书名号内用顿号表示停顿
+
+例12：根据《××省物价局、××省财政厅关于××市建制镇城市基础设施配套费征收标准的批复》（××规〔2018〕X号）文件要求，特制定本管理办法。（错误）
+
+根据《××省物价局　××省财政厅关于××市建制镇城市基础设施配套费征收标准的批复》（××规〔2018〕X号）文件要求，特制定本管理办法。（正确）
+
+解析：书名号内标示停顿时用空格。
+</p>
+
+<div class="image-container2">
+<div class="sss">
+
+                <a href="" target="_blank"><img src="images/1.jpg" alt="" /></a>
+
+    </div></div>
+
+<p class="justify-align">
+常见错误十：句内括号行文末尾使用标点符号不当
+
+例13：为加强对全区查处取缔无证无照经营综合治理工作的领导，决定成立××区查处取缔无证无照经营综合治理工作领导小组（领导小组组长由常务副区长兼任，副组长由××局局长兼任。），负责该项工作的协调处理。（错误）
+
+为加强对全区查处取缔无证无照经营综合治理工作的领导，决定成立××区查处取缔无证无照经营综合治理工作领导小组（领导小组组长由常务副区长兼任，副组长由××局局长兼任），负责该项工作的协调处理。（正确）
+
+解析：括号内行文末尾需要时可用问号、叹号和省略号。除此之外，句内括号行文末尾通常不用标点符号。
+
+常见错误十一：附件名称后使用标点符号
+
+例14：
+
+附件：1.××区查处取缔无证无照工作领导小组成员名单；（错误）
+
+附件：1.××区查处取缔无证无照工作领导小组成员名单（正确）
+
+解析：附件名称后不用任何标点符号。
+
+常见错误十二：二级标题在换行分段情况下使用句号
+
+例15：（一）整合监管职能和机构。
+
+为减少监管环节，保证上下协调联动……（错误）
+
+（一）整合监管职能和机构
+
+为减少监管环节，保证上下协调联动……（正确）
+
+（一）整合监管职能和机构。为减少监管环节，保证上下协调联动……（正确）
+
+解析：二级标题在换行分段时不使用句号，如使用句号则不需要换行分段。</p>
+<br>
+<p>
+    <span style="text-align:right;font-size: 13px;color:#9D9D9D">  来源：山临所辖区收费站🔸时间：2024年4月27日🔸著作权归作者所有,转载或内容合作请联系作者。<br><span style="text-align:right;font-size: 12px;color:#8B0000">&copy;网内版权号：<span id="uniqueNumber"></span>
+  </p> 
+
+<p></p>
+
+<p></p>
+<!-- partial -->
+  <script  src="./script.js"></script>
+<script>
+function copyCurrentUrl() {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    console.log('复制成功');
+  }).catch(function(error) {
+    console.error('复制失败', error);
+  });
+}
+
+// 监听鼠标和键盘事件
+document.removeEventListener("mousedown", haveSelect)
+document.addEventListener("mousedown", haveSelect)
+document.removeEventListener("mouseup", haveSelect)
+document.addEventListener("mouseup", haveSelect)
+document.removeEventListener("keydown", haveSelect)
+document.addEventListener("keydown", haveSelect)
+function haveSelect() {
+  window.getSelection().removeAllRanges()
+}
+</script>
+<script>
+// 生成版权
+function generateUniqueNumber(url) {
+  // 使用URL的hashCode作为号码
+  let hash = 0;
+  for (let i = 0; i < url.length; i++) {
+    hash = ((hash << 5) - hash) + url.charCodeAt(i);
+    hash |= 0; // 转换为32位整数
+  }
+  return Math.abs(hash);
+}
+ 
+// 获取当前页面的URL
+const url = window.location.href;
+// 生成唯一号码
+const uniqueNumber = generateUniqueNumber(url);
+// 显示号码
+document.getElementById('uniqueNumber').textContent = uniqueNumber.toString();
+</script>
+</br>
+</body>
+</html>

@@ -1,0 +1,44 @@
+body {
+  margin:0;
+}
+
+canvas {
+  height: 100vh !important;
+  position: fixed;
+  width: 100vw !important;
+}
+.fixed-width-container {
+  position: relative; /* 设置相对定位 */
+}
+ 
+.content-box {
+  width: 650px; /* 设置固定宽度 */
+  margin: 0 auto; /* 水平居中 */
+  background-color: rgba(255, 255, 255, 0.7); /* 半透明背景，可以调整rgba的最后一个参数来改变透明度 */
+ padding: 50px;
+height: auto; /* 高度自适应 */
+}
+ 
+.content-box::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+ 
+/* 高度自适应 */
+.content-box:empty::after {
+  content: ' ';
+  display: block;
+  height: 100%;
+}
+p {
+  text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 18px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+}
+h1{
+  text-align: center;
+  color: #FF4500; /* 颜色：红色 */
+}
