@@ -5,7 +5,7 @@
 		<title>新闻报道</title>
 		<link type="text/css" href="style/demo.css" rel="stylesheet" media="all" />
 		<link rel="icon" type="image/png" sizes="32x32" href="https://haijiaodao.github.io/xinwen/favicon-32x32.png">
-
+<link rel="stylesheet" type="text/css" href="css1/htmleaf-demo.css">
 	</head>
 <style>
 hr {
@@ -80,6 +80,82 @@ hr {
   font-size: 12px; /* 设置文字大小为16像素 */
 color: #000;
 }
+.logo::before {
+content: url('logo.png');
+width: 100px; /* 设置图片宽度为100像素 */
+    height: 100px; /* 设置图片高度为100像素 */
+  display: block;
+ position: relative;
+  left: 540px;
+  top: 20px;
+
+}
+
+.container {
+    width: 24%; /* 宽度自适应 */
+
+    padding: 10px;
+  }
+
+.handwriting-text {
+
+  color: #CCCCCC; /* 文字颜色 */
+  font-size: 12px; /* 字体大小 */
+  letter-spacing: 2px; /* 字母间距 */
+text-shadow: 2px 2px 2px #000000; /* 水平偏移 垂直偏移 模糊半径 颜色 */
+
+}
+h3{
+
+}
+.sfd{
+            display: flex; /* 使用flex布局 */
+            justify-content: center; /* 水平居中对齐 */
+margin-top: 0.6rem; /* 上间距 */
+    margin-bottom: 0.6rem; /* 下间距 */
+        }
+        
+
+.subheading {
+  display: block;
+  color: #232323;
+  font: 700 1.06rem sans-serif;
+}
+@media (max-width: 769px) {
+body{
+    width: 100%;           /* 宽度 */
+    height: 100%;          /* 高度 */
+    margin: 20px auto;      /* 上下间距20px，左右自动 */
+    padding: 0px;          /* 内边距 */
+    border: 0px solid #dddddd;/* 边框 */
+    position: relative;     /* 相对定位 */
+    top: 0px;             /* 相对于最近定位祖先元素向下偏移100px */
+ text-shadow: 0px 0px 1px #BEBEBE;
+ }
+
+}
+@media screen and (max-width: 1280px) {
+  image1.hide-at-small-resolution {
+    display: none;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-content, #print-content * {
+    visibility: visible;
+  }
+  #print-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+
+
 </style>
 <script>
 setInterval(() => {
@@ -123,7 +199,12 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-	<body><br>
+	<body>
+<div class="logo">
+
+</div>
+<br>
+<br>
 		<div id="top-nav"><br>
 			<h1>省公航旅高速公路运营管理分公司武威处山临收费所：高温坚守迎<span style="color: red;"> “烤”</span>验，积极开展<span style="color:#FF4500;">“情暖征途”</span><span style="color:#1E90FF;">“夏送清凉”</span>活动</h1>	
 
@@ -152,11 +233,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>
 				司乘服务无小事，一枝一叶总关情。这些高速人在做好本职工作和保障道安全路畅通的同时，再一次用“贴心服务”定格了又一个难忘的瞬间。
 			</p>
-			<h2 id="examples">信念、身影、步伐</h2>
+			<h2 id="examples" style="text-align: center;">践行“人民满意高速”愿景</h2>
 			
 			<ul class="no-bullets">
 				<li>
-					<a href="">⤵️地点：</a>东乐收费站收费广场				</li>
+					<a href="">⤵️地点：</a>东乐收费站收费车道			</li>
 <hr>  
 <img id="image1" class="shadow-img" src="img/1.jpg" alt="Image">
 <hr>
@@ -169,7 +250,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <img id="image2" class="shadow-img" src="img/2.jpg" alt="Image"><hr>  
 
 				<li>
-					<a href="">⤵️地点：</a>东乐收费站收费广场				
+					<a href="">⤵️地点：</a>东乐收费站收费车道				
 				</li>
 
 <img id="image3" src="img/3.jpg" alt="Image" onclick="zoomImage()"  class="shadow-img">
@@ -240,6 +321,15 @@ document.getElementById('uniqueNumber').textContent = uniqueNumber.toString();
 
 			
 		</div>
+<div>
+<header class="htmleaf-header" style="color:#000">
+	
+<div class="htmleaf-links" style="color:#fff">
+<a class="htmleaf-icon icon-htmleaf-home-outline" style="color:#fff" href="" title="首页" target="_blank"><span>首页</span></a>
+<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" style="color:#fff" href="" title="返回" target="_blank"><span> 返回</span></a>
+			</div>
+		</header>
+	</div>
 
 
 	</body>
