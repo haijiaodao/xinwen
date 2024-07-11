@@ -1,0 +1,324 @@
+
+@import url(ionicons.min.css);
+@import url("css.css");
+@import url("css1.css");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background: -webkit-linear-gradient(to left, #497293, #131e27);
+  background: linear-gradient(to left, #497293, #131e27);
+  background-attachment: fixed;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#background img {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 0.2;
+  -webkit-filter: grayscale(100%) blur(5px);
+  -moz-filter: grayscale(100%) blur(5px);
+  -ms-filter: grayscale(100%) blur(5px);
+  -o-filter: grayscale(100%) blur(5px);
+  filter: grayscale(100%) blur(5px);
+}
+
+#underCard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  z-index: 1;
+  height: 250px;
+  width: 400px;
+  background: transparent;
+  border-radius: 8px !important;
+  box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.6);
+}
+
+.mainCard {
+  font-family: "Oswald", sans-serif;
+  border-radius: 8px !important;
+  font-family: 微軟正黑體;
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+  width: 400px;
+  -webkit-mask-image: radial-gradient(circle, #ffffff 100%, #000000 100%);
+}
+.mainCard:hover .rightBack {
+  left: -9%;
+}
+.mainCard:hover .leftS ul {
+  opacity: 1;
+}
+.mainCard:hover #photo {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+  transform: translate(-10%, -50%);
+  -ms-transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+  top: -5%;
+  left: -18%;
+}
+.mainCard:hover .rightS {
+  left: 50%;
+}
+.mainCard:hover .rightS .rightCon {
+  left: -3%;
+  text-shadow: 1px 1px 6px #19242E;
+}
+.mainCard:hover .rightS #wrap .cube {
+  transform: rotateX(30deg) rotateY(-320deg) rotateZ(10deg);
+  -webkit-transition-duration: 2s;
+  transition-duration: 2s;
+}
+.mainCard .leftS {
+  position: absolute;
+  left: 8%;
+  height: 250px;
+  width: 100px;
+}
+.mainCard .leftS ul {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  opacity: 0;
+  color: #19242E;
+  font-size: 40px;
+  line-Height: 70px;
+  list-style: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.mainCard .leftS ul li {
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.mainCard .leftS ul li:hover {
+  color: #e74c3c;
+  cursor: pointer;
+}
+.mainCard #photo {
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  z-index: -5;
+  position: absolute;
+  top: 53%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+}
+.mainCard .rightS {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  color: #ECF0F1;
+  position: absolute;
+  left: 45%;
+  width: 400px;
+  height: 250px;
+}
+.mainCard .rightS .rightCon {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  position: absolute;
+  left: 0px;
+  padding: 40px 0;
+  width: 200px;
+  height: 250px;
+  font-family: 微軟正黑體;
+}
+.mainCard .rightS .rightCon h1 {
+  float: right;
+  margin-right: 10px;
+  font-size: 25px;
+  font-weight: 300;
+  letter-spacing: -0.6px;
+  margin-bottom: 80px;
+  text-shadow: 1px 1px 5px #19242E;
+}
+.mainCard .rightS .rightCon h2 {
+  float: right;
+  margin-right: 10px;
+  letter-spacing: 0px;
+  font-weight: 300;
+  font-size: 13px;
+}
+.mainCard .rightS .rightCon hr {
+  margin-right: 10px;
+  width: 20px;
+  border: 0;
+  border-bottom: 3px solid rgba(236, 240, 241, 0.8);
+  position: absolute;
+  left: 42px;
+  top: 98px;
+}
+.mainCard .rightS .rightCon h3 {
+  float: right;
+  margin-right: 45px;
+  font-weight: 300;
+  font-size: 15px;
+  margin-top: 10px;
+}
+.mainCard .rightS .rightCon h6 {
+  font-family: "Roboto", sans-serif;
+  float: left;
+  margin-top: 3px;
+  font-weight: 300;
+  font-size: 10px;
+  white-space: nowrap;
+}
+.mainCard .rightS:before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: -15px;
+  -ms-transform: skew(-15deg);
+  -webkit-transform: skew(-15deg);
+  transform: skew(-15deg);
+  box-shadow: -1px 5px 10px black;
+  background: #19242E;
+  background: linear-gradient(to left, #446a88, #19242e);
+}
+.mainCard .rightBack {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -ms-transform: skew(15deg);
+  -webkit-transform: skew(15deg);
+  transform: skew(15deg);
+  position: absolute;
+  width: 420px;
+  height: 250px;
+  opacity: 0.6;
+  background: #ECF0F1;
+  box-shadow: -1px 0px 10px black;
+  left: 40%;
+  z-index: -3;
+}
+
+a {
+  color: #19242E;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #19242E;
+}
+
+#decor {
+  -ms-transform: skew(-15deg);
+  -webkit-transform: skew(-15deg);
+  transform: skew(-15deg);
+  z-index: -1;
+  box-shadow: -40px -20px 50px #19242E;
+  height: 1000px;
+  width: 600px;
+  max-width: 600px;
+  background: #ecf0f1;
+}
+
+#wrap {
+  position: absolute;
+  z-index: -1;
+  top: 55%;
+  left: 30%;
+  perspective: 800px;
+  perspective-origin: 50% 50%;
+}
+#wrap .cube {
+  transform: rotateX(30deg) rotateY(40deg) rotateZ(90deg);
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+}
+#wrap .cube div {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+#wrap .cube .back {
+  background: #263545;
+  transform: translateZ(-50px) rotateY(180deg);
+}
+#wrap .cube .right {
+  background: #3A5169;
+  transform: rotateY(-270deg) translateX(50px);
+  transform-origin: top right;
+}
+#wrap .cube .left {
+  background: #3A5169;
+  transform: rotateY(270deg) translateX(-50px);
+  transform-origin: center left;
+}
+#wrap .cube .top {
+  background: #2D3F52;
+  transform-origin: top center;
+  transform: rotateX(90deg) translateY(-50px);
+}
+#wrap .cube .bottom {
+  background: #2D3F52;
+  transform-origin: bottom;
+  transform: rotateX(-90deg) translateY(50px);
+}
+#wrap .cube .front {
+  background: #263545;
+  transform: translateZ(50px);
+}
+
+#wrap2 {
+  position: absolute;
+  z-index: -1;
+  top: 27%;
+  left: 5%;
+  perspective: 800px;
+  perspective-origin: 50% 50%;
+}
+
+.cube2 {
+  transform: rotateX(110deg) rotateY(40deg) rotateZ(10deg);
+  position: relative;
+  width: 60px;
+  height: 60px;
+  transform-style: preserve-3d;
+}
+.cube2 div {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+.cube2 .back {
+  background: rgba(38, 53, 69, 0.3);
+  transform: translateZ(-30px) rotateY(180deg);
+}
+.cube2 .right {
+  background: rgba(58, 81, 105, 0.3);
+  transform: rotateY(-270deg) translateX(30px);
+  transform-origin: top right;
+}
+.cube2 .bottom {
+  background: rgba(45, 63, 82, 0.3);
+  transform-origin: bottom;
+  transform: rotateX(-90deg) translateY(30px);
+}

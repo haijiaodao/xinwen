@@ -1,0 +1,83 @@
+.centered-div {
+  width: 40rem; /* 设置宽度为父元素的50% */
+  margin-left: auto; /* 左边距设置为自动，实现水平居中 */
+  margin-right: auto; /* 右边距设置为自动，实现水平居中 */
+  height: auto; /* 高度自适应内容 */
+}
+p {
+  text-align: justify; /* 两端对齐 */
+  letter-spacing: 2px; /* 字间距 */
+  line-height: 1.5; /* 行间距 */
+text-indent:2em;
+font-size:14px;
+}
+.center-image {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; /* 指定宽度为视口宽度的50% */
+    height: auto; /* 高度自动调整以保持图像比例 */
+padding: 5px; /* 文字与图片间距 */
+  }
+    .plastic {
+      font-size: 1rem;
+      background-color: #ecf31ec0;
+      color: #d44bdb;
+      box-shadow: inset 0 calc(var(--diff-from-zero-level) * -10px) 2px 2px rgba(0, 17, 255, 0.2)
+    }
+
+    .plastic::before,
+    .plastic::after {
+      background-color: #33d8e7;
+      color: #dedede;
+      filter: none
+    }
+
+.image-container {
+display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+ 
+.image-container img {
+  display: block; /* 避免底部空白 */
+  width: 98%; /* 或指定宽度 */
+}
+ 
+.overlay {
+  position: absolute;
+    height: 60%;
+ width: 1080px;
+  background: rgba(0, 0, 0, 0.1); /* 半透明背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+ 
+.text {
+  padding: 5px;
+  text-align: center;
+ color: #fff; /* 红色文本 */
+  font-size: 20px; /* 文本大小为24像素 */
+  text-shadow: 2px 2px 2px #000000; /* x偏移量  y偏移量 模糊半径 颜色 */
+/* 设置文本透明度 */
+  opacity: 0.3;
+ 
+  /* 设置文本位置 */
+  position: relative;
+  top: 150px; /* 向下移动200像素 */
+  left: 0px; /* 向右移动20像素 */
+}
+.handwriting-text {
+
+  color: #8B0000; /* 文字颜色 */
+  font-size: 12px; /* 字体大小 */
+  letter-spacing: 2px; /* 字母间距 */
+
+}

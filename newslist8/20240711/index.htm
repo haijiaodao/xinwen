@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CI展示</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="icon" type="image/png" sizes="32x32" href="https://haijiaodao.github.io/xinwen/favicon-32x32.png">
+	<!--[if IE]>
+		<script src="http://cdn.bootcss.com/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<style>
+.image-gallery {
+ display: flex;
+    justify-content: center;
+    align-items: center;
+  flex-wrap: wrap; /* 允许换行 */
+  gap: 10px; /* 图片之间的间隔 */
+    height: 203px;
+    margin-top:260px;
+}
+.image-gallery img{
+  max-width: 100%; /* 图片宽度不超过其容器宽度 */
+  height: auto; /* 保持图片原有比例 */
+}
+ .image-gallery1 {
+ display: flex;
+    justify-content: center;
+    align-items: center;
+  flex-wrap: wrap; /* 允许换行 */
+  gap: 10px; /* 图片之间的间隔 */
+
+    height: 90px;
+    margin-top:100px;
+
+
+}
+.image-gallery img{
+  max-width: 95%; /* 图片宽度不超过其容器宽度 */
+  height: auto; /* 保持图片原有比例 */
+border-radius: 0px; /* 圆角大小 */
+  box-shadow: 1px 2px 2px #000; /* 阴影的大小、模糊度、颜色 */
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700,800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  min-height: 100vh;
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+}
+.scroll {
+ position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  width: 1000px;
+  mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+}
+.scroll > div span {
+  display: inline-block;
+  margin: 10px;
+  padding: 5px 10px;
+  background-color: #333;
+  border-radius: 5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+.scroll > div span:hover {
+  background-color: #4caf50;
+}
+.img-box {
+  display: flex;
+  column-gap: 10px;
+}
+.img-box > div,
+.img-box > div .bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.img-box .bg {
+  width: 350px;
+  height: 200px;
+  background-color: #ff3e3e;
+  filter: hue-rotate(calc(var(--r) * 1deg));
+  cursor: pointer;
+  transition: filter 0.5s;
+}
+.scroll > div {
+  white-space: nowrap;
+  animation: animate var(--t) linear infinite;
+  animation-delay: calc(var(--t) * -1);
+}
+@keyframes animate {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.scroll > div:nth-child(2) {
+  animation: animate2 var(--t) linear infinite;
+  animation-delay: calc(var(--t) / -2);
+}
+@keyframes animate2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+.scroll:hover > div {
+  animation-play-state: paused;
+}
+@media screen and (max-width: 768px) {
+  .scroll {
+    width: 95vw;
+  }
+  .scroll > div span {
+    background-color: #4caf50;
+  }
+  .img-box .bg {
+    width: 15vw;
+    height: 15vw;
+  }
+}
+</style>
+<!--[if lte IE 7]>      
+	<body scroll="no"> 
+	<![endif]-->
+	<!--[if gt IE 7]><!--> 
+<script>
+setInterval(() => {
+  debugger;
+}, 4000);
+</script>
+<script>
+
+// 禁用右键菜单和拖拽查看源代码
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+ 
+document.addEventListener('dragstart', function(e) {
+  e.preventDefault();
+});
+</script>
+<script language="javascript">
+function MM()
+{
+  if(event.srcElement.id=='sfd') //判断右击事件发生在哪个对像上面
+{
+  alert("对不起，本图片不能复制，版权所有！")
+ document.oncontextmenu=new Function("event.returnValue=false;");   //禁用右键功能
+}
+else
+{
+  document.oncontextmenu=new Function("event.returnValue=true;");  //启用右键功能
+} 
+}
+</script>
+
+<body>
+<!--<![endif]-->
+	<div class="nav">
+		<h1>
+			<a href="#">
+				<img src="images/logo.png" class="logo" alt=""><p>fullPage</p>
+			</a>
+		</h1>
+	    <ul>
+
+	    </ul>
+	</div>
+	<div id="article">
+		
+		<div class="page section1 current">
+			<div class="contain">
+				<div id="pageContain">
+		
+				<div class="page page1 current">
+					<div class="contain">
+						<header class="htmleaf-header">
+							<h1>山临所党支部品牌创建展示<span>2024年度</span></h1>
+							<div class="htmleaf-links">
+								<a class="htmleaf-icon icon-htmleaf-home-outline" href="" title="" target="_blank"><span> </span></a>
+								
+							</div>
+						</header>
+						<img src="images/a2.png" alt="HTML,CSS" class="page1-box">
+						<p>🚩聚心擎帜</p>
+					</div>
+				</div>
+<div class="page page2">
+			<div class="contain">
+				<h3 class="title1">便民服务</h3>
+
+<div class="image-gallery1">
+<img src="images/a10.png">
+<img src="images/a11.png">
+<img src="images/a12.png">
+<img src="images/a13.png">	
+<img src="images/a14.png">
+<img src="images/a16.png">			
+			</div>
+		</div>
+</div>
+				
+
+				<div class="page page3">
+					<div class="contain">
+
+						<h3 class="title">精彩瞬间</h3>
+						<h4 class="titleEng">基层掠影</h4>
+<div class="image-gallery">
+						<img src="images/1.png">
+<img src="images/2.png">
+
+					</div></div>
+					<div class="scTop"></div>
+					<div class="scBottom"></div>
+				</div>
+
+				<div class="page page4">
+					<div class="contain">
+						<h3 class="title">AI地图</h3>
+						<h4 class="titleEng">畅享丝路🌈行游一体</h4>
+						<div class="page4-box">
+							<img src="images/112.png" alt="微信">
+						</div>
+					</div>
+				</div>
+			</div>
+			<ul id="navBar">
+				<li></li>
+				<li></li>
+				<li></li>
+ 				<li></li>
+			</ul>
+
+    			<div id="prev">◀</div>
+    			<div id="next">▶</div>
+			</div>
+		</div>
+
+		<div class="page section2">
+			<div class="contain">
+				<h3 class="title">党纪学习教育</h3>
+				<h4 class="titleEng">2024</h4>
+<img src="images/a111.png" alt="" class="page6-box">
+			</div>
+		</div>
+
+		<div class="page section3">
+			<div class="contain">
+				<h3 class="title">团群建设</h3>
+				<h4 class="titleEng">掠影</h4>
+<div class="image-gallery">
+						<img src="images/111.jpg">
+<img src="images/112.jpg">
+<img src="images/113.jpg">
+<img src="images/114.jpg">
+<img src="images/115.jpg">
+<img src="images/116.jpg">
+<img src="images/117.jpg">
+<img src="images/119.jpg">
+<img src="images/121.jpg">
+<img src="images/122.jpg">
+<img src="images/123.jpg">
+<img src="images/125.jpg">
+					</div>
+			</div>
+		</div>
+
+		<div class="page page2">
+					<div class="contain">
+						<h3 class="title">山临所职工拓展基地</h3>
+						<h4 class="titleEng">掠影</h4>
+
+  <div class="scroll img-box" style="--t: 25s">
+    <div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd1.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd2.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd3.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd4.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd5.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd6.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd7.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd8.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd9.jpg"></div>
+    </div>
+    <div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd10.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd11.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd12.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd13.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd14.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd15.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd16.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd17.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd18.jpg"></div>
+    </div>
+ <div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd19.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd20.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd21.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd22.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd23.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd24.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd25.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd26.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd27.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd28.jpg"></div>
+ <div class="bg" style="--r: 0;"><img src="images/sfd29.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd30.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd31.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd32.jpg"></div>
+      <div class="bg" style="--r: 0;"><img src="images/sfd33.jpg"></div>
+    </div>
+  </div>
+
+					</div>
+				</div>
+	</div>
+	
+	<script type="text/javascript" src="js/fullPage.min.js"></script>
+	<script type="text/javascript">
+		
+	var runPage,
+		runPage2,
+	    interval,
+	    autoPlay;
+
+	autoPlay = function(to) {
+
+	    clearTimeout(interval);
+	    interval = setTimeout(function() {
+	        runPage.go(to);
+	    }, 5000);
+
+	}
+
+	runPage = new FullPage({
+
+		id : 'pageContain',                            // id of contain
+		slideTime : 1000,                               // time of slide
+	    effect : {                                     // slide effect
+	        transform : {
+	        	translate : 'X',					   // 'X'|'Y'|'XY'|'none'
+	        	scale : [0, 1],					   // [scalefrom, scaleto]
+	        	rotate : [60, 0]					   // [rotatefrom, rotateto]
+	        },
+	        opacity : [0, 1]                           // [opacityfrom, opacityto]
+	    },                           
+		mode : 'touch,nav:navBar',               // mode of fullpage
+		easing : [0, .93, .39, .98],                                // easing('ease','ease-in','ease-in-out' or use cubic-bezier like [.33, 1.81, 1, 1] )
+	    callback : function(index, thisPage) {     // callback when pageChange
+
+	        index = index + 1 > 3 ? 0 : index + 1;
+	        autoPlay(index);
+	    }
+	});
+
+	runSection = new FullPage({
+
+		id : 'article',                            // id of contain
+		slideTime : 800,                               // time of slide
+	    effect : {                                     // slide effect
+	        transform : {
+	        	translate : 'Y',					   // 'X'|'Y'|'XY'|'none'
+	        	scale : [0, 1],					   // [scalefrom, scaleto]
+	        	rotate : [0, 0]					   // [rotatefrom, rotateto]
+	        },
+	        opacity : [0, 1]                           // [opacityfrom, opacityto]
+	    },                           
+		mode : 'touch,wheel',               // mode of fullpage
+		easing : [0, .93, .39, .98],
+		callback : function(index, thisPage) {     // callback when pageChange
+
+	        if (index === 0) {
+	        	autoPlay(runPage.thisPage() + 1);
+	        } else {
+	        	clearTimeout(interval);
+	        }
+	    }
+	});
+
+	interval = setTimeout(function() {
+	    runPage.go(runPage.thisPage() + 1);
+	}, 5000);
+
+	</script>
+
+	<script type="text/javascript">
+	    
+	    var prev = document.getElementById('prev'),
+	        next = document.getElementById('next');
+	    
+	    prev.onclick = function() {
+	        runPage.go(runPage.thisPage() - 1);
+	    }
+	    next.onclick = function() {
+	        runPage.go(runPage.thisPage() + 1);
+	    }
+
+	</script>
+
+
+		<!--[if lte IE 6]>
+		<script type="text/javascript" src="http://mat1.gtimg.com/cd/201108/app/DD_belatedPNG_0.0.8a.js" charset="utf-8"></script>
+		<script type="text/javascript">
+		DD_belatedPNG.fix("*");
+		</script>
+		<![endif]--> 
+<script type="text/javascript">	
+$(function() {
+	$( '#vc-container' ).cassette();	
+});
+</script>
+<script>
+		$(document).ready(function() {
+			$('.leftSidebar, .content, .rightSidebar')
+				.theiaStickySidebar({
+					additionalMarginTop: 30
+				});
+		});
+	</script>
+<script>
+function copyCurrentUrl() {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    console.log('复制成功');
+  }).catch(function(error) {
+    console.error('复制失败', error);
+  });
+}
+
+// 监听鼠标和键盘事件
+document.removeEventListener("mousedown", haveSelect)
+document.addEventListener("mousedown", haveSelect)
+document.removeEventListener("mouseup", haveSelect)
+document.addEventListener("mouseup", haveSelect)
+document.removeEventListener("keydown", haveSelect)
+document.addEventListener("keydown", haveSelect)
+function haveSelect() {
+  window.getSelection().removeAllRanges()
+}
+</script>
+
+</body>
+</html>
