@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css1/htmleaf-demo.css">
+<title>摄影展出专辑</title>
+<style>
+  /* 使用flexbox居中 */
+  .centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 168px;
+  }
+ 
+  /* 居中H1 */
+  .centered-container h1 {
+    text-align: center;
+font-size: 28px;
+ display: block;
+  margin: 0;
+  font-family: 'maozedong', 'Arial', sans-serif;
+  color: #ff0000;
+  font-size: 2em;
+padding: 5px 20px 0px 20px;
+}
+@font-face {
+  font-family: 'maozedong';
+  src: url('maozedong.ttf') format('woff');
+}
+.shadow-img {
+
+  box-shadow: 2px 2px 8px #000; /* 阴影效果 */
+  border-radius: 0px; /* 圆角 */
+  object-fit: cover; /* 图片填充方式 */
+display: block;
+    margin: 0 auto;
+    width: 60%; /* 指定宽度为父元素宽度的50% */
+    height: auto;
+transition: transform 0.3s ease;
+    cursor: pointer;
+}
+hr {
+  margin-top: 10px; /* 上边距 */
+  margin-bottom: 0px; /* 下边距 */
+}
+ 
+  .enlarged-image {
+    transform: scale(1.5);
+  }
+.my-button {
+  font-size: 12px; /* 设置文字大小为16像素 */
+color: #000;
+}
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-content, #print-content * {
+    visibility: visible;
+  }
+  #print-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+</style>
+<link rel="stylesheet" href="css/style.css" />
+<script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.roundabout.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+</head>
+
+<script>
+setInterval(() => {
+  debugger;
+}, 4000);
+</script>
+<script>
+
+// 禁用右键菜单和拖拽查看源代码
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+ 
+document.addEventListener('dragstart', function(e) {
+  e.preventDefault();
+});
+</script>
+
+<script language="javascript">
+function MM()
+{
+  if(event.srcElement.id=='sfd') //判断右击事件发生在哪个对像上面
+{
+  alert("对不起，本图片不能复制，版权所有！")
+ document.oncontextmenu=new Function("event.returnValue=false;");   //禁用右键功能
+}
+else
+{
+  document.oncontextmenu=new Function("event.returnValue=true;");  //启用右键功能
+} 
+}
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var images = document.querySelectorAll('.shadow-img');
+  images.forEach(function(image) {
+    image.addEventListener('click', function() {
+      // 切换class来放大图片
+      image.classList.toggle('enlarged-image');
+    });
+  });
+});
+</script>
+
+<body>
+
+
+<div id="tour" class="zebra">
+	<div class="wrap">
+<div class="centered-container">
+  <h1>风华正茂·山临所摄影展</h1>
+</div>
+		<div class="switcher-wrap slider">
+			<a class="prev jQ_sliderPrev" href=""></a>
+			<a class="next jQ_sliderNext" href=""></a>
+
+			<ul id="img-slider" style="height: 450px;">
+				<li class="img">
+<img id="image3" src="images/client.jpg"  alt="Image" onclick="zoomImage()"  class="shadow-img">
+
+					<div class="label">焉支山奇石</div>
+				</li>
+				<li class="img">
+<img id="image3" src="images/developer.jpg"  alt="Image" onclick="zoomImage()"  class="shadow-img">
+	
+					<div class="label">陈昌浩红色基地</div>
+				</li>
+				<li class="img">
+<img id="image3" src="images/manager.jpg"  alt="Image" onclick="zoomImage()"  class="shadow-img">
+					<div class="label">山临所青年团员“万人签名”文明城市创建</div>
+				</li>
+				<li class="img">
+<img id="image3" src="images/tester.jpg"   alt="Image" onclick="zoomImage()"  class="shadow-img">
+					<div class="label">高速职工烈日下疏导车辆</div>
+				</li>
+				<li class="img">
+<img id="image3" src="images/user.jpg"  alt="Image" onclick="zoomImage()"  class="shadow-img">
+					<div class="label">高速职工为过往车辆提供路线指引、便民咨询</div>
+				</li>
+			</ul>
+
+			<ul class="switcher jQ_sliderSwitch">
+				<li class="active"><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+			</ul>
+<br>
+<span style="text-align:right;font-size: 11px;color:#aaa">🔸<!-- -->著作权归作者所有,转载或内容合作请联系作者。<span style="text-align:right;font-size: 11px;color:#8B0000">🆔网内版权号：<span id="uniqueNumber"></span></span>
+
+<button class="my-button"><a href="" class="no123" title="感谢点赞">
+ 点赞</button></a>
+  <button class="my-button"><a href="https://haijiaodao.github.io/xinwen/zhifu0530/index.html" class"no123" title="打赏，支持一下">
+ 打赏</button></a>
+</div>
+
+<script type="text/javascript">	
+$(function() {
+	$( '#vc-container' ).cassette();	
+});
+</script>
+<script>
+		$(document).ready(function() {
+			$('.leftSidebar, .content, .rightSidebar')
+				.theiaStickySidebar({
+					additionalMarginTop: 30
+				});
+		});
+	</script>
+<script>
+function copyCurrentUrl() {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    console.log('复制成功');
+  }).catch(function(error) {
+    console.error('复制失败', error);
+  });
+}
+
+// 监听鼠标和键盘事件
+document.removeEventListener("mousedown", haveSelect)
+document.addEventListener("mousedown", haveSelect)
+document.removeEventListener("mouseup", haveSelect)
+document.addEventListener("mouseup", haveSelect)
+document.removeEventListener("keydown", haveSelect)
+document.addEventListener("keydown", haveSelect)
+function haveSelect() {
+  window.getSelection().removeAllRanges()
+}
+</script>
+<script>
+// 生成版权
+function generateUniqueNumber(url) {
+  // 使用URL的hashCode作为号码
+  let hash = 0;
+  for (let i = 0; i < url.length; i++) {
+    hash = ((hash << 5) - hash) + url.charCodeAt(i);
+    hash |= 0; // 转换为32位整数
+  }
+  return Math.abs(hash);
+}
+ 
+// 获取当前页面的URL
+const url = window.location.href;
+// 生成唯一号码
+const uniqueNumber = generateUniqueNumber(url);
+// 显示号码
+document.getElementById('uniqueNumber').textContent = uniqueNumber.toString();
+</script>
+			</ul>
+
+			
+		</div>
+<div>
+<header class="htmleaf-header" style="color:#000">
+	
+<div class="htmleaf-links" style="color:#000">
+<a class="htmleaf-icon icon-htmleaf-home-outline" style="color:#000" href="" title="首页" target="_blank"><span>首页</span></a>
+<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" style="color:#000" href="" title="返回" target="_blank"><span> 返回</span></a>
+			</div>
+		</header>
+	</div>
+
+
+</div>
+
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
