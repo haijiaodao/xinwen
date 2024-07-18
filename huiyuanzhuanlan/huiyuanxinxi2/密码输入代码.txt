@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+<meta charset="UTF-8">
+<title>An example usage GSAP in React — week 29/52</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+<script language = JavaScript>
+function password() {
+	var testV = 1;
+	var pass1 = prompt('请输入密码:', '');
+	while (testV < 3) {
+		if (!pass1) history.go(-1);
+		if (pass1 == "123456") {
+			alert('密码正确!');
+			break;
+		}
+		testV += -1;
+		var pass1 = prompt('密码错误!请重新输入:');
+	}
+	if (pass1 != "password" & testV == 3) history.go(-1);
+	return " ";
+}
+document.write(password());
+</script>
+<div id="app"></div>
+
+<script src='js/react.production.min.js'></script>
+<script src='js/react-dom.production.min.js'></script>
+<script src='js/axios.min.js'></script>
+<script src='js/TweenMax.min.js'></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
