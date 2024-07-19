@@ -1,0 +1,52 @@
+:root {
+  --base: 10vh;
+  --black: #101010;
+  --white: #fdfdfd;
+  --delay: 1s;
+}
+html, body {
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background: var(--white);
+  width: 100vw;
+  height: 100vh;
+}
+.playground {
+  position: absolute;
+  display: flex;
+  font-size: 100rem;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+/********************************************************/
+.arrow {
+  position: absolute;
+  /*width: calc(3.5 * var(--base));*/
+  width: 100vw;
+  display: block;
+  height: calc(var(--base));
+  opacity: 1;
+  /* top: 75vh; */
+  /* animation: move-chevron var(--delay) linear infinite; */
+}
+/*******************************************************************/
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
