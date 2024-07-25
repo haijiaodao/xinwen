@@ -1,91 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>sucai8.cn - Circle Text + textLength</title>
-  <link rel="stylesheet" href="assets/css/normalize.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<style>
-  .top-layer {
-    position: fixed; /* 使DIV位于最上层 */
-    display: flex;
-  justify-content: center; /* 水平居中 */
-  align-items: center;     /* 垂直居中 */
-    width: 300px;   /* 宽度为200像素 */
-    height: auto;  /* 高度为100像素 */
-    border: 0px solid #fff; /* 边框大小和颜色 */
-position: absolute; /* 设置绝对定位 */
-    z-index: 1; /* 设置z-index值 */
-color:#fff;
-  }
-.top-layer img {
-  max-width: 30%; /* 确保图片不会超出容器 */
-  max-height: 30%; /* 确保图片不会超出容器 */
-  justify-content: center; /* 水平居中 */
-  align-items: center;     /* 垂直居中 */
-  transition: all 0.3s; /* 设置过渡效果 */
-}
-a {
-    text-decoration: none;
-color:#fff;
-  }
-.image-container {
-  position: relative;
-  width: 550px;  /* 容器的宽度 */
-  height: 550px; /* 容器的高度 */
-  justify-content: center; /* 水平居中 */
-  align-items: center;     /* 垂直居中 */
-  overflow: hidden;
-}
+<html> 
+<head> <title>新闻报道</title> 
+ 
+<style>  
+@media print{  
+body{display:none}  
+}  
+</style>  
+</head>  
 
 
-.image:hover {
-  transform: scale(2.5); /* 鼠标悬停时放大的比例 */
-}
-@media (maxwidth: 600px) {
-  img {
-    width: 50%;
-  }
-}
-</style>
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:lang="en" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 500 500">
-  <title>Circular Text Path</title>
-  <defs>
-    <path id="textcircle" d="M250,400
-                 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z" transform="rotate(12,250,250)"></path>
-  </defs>
-  <g class="textcircle">
-    <text textlength="942">
-      <textpath xlink:href="#textcircle" aria-label="CSS & SVG are awesome" textlength="942">
-         | 山临高速公路收费所 | 党支部 | 2024 &
-      </textpath>
-    </text>
-  </g>
-</svg>
-<!-- partial -->
-  <div class="top-layer">
-<img id="myImage"  src="img\1.png" alt="图片" class="image" />
-</div> <!-- 创建一个最上层的DIV -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<script type="javascript">
+var noPrint=true;
+var noCopy=true;
+var noScreenshot=true;
+var autoBlur=true;
+</script>
+
+<script type="text/javascript" src="js/noprint.js"></script>
+ 
+
 <script>
-function zoom(e) {
-  var img = document.getElementById('zoomImage');
-  e = window.event || e;
-  var scale = e.wheelDelta / 120; // Check if wheel was moved up or down
-  img.style.transform = 'scale(' + (img.style.transform ? parseFloat(img.style.transform) : 1) + scale + ')';
-}
+setInterval(() => {
+  debugger;
+}, 4000);
 </script>
 <script>
-function setupImageLink() {
-    var image = document.getElementById('myImage');
-    image.addEventListener('click', function() {
-        window.location.href = 'https://haijiaodao.github.io/xinwen/newslist8/20240724/index.html';
-    });
-}
-window.onload = setupImageLink;
+var threshold = 160; // 打开控制台的宽或高阈值
+// 每秒检查一次
+setInternet(function() {
+    if (window.outerWidth - window.innerWidth > threshold || 
+    window.outerHeight - window.innerHeight > threshold) {
+        // 如果打开控制台，则刷新页面
+        window.location.reload();
+    }
+
 </script>
-</body>
-</html>
+
+
+<frameset cols="0,*" frameborder="NO" border="0" framespacing="0">
+<frame src="ps.html" name="leftFrame" scrolling="NO" noresize>
+<frame src="index.htm" name="mainFrame">
+</frameset><noframes></noframes>
+</body> 
+</html> 
