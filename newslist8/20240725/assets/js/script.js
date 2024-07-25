@@ -1,0 +1,1 @@
+Splitting();gsap.from(".raindrops .char",{duration:3,delay:0.25,ease:"bounce",stagger:{from:"random",amount:6,y:"-750",},});gsap.to("h2",{keyframes:{ease:"none",easeEach:"sine.inOut",yPercent:[0,-500,-700,-900,-1200,-1800,-2200,-2800,-3200,-4000],xPercent:[0,-300,-100,100,300,100,-100,300],rotation:[17,-24,20,-18,30,-45],},duration:20,delay:2.5,stagger:{amount:4,}});

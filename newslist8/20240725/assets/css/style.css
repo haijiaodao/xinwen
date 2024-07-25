@@ -1,0 +1,48 @@
+
+p.raindrops{
+font-family:'Acme',sans-serif;
+color: #FFF;
+text-align:left;
+
+  line-height: 2; /* 行间距设置为1.5倍行高 */
+margin: 0; /* 重置<p>标签的默认边距 */
+  margin-left: auto; /* 左边距设置为自动 */
+  margin-right: auto; /* 右边距设置为自动 */
+
+  font-weight: 100; /* 字体粗细：粗体 */
+  text-shadow: 1px 1px 2px #999;
+  font-size: 20px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+
+}
+
+h2{position:absolute;top:103px;left:50%;font-family:'Acme',sans-serif;font-size:min(200%,10vw);color:#8d81d9;z-index:-2}
+
+h1{
+ text-align: center; /* 水平居中 */
+    margin: 50px 0; /* 上下垂直距离 */
+    position: absolute; /* 绝对定位 */
+    left: 50%; /* 左边距设置为50%，以便于水平居中 */
+    transform: translateX(-50%); /* 水平方向向左偏移自身宽度的50% */
+    top: -110px; /* 指定位置的垂直坐标 */
+    width: 200px; /* 指定宽度 */
+color: #FF0000;
+}
+
+img.cloud{position:absolute;top:0;left:50%;max-width:70%;transform:translate(-50%);filter:brightness(.7);z-index:10}
+
+img.lightning{position:absolute;top:20px;left:50%;max-width:20%;opacity:0;animation:flash 6s both 2s}@keyframes flash{0%,19%,26%,44%,46%,47%,55%,79%,85%,100%{opacity:0}20%,45%,48%,80%{opacity:1}}.wrap{
+top: 300px; /* 指定位置的垂直坐标 */
+
+position:absolute;
+bottom:1em;
+left:50%;
+transform:translateX(-50%);
+
+text-align: left; /* 左对齐文本 */
+  margin-left: auto; /* 左边距设置为自动 */
+  margin-right: auto; /* 右边距设置为自动 */
+
+}
+*{padding:0;margin:0;box-sizing:border-box}
+body{min-height:100vh;background:slateblue;background-size:400px 227px;overflow:hidden}/*

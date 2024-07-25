@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>js文本出现特效下雨动画</title>
+    <link rel='stylesheet' href='assets/css/splitting.css'>
+    <link rel='stylesheet' href='http://v.sucai8.cn/2022/7/xemy812626/css/splitting-cells.css'>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<style>
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-content, #print-content * {
+    visibility: visible;
+  }
+  #print-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+</style>
+<script>
+setInterval(() => {
+  debugger;
+}, 4000);
+</script>
+<script>
+
+// 禁用右键菜单和拖拽查看源代码
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+ 
+document.addEventListener('dragstart', function(e) {
+  e.preventDefault();
+});
+</script>
+
+<script language="javascript">
+function MM()
+{
+  if(event.srcElement.id=='sfd') //判断右击事件发生在哪个对像上面
+{
+  alert("对不起，本图片不能复制，版权所有！")
+ document.oncontextmenu=new Function("event.returnValue=false;");   //禁用右键功能
+}
+else
+{
+  document.oncontextmenu=new Function("event.returnValue=true;");  //启用右键功能
+} 
+}
+</script>
+<body>
+    <!-- partial:index.partial.html --><img class="cloud" src="assets/picture/cloud.png"><img class="lightning"
+        src="assets/picture/lightning-bolt.png">
+    <div class="wrap"><h1>党的八项纪律</h1>
+        <p class="raindrops" data-splitting="">●党的八大纪律:政治纪律、组织纪律、廉洁纪律、群众纪律、工作纪律、生活纪律、保密纪律、宣传纪律。<br>●纪律要求党员和党的干部在思想、行动、言论等方面都要遵守党的规定，维护党的团结统一和党的形象。
+<br>●政治纪律要求党员必须坚定政治立场，维护党的政治方向、政治原则和政治路线。<br>组织纪律要求党员服从组织安排，遵守组织程序，执行组织决定，不得搞个人主义、自由主义。<br>廉洁纪律要求党员必须保持清正廉洁的政治本色，不得利用职权谋取私利，不得贪污受贿、权钱交易。<br>●群众纪律要求党员要密切联系群众，倾听群众意见，关心群众疾苦，不得脱离群众、漠视群众疾苦。<br>工作纪律要求党员要认真负责、勤奋工作，不得敷衍塞责、玩忽职守。<br>●生活纪律要求党员要保持健康的生活方式和良好的生活作风，不得沉溺于享乐、追求低级趣味。<br>
+●保密纪律要求党员要严守党的秘密，不得泄露党的机密和工作秘密。<br>●宣传纪律要求党员在宣传党的路线方针政策时要严格遵守党的宣传纪律，不得随意发表与党的宣传口径不一致的言论。<br>●这八大纪律是党员必须遵守的基本准则，是保持党的先进性和纯洁性的重要保障。<br>
+        </p>
+    </div>
+    <!-- <h2>zzZz</h2>
+    <h2>Zz</h2>
+    <h2>Zzzz</h2> -->
+    <!-- partial -->
+    <script src='assets/js/splitting.min.js'></script>
+    <script src='assets/js/gsap.min.js'></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
