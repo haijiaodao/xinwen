@@ -1,0 +1,151 @@
+
+body {
+    background-color: #ddd;
+    font-size: 100%;
+    padding: 3em;
+}
+.mainNav {
+    float: left;
+    transform: perspective(500px);
+    transform-style: preserve-3d;
+	margin-left:200px;
+}
+.sfdNav {
+	margin-left:300px;
+}
+a {
+  color: #FF0000; /* 文本颜色为红色 */
+  text-decoration: none; /* 去除下划线 */
+  background-color: #; /* 背景颜色为绿色 */
+  padding: 10px 20px; /* 设置内边距 */
+  border: 0px solid #0000FF; /* 设置边框为蓝色 */
+  border-radius: 5px; /* 设置圆角 */
+  font-size: 14px; /* 字体大小 */
+  font-weight: bold; /* 字体粗细 */
+}
+ 
+a:hover {
+  background-color: #FF00FF; /* 鼠标悬停时的背景颜色 */
+  color: #FFFF00; /* 鼠标悬停时的文本颜色 */
+}
+p {
+  text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 16px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;
+}
+hr {
+  border: none;
+  border-top: 1px dashed rgba(0, 0, 0, .2);
+}
+h1 {
+  display: block;
+  margin: 0;
+  font-family: 'maozedong', 'Arial', sans-serif;
+  color: #87CEFA;
+  font-size: 1.2em;
+padding: 15px 5px 0px 20px;
+text-align: center;
+text-shadow: 1px 1px 2px #000;
+line-height: 1.2; /* 设置为字体大小的1.5倍 */
+}
+. centered-div {
+  width: 300px;  /* 指定宽度 */
+    height: 200px; /* 指定高度 */
+    position: absolute; /* 绝对定位 */
+    top: 10%; /* 从顶部50%开始 */
+    left: 70%; /* 从左边50%开始 */
+    transform: translate(-50%, -50%); /* 使用transform居中 */
+    background-color: #f0f0f0; /* 背景颜色 */
+    border: 1px solid #000; /* 边框 */
+  }
+  .container {
+    position: relative; /* 相对定位 */
+    width: 85%; /* 容器宽度 */
+    float: top;
+    display: flex; /* 使用Flexbox布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+  }
+.mainNav ul {
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+.mainNav ul:after {
+  background-color: hsla(0,0%,0%,0.1);
+  box-shadow: 0 0.09375em 0.1875em 0.1875em hsla(0,0%,0%,0.1);
+  content: '';
+  height: 0.375em;
+  left: 0.75em;
+  position: absolute;
+  right: 0.75em;
+  top: 100%;
+  z-index: -1;
+}
+.mainNav a {
+    background-color: #f79533;
+    background-image: linear-gradient(hsla(0,0%,100%,.05), hsla(0,0%,0%,.05)),
+                      linear-gradient(-197.5deg, hsla(0,0%,100%,.025) 50%, transparent 50%);
+    backface-visibility: hidden;
+    box-shadow: inset 0 0 .125em hsla(0,0%,0%,.25),
+                inset 0 0 1.5em hsla(0,0%,0%,.25);
+    color: #333;
+    display: block;
+    font: bold 1em/3 sans-serif;
+    padding: 0 1.5em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 1px hsla(0,0%,100%,.25);
+    transition: .5s;
+    transform-origin: 50% 0;
+    transform-style: preserve-3d;
+    width: 6em;
+}
+.mainNav a:after {
+    background-color: inherit;
+    background-image: linear-gradient(hsla(0,0%,100%,.05), hsla(0,0%,0%,.05)),
+                      linear-gradient(-197.5deg, hsla(0,0%,100%,.025) 50%, transparent 50%),
+                      linear-gradient(hsla(0,0%,0%,.25), hsla(0,0%,0%,.25));
+    box-shadow: inset 0 0 .25em hsla(0,0%,0%,.2),
+                inset 0 0 1.5em hsla(0,0%,0%,.3);
+    bottom: 0;
+    color: #fff;
+    content: attr(data-title);
+    left: 100%;
+    line-height: 3;
+    position: absolute;
+    top: 0;
+    transform: rotateY(90deg);
+    transform-origin: 0 0;
+    width: 100%;
+}
+.mainNav a:before {
+    background-color: inherit;
+    background-image: linear-gradient(hsla(0,0%,100%,.07), hsla(0,0%,0%,.07)),
+                      linear-gradient(hsla(0,0%,0%,.5), hsla(0,0%,0%,.5));
+    bottom: 0;
+    content: '';
+    height: 9em;
+    left: 100%;
+    position: absolute;
+    top: 0;
+    transform-origin: 0 0;
+    width: 100%;
+}
+.mainNav li:nth-child(-n+2) a:before {
+    transform: rotateX(-90deg) translateX(-9em) translateZ(3em);
+}
+.mainNav li:nth-child(n+3) a:before {
+    transform: rotateX(-90deg) translateX(-9em);
+}
+.mainNav li:hover a {
+    transform: rotateY(-90deg) translateX(-4.5em) translateZ(4.5em);
+    z-index: 100;
+}
+​
