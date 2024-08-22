@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>会员服务</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<style>
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  display: inline-block;
+  border-radius: 2.5rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
+text-align: center; /* 水平居中 */
+}
+
+.btn:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover::after {
+  -webkit-transform: scaleX(1.4) scaleY(1.6);
+          transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn:active, .btn:focus {
+  outline: none;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn--white {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn--white::after {
+  background-color: #fff;
+}
+
+</style>
+<body>
+<!-- partial:index.partial.html -->
+<div class='price_card'>
+  <div class='card_icon'>★</div>
+  <h3 class='card_title' contenteditable='true'>白银会员</h3>
+  <p class='price_total'>￥199.99</p>
+  <div class='services_block'>
+    <p class='service'>每日1篇</p>
+    <p class='service'>图片≤2</p>
+    <p class='service'>24小时响应</p>
+    <p class='service'>个性化模版1次/1月</p>
+    <p class='service'>不支持音视频</p>
+    <p class='service'>参与积分活动</p>
+    <a href="https://haijiaodao.github.io/github.io/18/index.html?#/step-1" class="btn btn--white">支付</a>
+
+  </div>
+
+  <div class='breakdown_of_costs'>
+        
+  </div>
+</div>
+
+<div class='price_card'>
+  <div class='card_icon'>☽</div>
+  <h3 class='card_title' contenteditable='true'>黄金会员</h3>
+  <p class='price_total'>￥499.99</p>
+  <div class='services_block'>
+      <p class='service'>每日2篇</p>
+    <p class='service'>图片≤3</p>
+    <p class='service'>12小时响应</p>
+    <p class='service'>个性化模版3次/1月</p>
+    <p class='service'>支持音视频</p>
+    <p class='service'>参与积分活动</p>
+
+   <a href="https://haijiaodao.github.io/github.io/18/index.html?#/step-1" class="btn btn--white">支付</a>
+
+  </div>
+
+  <div class='breakdown_of_costs'>
+    
+      </div>
+</div>
+
+<div class='price_card'>
+  <div class='card_icon'>☀</div>
+  <h3 class='card_title' contenteditable='true'>黑钻会员</h3>
+  <p class='price_total'>￥999.99</p>
+  <div class='services_block'>
+   <p class='service'>每日不限量</p>
+    <p class='service'>图片≤5</p>
+    <p class='service'>8小时响应</p>
+    <p class='service'>个性化模版3次/1月</p>
+    <p class='service'>支持音视频</p>
+    <p class='service'>参与积分活动</p>
+
+    <a href="https://haijiaodao.github.io/github.io/18/index.html?#/step-1" class="btn btn--white">支付</a>
+
+  </div>
+
+  <div class='breakdown_of_costs'>
+ 
+    
+  </div>
+</div>
+<!-- partial -->
+  <script src="assets/js/script.js"></script>
+
+</body>
+</html>
