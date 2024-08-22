@@ -1,0 +1,482 @@
+/*-------------------------------------
+Template Name:Elema - Responsive Bootstrap Pricing Tables.
+Template URI: https://webtend.net/
+Description: Elema is a simple and unique style for pricing tables built with Bootstrap framework. 
+Author: webtend
+Author URI: https://webtend.net/
+Version: 1.0
+---------------------------------------
+        CSS INDEX
+---------------------------------------
+1.Table-1 section css
+2.Table-2 section css
+3.Table-3 section css
+4.Table-4 section css
+5.Table-5 section css
+6.Responsive css
+
+---------------------------------------*/
+
+/*---------------------------------------
+    Start Table-1 section css
+---------------------------------------*/
+.elema .table-header{
+    margin-bottom: 90px;
+}
+.elema .table-header h1{
+    font-weight: 500;
+    color: #25384c;
+    font-size: 41px;
+    text-transform: uppercase;
+}
+.elema .table-1{
+    background: #e3e6ef;
+}
+.elema .pricing-area-1{
+    background: #f7f7f7;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    transition: .5s;
+}
+.elema .pricing-area-1:hover{
+    box-shadow: 0 0 20px #c3c3c3;
+}
+.elema .pricing-area-1:after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background: url(../img/table-img.png);
+    width: 100%;
+    height: 165px;
+    z-index: -1;
+}
+.elema .title-1{
+    padding-top: 30px;
+    padding-bottom: 55px;
+}
+.elema .price-1{
+    padding-bottom: 40px;
+}
+.elema .price-body-1{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+}
+.elema .price-body-1:after{
+    position: absolute;
+    content: '';
+    width: 275px;
+    left: 40px;
+    top: 0;
+    border-top: 1px dashed #434343;
+}
+.elema .price-body-1:before{
+    position: absolute;
+    content: '';
+    width: 275px;
+    left: 40px;
+    bottom: 0;
+    border-top: 1px dashed #434343;
+}
+.elema .price-body-1 ul li{
+    line-height: 50px;
+}
+.elema .price-button-1{
+    padding-top: 40px;
+    padding-bottom: 25px;
+}
+.elema .price-button-1 .button-1{
+    padding: 15px 60px;
+    border: 1px solid #005b7f;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    color: #005b7f;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: .5s;
+}
+.elema .pricing-area-1:hover  .price-button-1 .button-1{
+    background: #005b7f;
+    color: #fff;
+}
+/*---------------------------------------
+    End Table-1 section css
+---------------------------------------*/
+
+/*---------------------------------------
+    Start Table-2 section css
+---------------------------------------*/
+.elema .table-2{
+    background: #e3e6ef;
+}
+.elema .pricing-area-2{
+    background: #f7f7f7;
+    text-align: center;
+}
+.elema .price-head{
+    background: #8c0795;
+    position: relative;
+}
+.elema .title-2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.elema .title-2 h3{
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.elema .price-icon i{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+.elema .price-2{
+    padding-bottom: 30px;
+    padding-top: 20px;
+    overflow: hidden;
+}
+.elema .price-2 h1{
+    color: #fff;
+}
+.elema .price-2 span{
+    color: #fff;
+}
+.elema .price-body-2{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+}
+.elema .price-body-2 ul:after{
+    position: absolute;
+    content: '';
+    width: 275px;
+    left: 40px;
+    top: 30px;
+    border-top: 1px dashed #434343;
+}
+.elema .price-body-2 ul:before{
+    position: absolute;
+    content: '';
+    width: 275px;
+    left: 40px;
+    bottom: 30px;
+    border-top: 1px dashed #434343;
+}
+.elema .price-body-2 ul li{
+    line-height: 60px;
+}
+.elema .price-button-2{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.elema .price-button-2 .button-2{
+    font-size: 26px;
+    padding: 15px 40px;
+    border: 1px solid #8c0795;
+    color: #8c0795;
+    border-radius: 30px;
+    transition: .5s;
+}
+.elema .pricing-area-2:hover .button-2{
+    background: #8c0795;
+    color: #fff;
+}
+/*---------------------------------------
+    End Table-2 section css
+---------------------------------------*/
+
+
+/*---------------------------------------
+    Start Table-3 section css
+---------------------------------------*/
+.elema .table-3{
+    background: #e3e6ef;
+}
+.elema .pricing-area-3{
+    border-radius: 50px;
+    text-align: center;
+    overflow: hidden;
+}
+.elema .title-3{
+    background: #005b7f;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+.elema .title-3 h2{
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+}
+.elema .price-3{
+    background: #fff;
+    padding-top: 25px;
+    padding-bottom: 30px;
+}
+.elema .price-body-3 ul li{
+    line-height: 60px;
+}
+.elema .price-body-3 ul .c-1{
+    background: #ebebeb;
+}
+.elema .price-body-3 ul .c-2{
+    background: #dfdfdf;
+}
+.elema .price-body-3 ul .c-3{
+    background: #d9d9d9;
+}
+.elema .price-body-3 ul .c-4{
+    background: #d4d4d4;
+}
+.elema .price-button-3{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #005b7f;
+}
+.elema .price-button-3 .button-3{
+    padding: 12px 20px;
+    background: #0074a2;
+    color: #fff;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+/*---------------------------------------
+    End Table-3 section css
+---------------------------------------*/
+
+/*---------------------------------------
+    Start Table-4 section css
+---------------------------------------*/
+.elema .table-4{
+    background: #e3e6ef;
+}
+.elema .pricing-area-4{
+    background: #fff;
+    text-align: center;
+    border: 1px solid #bcbcbc;
+    transition: .5s;
+}
+.elema .pricing-area-4:hover{
+    box-shadow: 0 0 20px #c3c3c3;
+}
+.elema .price-active{
+    background: #00aeef !important;
+}
+.elema .price-active h1{
+    color: #fff !important;
+}
+.elema .price-active span{
+    color: #fff !important;
+}
+.elema .title-head{
+    position: relative;
+}
+.elema .best{
+    position: absolute;
+    top: 30px;
+    left: -10px;
+    padding: 10px 25px;
+    background: #00aeef;
+}
+.elema .best:before {
+    left: 114px;
+    border-left: 40px solid #fff;
+    border-top: 40px solid transparent;
+    content: "";
+    display: block;
+    height: 0;
+    position: absolute;
+    transform: rotate(47deg);
+    bottom: 3px;
+}
+.elema .best:after {
+    left: 3px;
+    border-left: 13px solid #00aeef;
+    border-top: 13px solid transparent;
+    content: "";
+    display: block;
+    height: 0;
+    position: absolute;
+    transform: rotate(47deg);
+    bottom: -7px;
+}
+.elema .best span{
+    font-size: 12px;
+    color: #fff;
+    margin-right: 20px
+}
+.elema .title-4{
+    padding-bottom: 55px;
+    padding-top: 55px;
+}
+.elema .title-4 h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    color: #888888;
+}
+.elema .price-4{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: #ececec;
+    transition: .5s;
+}
+.elema .pricing-area-4:hover .price-4{
+    background: #00aeef !important;
+}
+.elema .pricing-area-4:hover .price-4 h1{
+    color: #fff;
+}
+.elema .pricing-area-4:hover .price-4 span{
+    color: #fff;
+}
+.elema .price-4 h1{
+    color: #00aeef;
+    font-size: 46px;
+    font-weight: 400;
+    transition: .5s;
+}
+.elema .price-4 span{
+    color: #00aeef;
+    font-weight: 300;
+    transition: .5s;
+}
+.elema .price-body-4{
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+.elema .price-body-4 ul li{
+    line-height: 40px;
+}
+.elema .price-button-4{
+    padding-bottom: 30px;
+}
+.elema .price-button-4 .button-4{
+    padding: 15px 60px;
+    border: 1px solid #00aeef;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    color: #00aeef;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: .5s;
+}
+.active-btn{
+    background: #00aeef!important;
+    color: #fff!important;
+}
+.elema .pricing-area-4:hover .button-4{
+    background: #00aeef!important;
+    color: #fff!important;
+}
+/*---------------------------------------
+    End Table-4 section css
+---------------------------------------*/
+
+/*---------------------------------------
+    Start Table-5 section css
+---------------------------------------*/
+.elema .table-5{
+    background: #f7f7f7;
+}
+.elema .pricing-area-5{
+    background: #fafafa;
+    text-align: center;
+    border-right: 1px solid #f1f1f1;
+    transition: .5s;
+}
+.elema .pricing-area-5:hover{
+    background: #e58496;
+    background: -moz-linear-gradient(top, #e58496 0%, #ea7368 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #e58496), color-stop(100%, #ea7368));
+    background: -webkit-linear-gradient(top, #e58496 0%, #ea7368 100%);
+    background: -o-linear-gradient(top, #e58496 0%, #ea7368 100%);
+    background: -ms-linear-gradient(top, #e58496 0%, #ea7368 100%);
+    background: linear-gradient(to bottom, #e58496 0%, #ea7368 100%);
+}
+.elema .pricing-area-5:hover .title-5 h1{
+    color: #fff;
+}
+.elema .pricing-area-5:hover .price-5 span{
+    color: #fff;
+}
+.elema .title-5{
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+.elema .pricing-area-5:hover .price-5 h1{
+    color: #fff;
+}
+.elema .price-5 h1{
+    font-size: 52px;
+}
+.elema .price-5{
+    padding-bottom: 55px;
+}
+.elema .price-body-5{
+    padding-bottom: 30px;
+}
+.elema .pricing-area-5:hover .price-body-5 ul li{
+    color: #fff;
+}
+.elema .price-body-5 ul li{
+    line-height: 40px;
+}
+.elema .price-button-5{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.elema .price-button-5 .button-5{
+    padding: 15px 60px;
+    background: #e97772;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: .5s;
+}
+.elema .pricing-area-5:hover .price-button-5 .button-5{
+    background: #fff;
+    color: #e9746c;
+}
+/*---------------------------------------
+    End Table-5 section css
+---------------------------------------*/
+
+/*---------------------------------------
+    Responsive css
+---------------------------------------*/
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .elema .best {
+        top: 8px;
+    }
+}
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    
+   .elema .pricing-area-1,
+   .elema  .pricing-area-2,
+   .elema .pricing-area-3,
+   .elema  .pricing-area-4,
+   .elema .pricing-area-5{
+        margin-bottom: 60px;
+    }
+}
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) {
+
+    .elema .pricing-area-1,
+    .elema .pricing-area-2,
+    .elema .pricing-area-3,
+    .elema .pricing-area-4,
+    .elema .pricing-area-5{
+        margin-bottom: 80px;
+    }
+}
