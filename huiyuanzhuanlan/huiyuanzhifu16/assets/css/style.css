@@ -1,0 +1,195 @@
+@import url("css2.css");
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #424242;
+  text-decoration: none;
+  font-weight: 700;
+  background: linear-gradient(270deg, #c24289, #bb48fe, #b869e3, #5939f5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  transition: all 0.3s;
+}
+a:hover {
+  background-position: 100% 50%;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+
+  color: #424242;
+  background: radial-gradient(at 20% 97%, #dde37e 0px, transparent 50%) 0% 0% repeat scroll, radial-gradient(at 93% 9%, #76f9ad 0px, transparent 50%) 0% 0% repeat scroll, radial-gradient(at 82% 82%, #ef96a6 0px, transparent 50%) 0% 0% repeat scroll, radial-gradient(at 94% 10%, #f0a9ff 0px, transparent 50%) 0% 0% repeat scroll, radial-gradient(at 43% 18%, #7df4ff 0px, transparent 50%) 0% 0% repeat scroll, radial-gradient(at 10% 45%, #f3b7fb 0px, transparent 50%) 0% 0% repeat scroll, radial-gradient(at 57% 44%, #f4c5f7 0px, #a299ff 50%) 0% 0% repeat scroll rgba(0, 0, 0, 0);
+}
+
+.container {
+  min-height: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+@media (max-width: 1140px) {
+  .container {
+    margin: 0 60px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    margin: 0 20px;
+  }
+}
+
+.card {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #fff;
+  transition: all 0.3s;
+}
+.card__box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.card__box:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(179deg, #ccccff, #f5ccff);
+  opacity: 0.4;
+  transition: all 0.3s;
+}
+.selected .card__box:before {
+  opacity: 0.8;
+}
+.card__header, .card__footer {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  padding: 16px 20px;
+  backdrop-filter: blur(5px);
+  justify-content: space-between;
+  font-weight: 700;
+}
+.card__header {
+  top: 0;
+  display: flex;
+  border-bottom: 1px solid #fff;
+}
+.card__footer {
+  bottom: 0;
+  display: flex;
+  border-top: 1px solid #fff;
+}
+.card__title {
+  font-size: 32px;
+  text-transform: uppercase;
+  margin: 0;
+ font-family: "黑体",
+}
+.card__price {
+  font-size: 30px;
+}
+.card__period {
+  font-size: 16px;
+}
+.card__canvas {
+  position: relative;
+  left: 50%;
+  margin-left: -170px;
+  width: 340px;
+  height: 340px;
+}
+.card__description {
+  position: relative;
+  flex: 1;
+  font-size: 16px;
+  padding: 0 20px;
+}
+.card__description-info {
+  margin-top: 12px;
+  display: block;
+}
+.card__button {
+  margin-right: 12px;
+}
+.selected .card__button {
+  cursor: default;
+  background: #fff;
+}
+
+.btn {
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 18px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  line-height: 44px;
+  height: 44px;
+  padding: 0 10px;
+  background-color: var(--color-active);
+  background: linear-gradient(45deg, #ffcccc, #ffe0cc, #fff3cc, #e6ffcc, #ccffeb, #ccccff, #f5ccff);
+  border: none;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  flex: 1;
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+}
+.btn:hover {
+  background-position: 100% 50%;
+}
+.btn--icon {
+  max-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn__text {
+  height: 200%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.6s ease;
+  transform: translateY(0%);
+}
+.selected .btn__text {
+  transform: translateY(-50%);
+}
+
+.swiper-btns {
+  position: relative;
+  display: flex;
+  margin: 0 0 20px auto;
+}
+
+.swiper-btn {
+  position: initial;
+  width: 40px;
+  height: 40px;
+  margin-top: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.swiper-btn:after {
+  font-size: 24px;
+  color: #000;
+}
+
+.link {
+  display: block;
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  margin: 0 auto 40px;
+}
