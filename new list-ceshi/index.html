@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>新闻稿件</title>
+
+</head>
+<body>
+<script>
+$(document).ready(function() {
+    adjustLayout();
+
+    $(window).resize(function() {
+        adjustLayout();
+    });
+
+    function adjustLayout() {
+        var containerWidth = $('.container').width();
+        var newsItemWidth = $('.news-item').outerWidth(true);
+        var numColumns = Math.floor(containerWidth / newsItemWidth);
+
+        $('.news-item').css('width', (containerWidth / numColumns) + 'px');
+    }
+});
+</script>
+<style>.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.news-list {
+    list-style: none;
+    padding: 0;
+}
+
+.news-item {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.news-item h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    font-size: 16px;
+    margin-top: 0;
+}
+.a:link{
+
+　　font-size:12px;
+
+　　color:#999999;
+
+　　text-decoration:none;
+
+　　}
+
+　　a:visited{
+
+　　font-size:12px;
+
+　　color:#000000;
+
+　　text-decoration:none;
+
+　　}
+
+　　a:hover{
+
+　　font-size:12px;
+
+　　color:red;
+
+　　text-decoration:underline;
+
+　　}
+a {
+        text-decoration: none; /* 取消下划线 */
+        color: red; /* 修改为任意合适的颜色值 */
+    }
+div{
+#myDiv {
+
+border-radius: 50px;}
+#myDiv:hover
+{
+background-color: #FFEEDD;
+}
+
+</style>
+
+<div class="image-container">
+        <img src="1.png" width="300" style="position:absolute;top:0px;left:280px">
+    
+
+    <div class="container">
+
+<h2>新闻稿件</h2>
+        <ul class="news-list">
+            <li>
+                <div id="myDiv" class="news-item">
+                    <h2></h2>
+                    <p>党建引领 画好收费同心圆<a href="">..【详细】</a>2024年1月19日</p>
+                </div>
+            </li>
+            <li>
+
+
+    <div id="myDiv" class="news-item">
+                    <h2></h2>
+                    <p>党旗下挥汗如雨的“高速人”<a href="">..【详细】</a>2024年1月18日</p>
+                </div>
+            </li>
+            <li>
+                <div id="myDiv" class="news-item">
+                    <h2></h2>
+                    <p>新闻内容<a href="">..【详细】</a></p>
+                </div>
+            </li>
+ <li>
+                <div id="myDiv" class="news-item">
+                    <h2></h2>
+                    <p>新闻内容<a href="">..【详细】</a></p>
+                </div>
+            </li> <li>
+                <div id="myDiv" class="news-item">
+                    <h2></h2>
+                    <p>新闻内容<a href="">..【详细】</a></p>
+                </div>
+            </li> <li>
+                <div id="myDiv" class="news-item">
+                    <h2></h2>
+                    <p>新闻内容<a href="">..【详细】</a></p>
+                </div>
+            </li> <li>
+                <div id="myDiv" class="news-item">
+                    <h2></h2>
+                    <p>新闻内容<a href="">..【详细】</a></p>
+                </div>
+            </li> <li>
+                <div id="myDiv" class="news-item">
+                    <h2></h2>
+                    <p>新闻内容<a href="">..【详细】</a></p>
+                </div>
+            </li> <li>
+                <div id="myDiv" class="news-item">
+                    <h2></h2>
+                    <p>新闻内容<a href="">..【详细】</a></p>
+                </div>
+            </li> <li>
+                <div id="myDiv" class="news-item">
+                    <h2></h2>
+                    <p>新闻内容<a href="">..【详细】</a></p>
+                </div>
+            </li> <li>
+                <div id="myDiv" class="news-item">
+                    <h2></h2>
+                    <p>新闻内容<a href="">..【详细】</a></p>
+                </div>
+            </li> <li>
+                <div id="myDiv" class="news-item">
+                    <h2></h2>
+                    <p>新闻内容<a href="">..【详细】</a></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

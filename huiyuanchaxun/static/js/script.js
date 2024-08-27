@@ -1,1 +1,0 @@
-$(window).on("load resize ",function(){var a=$(".tbl-content").width()-$(".tbl-content table").width();$(".tbl-header").css({"padding-right":a})}).resize();
