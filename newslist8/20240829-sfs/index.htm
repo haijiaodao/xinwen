@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<link type="text/css" href="static/css/style.css" rel="stylesheet">
+  <title>新闻报道</title>
+<script>
+function showPage(pageName) {
+    // 隐藏所有的页面
+    document.getElementById('home').style.display = 'none';
+    document.getElementById('news').style.display = 'none';
+    document.getElementById('contact').style.display = 'none';
+    document.getElementById('about').style.display = 'none';
+    document.getElementById('map').style.display = 'none';
+    // 显示选定的页面
+    document.getElementById(pageName).style.display = 'block';
+}
+</script>  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><link rel='stylesheet' href='assets/css/bootstrap.min.css'>
+<link rel='stylesheet' href='assets/css/all.css'><link rel="stylesheet" href="assets/css/style.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://haijiaodao.github.io/xinwen/favicon-32x32.png">
+</head>
+<style>
+.center-image {
+  text-align: center;
+}
+ 
+.center-image img {
+  display: inline-block;
+  max-width: 100%; /* 确保图片不会超过其容器的宽度 */
+}
+p
+{
+  text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 16px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding-top: 10px;
+padding-left: 400px;
+ padding-right: 400px;
+}
+a{
+text-decoration: none;
+  color: #000; /* 颜色：红色 */
+  font-size: 16px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding-top: 9px;
+padding-left: 400px;
+padding-right: 400px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #4169E1;
+}
+ 
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 24px;
+  text-decoration: none;
+  font-size: 17px;
+}
+ 
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+ 
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.image-gallery {
+
+
+  text-align: center; /* 横向居中 */
+  display: flex; /* 使用Flexbox布局 */
+  justify-content: center; /* 子元素水平居中 */
+  flex-wrap: wrap; /* 允许换行 */
+  gap: 10px; /* 图片之间的间隔 */
+}
+ 
+.image-gallery img {
+  width: 350px; /* 设置图片宽度 */
+  height: auto; /* 高度自动缩放以保持宽高比 */
+  /* 也可以设置固定高度，但这样可能会失去宽高比 */
+}
+@font-face {
+  font-family: 'maozedong';
+  src: url('maozedong.ttf') format('woff');
+}
+.centered-div {
+  width: 900px; /* 设置DIV的宽度 */
+  height: 800PX; /* 设置DIV的高度 */
+position: absolute; /* 绝对定位 */
+  top: 50px;          /* 距离顶部50像素 */
+  left: 27%;        /* 距离左侧100像素 */
+
+  background-color: rgba(0, 0, 0, 0.1); /* 设置背景颜色为红色，透明度为80% */
+box-shadow: 2px 2px 8px #000; /* 阴影效果 */
+z-index: 100; /* 较大的值确保位于最上层 */
+}
+.centered1-div {
+  width: 480px; /* 设置DIV的宽度 */
+  height: 800PX; /* 设置DIV的高度 */
+position: absolute; /* 绝对定位 */
+  top: 50px;          /* 距离顶部50像素 */
+  left: 1.5%;        /* 距离左侧100像素 */
+
+  background-color: #); /* 设置背景颜色为红色，透明度为80% */
+
+z-index: 100; /* 较大的值确保位于最上层 */
+}
+
+.image-container {
+  width: 480px; /* 设置DIV的宽度 */
+  height: 800PX; /* 设置DIV的高度 */
+position: absolute; /* 绝对定位 */
+  top: 50px;          /* 距离顶部50像素 */
+  right: 1.7%;        /* 距离左侧100像素 */
+  background-color: #); /* 设置背景颜色为红色，透明度为80% */
+z-index: 100; /* 较大的值确保位于最上层 */
+}
+.image-container img {
+  width: 70%; /* 让图片宽度填满DIV */
+  height: auto; /* 图片高度自动调整以保持纵横比 */
+  position: absolute; /* 绝对定位，相对于父DIV */
+  top: 320px; /* 图片距离DIV顶部的距离 */
+  left: 55px; /* 图片距离DIV左侧的距离 */
+}
+hr {
+  border: none;
+  border-top: 1px dashed rgba(0, 0, 0, .2);
+}
+h1 {
+  display: block;
+  margin: 0;
+  font-family: 'maozedong', 'Arial', sans-serif;
+  color: #87CEFA;
+  font-size: 2.2em;
+padding: 15px 15px 1px 15px;
+text-align: center;
+text-shadow: 1px 1px 2px #000;
+}
+.handwriting-text {
+
+  color: #8B0000; /* 文字颜色 */
+  font-size: 12px; /* 字体大小 */
+  letter-spacing: 2px; /* 字母间距 */
+  font-weight: 300; /* 字体粗细：粗体 */
+
+}
+
+.shadow-img {
+
+  box-shadow: 2px 2px 8px #000; /* 阴影效果 */
+  border-radius: 0px; /* 圆角 */
+  object-fit: cover; /* 图片填充方式 */
+display: block;
+    margin: 0 auto;
+    width: 90%; /* 指定宽度为父元素宽度的50% */
+    height: auto;
+transition: transform 0.3s ease;
+    cursor: pointer;
+}
+hr {
+  margin-top: 10px; /* 上边距 */
+  margin-bottom: 10px; /* 下边距 */
+}
+ 
+  .enlarged-image {
+    transform: scale(2);
+  }
+.my-button {
+  font-size: 12px; /* 设置文字大小为16像素 */
+color: #000;
+}
+.logo::before {
+content: url('logo.png');
+width: 100px; /* 设置图片宽度为100像素 */
+    height: 100px; /* 设置图片高度为100像素 */
+  display: block;
+ position: relative;
+  left: 540px;
+  top: 20px;
+
+}
+sfd{
+            display: flex; /* 使用flex布局 */
+            justify-content: center; /* 水平居中对齐 */
+margin-top: 0.6rem; /* 上间距 */
+    margin-bottom: 0.6rem; /* 下间距 */
+        }
+        
+
+.subheading {
+  display: block;
+  color: #232323;
+  font: 700 1.06rem sans-serif;
+}
+@media (max-width: 769px) {
+body{
+    width: 100%;           /* 宽度 */
+    height: 100%;          /* 高度 */
+    margin: 20px auto;      /* 上下间距20px，左右自动 */
+    padding: 0px;          /* 内边距 */
+    border: 0px solid #dddddd;/* 边框 */
+    position: relative;     /* 相对定位 */
+    top: 0px;             /* 相对于最近定位祖先元素向下偏移100px */
+ text-shadow: 0px 0px 1px #BEBEBE;
+ }
+
+}
+@media screen and (max-width: 1280px) {
+  image1.hide-at-small-resolution {
+    display: none;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-content, #print-content * {
+    visibility: visible;
+  }
+  #print-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.highlight {
+    color: #FF6600; /* 红色 */
+    font-size: 18px; /* 24像素大小 */
+    font-weight: bold; /* 粗体 */
+  }
+
+  .centered-div {
+    width: 1100px; /* 设定宽度 */
+    height: 750px; /* 设定高度 */
+    margin: 40px 10px; /* 上下保持为0，左右自动居中 */
+    background-color: #; /* 背景颜色 */
+    border: 0px solid #; /* 边框 */
+    display: flex; /* 使用Flexbox布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+display: block; 
+  }
+.span-inline-block {
+    display: inline-block;
+    margin-right: 0px; /* Optional: add some space between the elements */
+  }
+
+</style>
+<script>
+setInterval(() => {
+  debugger;
+}, 4000);
+</script>
+<script>
+
+// 禁用右键菜单和拖拽查看源代码
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+ 
+document.addEventListener('dragstart', function(e) {
+  e.preventDefault();
+});
+</script>
+
+<script language="javascript">
+function MM()
+{
+  if(event.srcElement.id=='sfd') //判断右击事件发生在哪个对像上面
+{
+  alert("对不起，本图片不能复制，版权所有！")
+ document.oncontextmenu=new Function("event.returnValue=false;");   //禁用右键功能
+}
+else
+{
+  document.oncontextmenu=new Function("event.returnValue=true;");  //启用右键功能
+} 
+}
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var images = document.querySelectorAll('.shadow-img');
+  images.forEach(function(image) {
+    image.addEventListener('click', function() {
+      // 切换class来放大图片
+      image.classList.toggle('enlarged-image');
+    });
+  });
+});
+</script>
+
+<body>
+
+<div class="topnav">
+  <a href="#home" onclick="showPage('home')">简介</a>
+  <a href="#news" onclick="showPage('news')">组织机构</a>
+  <a href="#contact" onclick="showPage('contact')">为民服务</a>
+  <a href="#about" onclick="showPage('about')">大事记</a>
+  <a href="#map" onclick="showPage('map')">旅游地图</a>
+<p style="font-family: 'maozedong', 'Arial', sans-serif;text-align: right;color: #FFf; font-size: 20px;font-weight: 600;text-shadow: 1px 1px 2px #B0C4DE;padding-top: 10px;padding-right: 20px;">山临高速公路收费所</p>
+</div>
+ 
+<div id="home" style="display:block;">
+  <h1></h1>
+  <p><div id="content">
+ <p> 山临高速公路收费所于2004年11月成立，全长96.886KM，起止点桩号K2135+332到K2232+218，下辖张掖、张掖西、老寺庙、临泽、东乐、张掖丹霞、甘州7个匝道收费站和6个股室，共有职工392人，其中，男职工167人，女职工225人；招聘制职工294人，事业编职工98人；中共党员74人。全所职工人均年龄38岁。</p>
+
+<div class="image-gallery">
+  <img src="img\2.jpg" alt="">
+
+  <img src="img\4.jpg" alt="">
+  <img src="img\5.jpg" alt="">
+</div></div></p>
+</div>
+ 
+<div id="news" style="display:none;">
+  <h1></h1>
+  <p><div id="content">
+ <p>组织机构图</p>
+
+<br><br><br><span class="block-span"><div class="centered-div"><div class="tree"><ul><li><a href="#">山临高速公路收费所</a><ul><li><a href="#">综合办公室</a><ul class="vertical"><li><a href="#">党政工</a></li><li><a href="#">人事劳资</a></li><li><a href="#">后勤伙食</a></li><li><a href="#">车辆管理</a></li><li><a href="#">费用申请</a></li></ul></li><li><a href="#">财务股</a><ul class="vertical"><li><a href="#">费用审核</a></li><li><a href="#">票据管理</a></li><li><a href="#">资金支付</a></li></ul></li><li><a href="#">监督管理股</a><ul class="vertical"><li><a href="#">机电维护保养</a></li><li><a href="#">安全生产</a></li><li><a href="#">服务区监督</a></li></ul></li><li><a href="#">业务股</a><ul><li><a href="#">监控分中心</a><ul class="vertical"><li><a href="#">临泽站监控室</a></li><li><a href="#">张掖丹霞站监控室</a></li><li><a href="#">甘州站监控室</a></li><li><a href="#">张掖西站监控室</a></li><li><a href="#">张掖站监控室</a></li><li><a href="#">老寺庙站监控室</a></li><li><a href="#">东乐站监控室</a></li></ul></li><li><a href="#">稽查大队</a></li></ul></li><li><a href="#">张掖ETC客服中心</a><ul><li><a href="#">ETC监督发行</a><ul class="vertical"><li><a href="#">张掖站客服中心</a></li><li><a href="#">ETC核销、办理、审核</a></li></ul></li><li><a href="#">客服</a></li></ul></li></ul></li></ul></div></div></span>
+
+
+
+
+</div></p>
+
+</div>
+ 
+<div id="contact" style="display:none;">
+  <h1></h1>
+  <p><div id="content">
+ <p>青年志愿服务</p>
+
+<div class="image-gallery">
+  <img src="img\7.jpg" alt="">
+
+  <img src="img\8.jpg" alt="">
+  <img src="img\10.jpg" alt="">
+</div></div></p>
+
+</div>
+ 
+<div id="about" style="display:none;">
+  <h1></h1>
+  <p>行业发展历程</p>
+</div>
+
+<div id="map" style="display:none;">
+  <h1></h1><p><div id="content">
+ <p> 行游一体·畅享丝路</p>
+
+<div class="image-gallery">
+  <img src="img\112.png" alt="" style="width:834px; height:467px;">
+
+</div></div></p>
+
+  
+</div>
+<span class="span-inline-block"><span style="display: block; margin-left: auto; margin-right: auto; width: 50%;font-size: 11px;color:#333">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔸<!-- -->网站图片及文字所有权归本网站,转载或内容合作请联系。🆔网内版权号：<span id="uniqueNumber"></span></span></span>
+
+
+
+<script type="text/javascript">	
+$(function() {
+	$( '#vc-container' ).cassette();	
+});
+</script>
+<script>
+		$(document).ready(function() {
+			$('.leftSidebar, .content, .rightSidebar')
+				.theiaStickySidebar({
+					additionalMarginTop: 30
+				});
+		});
+	</script>
+<script>
+function copyCurrentUrl() {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    console.log('复制成功');
+  }).catch(function(error) {
+    console.error('复制失败', error);
+  });
+}
+
+// 监听鼠标和键盘事件
+document.removeEventListener("mousedown", haveSelect)
+document.addEventListener("mousedown", haveSelect)
+document.removeEventListener("mouseup", haveSelect)
+document.addEventListener("mouseup", haveSelect)
+document.removeEventListener("keydown", haveSelect)
+document.addEventListener("keydown", haveSelect)
+function haveSelect() {
+  window.getSelection().removeAllRanges()
+}
+</script>
+<script>
+// 生成版权
+function generateUniqueNumber(url) {
+  // 使用URL的hashCode作为号码
+  let hash = 0;
+  for (let i = 0; i < url.length; i++) {
+    hash = ((hash << 5) - hash) + url.charCodeAt(i);
+    hash |= 0; // 转换为32位整数
+  }
+  return Math.abs(hash);
+}
+ 
+// 获取当前页面的URL
+const url = window.location.href;
+// 生成唯一号码
+const uniqueNumber = generateUniqueNumber(url);
+// 显示号码
+document.getElementById('uniqueNumber').textContent = uniqueNumber.toString();
+</script>
+
+<div id="playground" class="playground"></div>
+
+<script  src="js/script.js"></script>
+
+</body>
+</html>
