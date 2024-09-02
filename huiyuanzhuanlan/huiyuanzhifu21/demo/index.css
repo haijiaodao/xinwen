@@ -1,0 +1,26 @@
+/*滚动条样式*/
+::-webkit-scrollbar {
+    width: 10px;
+    background: #949494;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+/*滚动条背景颜色*/
+::-webkit-scrollbar-track {
+    background: #e6e6e6;
+}
+
+/*滚动条颜色*/
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    background: #808080;
+}
+
+/*点击滚动条出现的颜色*/
+::-webkit-scrollbar-thumb:active {
+    background: #6bc30d;
+}
