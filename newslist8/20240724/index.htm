@@ -5,6 +5,19 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>新闻报道</title>
+<script>
+        function isFromSpecificPage() {
+            // 检查是否有特定的来源页面的参考链接
+            return (window.location.search.includes("?from=specific"));
+        }
+ 
+        window.onload = function() {
+            if (!isFromSpecificPage()) {
+                // 如果没有来自特定页面的链接，则显示错误信息
+                document.body.innerHTML = "<h1>无法直接访问此页面，请从特定页面链接访问。</h1>";
+            }
+        };
+    </script>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="fonts/FontAwesome/font-awesome.css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
