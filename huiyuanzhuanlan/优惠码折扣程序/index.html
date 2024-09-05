@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>优惠码折扣计算</title>
+<script>
+function calculateDiscount(couponCode, originalAmount) {
+    var discountCodes = {
+        'CODE1': 0.8,  // 80%折扣
+        'CODE2': 0.7,  // 70%折扣
+        'CODE3HISIEOIPO': 0.6   // 60%折扣
+        // 添加更多优惠码和折扣比例
+    };
+ 
+    var discount = discountCodes[couponCode];
+    if (discount) {
+        var discountedAmount = originalAmount * discount;
+        return discountedAmount.toFixed(0); // 保留两位小数
+    } else {
+        return "无效的优惠码";
+    }
+}
+ 
+function updateDiscount() {
+    var couponCode = document.getElementById('couponCode').value;
+    var originalAmount = parseFloat(document.getElementById('originalAmount').value);
+    var discountedAmount = calculateDiscount(couponCode, originalAmount);
+    document.getElementById('discountedAmount').innerText = discountedAmount;
+}
+</script>
+<script>
+function toggleImage() {
+  var image = document.getElementById('myImage');
+  if (image.style.display === 'none') {
+    image.style.display = 'block';
+  } else {
+    image.style.display = 'none';
+  }
+}
+</script>
+</head>
+<style>
+
+#myImage {
+  width: 230px; /* 设置图片宽度为200像素 */
+  height: 300px; /* 设置图片高度为200像素 */
+  animation: bounce 5s infinite alternate; /* 应用名为bounce的动画，持续时间1秒，无限次数循环，交替方向 */
+ float: left; /* 让图片浮动到左边 */
+    margin-right: 30px; /* 在图片和文本之间添加一些间隔 */
+
+}
+ 
+@keyframes bounce {
+  0% {
+    transform: translateY(0); /* 动画开始时，图片位于原位置 */
+  }
+  50% {
+    transform: translateY(-10px); /* 动画进行到50%时，图片向上移动10像素 */
+  }
+  100% {
+    transform: translateY(0); /* 动画结束时，图片返回原位置 */
+  }
+}
+.centered-div {
+  width: 50%; /* 自适应宽度 */
+  max-width: 300px; /* 最大宽度限制 */
+  height: auto; /* 高度自适应 */
+  margin: 0 auto; /* 水平居中 */
+  position: absolute; /* 绝对定位 */
+  top: 35%; /* 顶部距离容器高度50% */
+  left: 50%; /* 左边距离容器宽度50% */
+  transform: translate(-50%, -50%); /* 向上、向左偏移自身宽高的一半，以实现居中 */
+}
+</style>
+<body>
+<div class="centered-div">
+<h2>充值优惠码金额折扣计算</h2>
+<form>
+    优惠码：<input type="text" id="couponCode" /><br><br>
+    金额：<input type="number" id="originalAmount" /><br><br>
+    <button type="button" onclick="updateDiscount()">计算折扣</button>
+</form>
+<p>折扣后金额：<span id="discountedAmount"></span></p>
+<button onclick="toggleImage()">去支付</button>
+ <br><br>
+<img id="myImage" src="1.png" alt="支付" style="display: none;">
+<button onclick="openNewLink()">完成支付后登记</button>
+<script>
+function openNewLink() {
+    window.open('https://www.wjx.top/vm/OFwMr0q.aspx#', '_blank');
+}
+</script>
+ </div>
+</body>
+</html>
