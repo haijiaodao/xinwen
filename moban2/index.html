@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery 3D旋转切换页面 www.sucai8.cn </title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<style>
+.orbit-spinner, .orbit-spinner * {
+      box-sizing: border-box;
+    }
+
+    .orbit-spinner {
+      height: 55px;
+      width: 55px;
+      border-radius: 50%;
+      perspective: 100px;
+ position: absolute;
+        left: 600px;
+        top: 155px;
+    }
+
+    .orbit-spinner .orbit {
+      position: absolute;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    .orbit-spinner .orbit:nth-child(1) {
+      left: 0%;
+      top: 0%;
+      animation: orbit-spinner-orbit-one-animation 1200ms linear infinite;
+      border-bottom: 3px solid #ff1d5e;
+    }
+
+    .orbit-spinner .orbit:nth-child(2) {
+      right: 0%;
+      top: 0%;
+      animation: orbit-spinner-orbit-two-animation 1200ms linear infinite;
+      border-right: 3px solid #ff1d5e;
+    }
+    .orbit-spinner .orbit:nth-child(3) {
+      right: 0%;
+      bottom: 0%;
+      animation: orbit-spinner-orbit-three-animation 1200ms linear infinite;
+      border-top: 3px solid #ff1d5e;
+    }
+
+    @keyframes orbit-spinner-orbit-one-animation {
+      0% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+      }
+      100% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+      }
+    }
+
+    @keyframes orbit-spinner-orbit-two-animation {
+      0% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+      }
+      100% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+      }
+    }
+
+    @keyframes orbit-spinner-orbit-three-animation {
+      0% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+      }
+      100% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+      }
+    }
+</style>
+<body>
+<!-- partial:index.partial.html -->
+<header>
+  <nav class="text-center">
+    <ul class="inline-block">
+      <li class="pull-left active"><a href="#" data-direction="front">首页</a></li>
+      <li class="pull-left"><a href="#" data-direction="back">组织机构</a></li>
+      <li class="pull-left"><a href="#" data-direction="top">基层动态</a></li>
+      <li class="pull-left"><a href="#" data-direction="right">关于我们</a></li>
+      <div class="clearfix"></div>
+    </ul>
+  </nav>
+</header>
+<div id="wrap">
+  <div class="cube">
+    <section class="page active face front" id="home">
+      <div class="act-table text-center">
+        <div class="act-table-cell ver-middle">山临高速公路收费所</div>
+
+<div class="orbit-spinner">
+  <div class="orbit"></div>
+  <div class="orbit"></div>
+  <div class="orbit"></div>
+</div>
+
+
+      </div>
+    </section>
+    <section class="page face back" id="portfolio">
+      <div class="act-table text-center">
+        <div class="act-table-cell ver-middle">sucai8.cn</div>
+      </div>
+    </section>
+    <section class="page face top" id="about">
+      <div class="act-table text-center">
+        <div class="act-table-cell ver-middle">about Page</div>
+      </div>
+    </section>
+    <section class="page face right" id="contact">
+      <div class="act-table text-center">
+        <div class="act-table-cell ver-middle">contact Page</div>
+      </div>
+    </section>
+    <section class="page face bottom" id="blog">
+      <div class="act-table text-center">
+        <div class="act-table-cell ver-middle">blog Page</div>
+      </div>
+    </section>
+    <section class="page face left" id="article">
+      <div class="act-table text-center">
+        <div class="act-table-cell ver-middle">article Page</div>
+      </div>
+    </section>
+  </div>
+</div>
+<!-- partial -->
+  <script src='jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

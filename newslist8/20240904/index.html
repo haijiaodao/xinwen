@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>新闻报道</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<style>
+#centered-top-layer {
+  position: fixed; /* 定位为固定位置，始终在最上层 */
+  top: 10%; /* 距离顶部0像素 */
+  left: 50%; /* 距离左侧居中 */
+  transform: translateX(-50%); /* 向左移动自身宽度的一半 */
+  z-index: 9999; /* 设置较高的z-index确保在最上层 */
+  opacity: 0.6; /* 设置透明度 */
+  width: 800px; /* 设置宽度 */
+  height: 780px; /* 设置高度 */
+  background-color: #fff; /* 背景颜色 */
+}
+p {
+  text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 16px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 1px #999;
+  opacity: 0.6; /* 设置透明度 */
+padding: 0px 20px 0px 20px;
+}
+h1 {
+  display: block;
+  margin: 0;
+  font-family: 'maozedong', 'Arial', sans-serif;
+  color: #FF4500;
+font-size: 26px;
+
+padding: 15px 5px 0px 20px;
+text-align: center;
+text-shadow: 2px 2px 2px #fff;
+line-height: 1.2; /* 设置为字体大小的1.5倍 */
+}
+hr {
+  border: none;
+  border-top: 1px dashed rgba(0, 0, 0, .2);
+}
+.handwriting-text {
+
+  color: #CCCCCC; /* 文字颜色 */
+  font-size: 12px; /* 字体大小 */
+  letter-spacing: 2px; /* 字母间距 */
+text-shadow: 2px 2px 2px #000000; /* 水平偏移 垂直偏移 模糊半径 颜色 */
+
+}
+.no123{
+
+font-size: 16px;
+  color: #008B8B;
+  margin-bottom: 20px;
+  margin-left: 26px;
+  cursor: pointer;
+}
+a {
+    color: inherit; /* 继承父元素的文字颜色 */
+    text-decoration: none; /* 去除下划线 */
+    outline: none; /* 去除点击后的蓝色边框，主要用于键盘导航 */
+}
+ 
+/* 可选：为鼠标悬停状态添加样式 */
+a:hover {
+    text-decoration: none; /* 鼠标悬停时也去除下划线 */
+    color: inherit; /* 鼠标悬停时保持和父元素一致的颜色 */
+}
+.orbit-spinner, .orbit-spinner * {
+      box-sizing: border-box;
+    }
+
+    .orbit-spinner {
+      height: 55px;
+      width: 55px;
+      border-radius: 50%;
+      perspective: 800px;
+    }
+
+    .orbit-spinner .orbit {
+      position: absolute;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    .orbit-spinner .orbit:nth-child(1) {
+      left: 0%;
+      top: 0%;
+      animation: orbit-spinner-orbit-one-animation 1200ms linear infinite;
+      border-bottom: 3px solid #ff1d5e;
+    }
+
+    .orbit-spinner .orbit:nth-child(2) {
+      right: 0%;
+      top: 0%;
+      animation: orbit-spinner-orbit-two-animation 1200ms linear infinite;
+      border-right: 3px solid #ff1d5e;
+    }
+
+    .orbit-spinner .orbit:nth-child(3) {
+      right: 0%;
+      bottom: 0%;
+      animation: orbit-spinner-orbit-three-animation 1200ms linear infinite;
+      border-top: 3px solid #ff1d5e;
+    }
+
+    @keyframes orbit-spinner-orbit-one-animation {
+      0% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+      }
+      100% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+      }
+    }
+
+    @keyframes orbit-spinner-orbit-two-animation {
+      0% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+      }
+      100% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+      }
+    }
+
+    @keyframes orbit-spinner-orbit-three-animation {
+      0% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+      }
+      100% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+      }
+    }
+</style>
+<body>
+
+    <script src="assets/js/script.js"></script>
+<div id="centered-top-layer">
+    <h1>🎥基层快讯</h1>
+<div class="no123"><strong></strong><a href="#">来源：新闻网🔯时间：2024年7月12日</a></div>
+<p>
+学习贯彻二十届三中全会会议精神的工作总结 2024年9月，我们在全公司范围内深入学习贯彻了党的二十届三中全会会议精神。通过一系列学习活动，全体员工对全会精神有了更深刻的理解，并积极将其转化为推动公司发展的动力。</p>
+<p>🔶工作概述 本次学习贯彻活动覆盖公司各部门、各层级员工，通过集中学习、个人自学、专题研讨等多种形式，确保每位员工都能领会全会精神，并落实到实际工作中。 </p>
+<p>🔶工作内容 1. 集中学习：公司组织了一次全体大会，由公司高层领导传达二十届三中全会的主要精神，并结合公司实际发展情况，提出具体落实要求。 2. 分组讨论：各部门组织员工分组讨论，结合部门工作实际，探讨如何将全会精神融入日常工作，提高工作效率和质量。 3. 个人自学：鼓励员工利用业余时间进行自学，通过阅读全会公报、相关解读文章和视频，进一步加深对全会精神的理解。 4. 专题培训：针对不同层级、不同岗位的员工，开展专题培训，邀请专家进行解读，帮助员工更好地领会全会精神，并掌握实际操作方法。 </p>
+<p> 🔶工作成果 1. 提高了思想认识：通过本次学习活动，全体员工对党的二十届三中全会的精神有了更深刻的理解，进一步增强了政治意识、大局意识、核心意识、看齐意识。 2. 促进了工作落实：各部门结合实际工作，将全会精神转化为推动工作的动力，制定了具体的工作计划和措施，取得了明显成效。 3. 增强了团队凝聚力：通过集中学习和分组讨论，员工之间的沟通更加顺畅，团队凝聚力得到了进一步增强，为公司今后的发展奠定了坚实基础。  </p>
+<p>🔶经验和收获 1. 领导带头学习：高层领导的重视和带头学习，为全体员工树立了榜样，形成了良好的学习氛围。 2. 结合实际工作：将全会精神与实际工作相结合，使学习活动更具针对性和实效性，提高了员工参与学习的积极性和主动性。 3. 多种学习方式：通过集中学习、分组讨论、个人自学、专题培训等多种方式，满足了不同员工的学习需求，提高了学习效果。 </p>
+<p> 🔶问题与改进 1. 部分员工对全会精神的理解不够深入：在今后的学习活动中，将加强针对性培训，帮助员工更好地领会全会精神。 2. 部分部门在实际工作中落实不够到位：将进一步加强对各部门的督促检查，确保全会精神在实际工作中得到有效落实。</p>
+ <p>🔶自我评价 通过本次学习活动，我深刻领会了党的二十届三中全会的精神，并在实际工作中积极落实，取得了一定的成效。但仍存在一些不足之处，需要在今后的学习和工作中不断改进和提高。 七、总结 学习贯彻党的二十届三中全会会议精神，是一项长期而艰巨的任务。我们将继续加强学习，不断深化对全会精神的理解，并结合实际工作，推动公司高质量发展，为实现中华民族伟大复兴的中国梦贡献力量。</p>
+</p>
+
+</div>
+</body>
+
+</html>
