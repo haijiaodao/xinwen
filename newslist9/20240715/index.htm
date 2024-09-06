@@ -1,0 +1,672 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<title>新闻报道</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+<link rel="stylesheet" href="static/css/demo.css">
+<link rel="stylesheet" href="static/css/font-awesome.css">
+<link rel="stylesheet" href="static/css/sky-forms.css">
+<link rel="stylesheet" href="static/css/sky-forms-orange.css">
+<link rel="stylesheet" type="text/css" href="css1/htmleaf-demo.css">
+<link rel="icon" type="image/png" sizes="32x32" href="https://haijiaodao.github.io/xinwen/favicon-32x32.png">
+<script src="static/js/jquery.min.js"></script>
+
+</head>
+<style>
+.my-button {
+  font-size: 12px; /* 设置文字大小为16像素 */
+color: #000;
+}
+
+
+.sfd{
+            display: flex; /* 使用flex布局 */
+            justify-content: center; /* 水平居中对齐 */
+margin-top: 10px; /* 上间距 */
+    margin-bottom: 10px; /* 下间距 */
+        }
+        
+   .image2{
+            width: 32rem; /* 设置图片宽度 */
+            height: auto; /* 保持高度自动计算 */
+            margin: 10px; /* 设置图片之间的间距 */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 设置阴影样式 */
+  border-radius: 0px; /* 圆角 */
+  object-fit: cover; /* 图片填充方式 */
+display: block;
+transition: transform 0.3s ease;
+    cursor: pointer;
+        }
+
+    .enlarged-image {
+    transform: scale(2);
+  }
+  .image1 {
+    max-width: 15%;
+    max-height:15%;
+position: absolute; /* 相对于最近的已定位祖先元素 */
+  top: 50px; /* 距离顶部100像素 */
+  left: 250px; /* 距离左侧150像素 */
+
+  }
+hr {
+  border: none;
+  border-top: 1px dashed rgba(0, 0, 0, .2);
+}
+h1 {
+  display: block;
+  margin: 0;
+  font-family: 'maozedong', 'Arial', sans-serif;
+  color: #87CEFA;
+  font-size: 1.2em;
+padding: 15px 5px 0px 20px;
+text-align: center;
+text-shadow: 1px 1px 2px #000;
+line-height: 1.2; /* 设置为字体大小的1.5倍 */
+}
+
+
+@font-face {
+  font-family: 'maozedong';
+  src: url('maozedong.ttf') format('woff');
+}
+.subheading {
+  display: block;
+  color: #232323;
+  font: 700 18px sans-serif;
+pre
+{
+	background: #fff;
+	padding: 10px;
+	font-size: 93%;
+	width: 740px;
+
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+
+.handwriting-text {
+
+  color: #CCCCCC; /* 文字颜色 */
+  font-size: 12px; /* 字体大小 */
+  letter-spacing: 2px; /* 字母间距 */
+text-shadow: 2px 2px 2px #000000; /* 水平偏移 垂直偏移 模糊半径 颜色 */
+
+}
+h3{
+
+}
+.sfd{
+            display: flex; /* 使用flex布局 */
+            justify-content: center; /* 水平居中对齐 */
+margin-top: 0.6rem; /* 上间距 */
+    margin-bottom: 0.6rem; /* 下间距 */
+        }
+        
+
+.subheading {
+  display: block;
+  color: #232323;
+  font: 700 1.06rem sans-serif;
+}
+@media (max-width: 769px) {
+body{
+    width: 100%;           /* 宽度 */
+    height: 100%;          /* 高度 */
+    margin: 20px auto;      /* 上下间距20px，左右自动 */
+    padding: 0px;          /* 内边距 */
+    border: 0px solid #dddddd;/* 边框 */
+    position: relative;     /* 相对定位 */
+    top: 0px;             /* 相对于最近定位祖先元素向下偏移100px */
+ text-shadow: 0px 0px 1px #BEBEBE;
+ }
+
+}
+@media screen and (max-width: 1280px) {
+  image1.hide-at-small-resolution {
+    display: none;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-content, #print-content * {
+    visibility: visible;
+  }
+  #print-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+p {
+  text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 16px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;
+}
+
+.handwriting-text {
+  color: #8B0000; /* 文字颜色 */
+  font-size: 12px; /* 字体大小 */
+  letter-spacing: 2px; /* 字母间距 */
+  font-weight: 300; /* 字体粗细：粗体 */
+}
+
+.shadow-img {
+  box-shadow: 2px 2px 8px #000; /* 阴影效果 */
+  border-radius: 0px; /* 圆角 */
+  object-fit: cover; /* 图片填充方式 */
+display: block;
+    margin: 0 auto;
+    width: 80%; /* 指定宽度为父元素宽度的50% */
+    height: auto;
+transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+
+li{
+padding: 20px 20px 15px 20px;
+}
+
+ul.no-bullets, ol.no-bullets {
+    list-style-type: none;
+}
+a
+{
+	color: #f60;
+	text-decoration: none;
+}
+
+a:hover
+{
+	color: #f60;
+}
+
+ul
+{
+	padding: 0 0 0 1em;
+}
+
+ul.no-bullets {
+  list-style-type: none; /* 去除列表前的小黑点 */
+}
+
+ul.link-list li
+{
+	margin: 0;
+}
+
+ul p
+{
+	margin: 0;
+}
+fieldset {
+  text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 16px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;
+}
+</style>
+
+<script>
+setInterval(() => {
+  debugger;
+}, 4000);
+</script>
+
+<script>
+// 禁用右键菜单和拖拽查看源代码
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+ 
+document.addEventListener('dragstart', function(e) {
+  e.preventDefault();
+});
+</script>
+<script language="javascript">
+function MM()
+{
+  if(event.srcElement.id=='sfd') //判断右击事件发生在哪个对像上面
+{
+  alert("对不起，本图片不能复制，版权所有！")
+ document.oncontextmenu=new Function("event.returnValue=false;");   //禁用右键功能
+}
+else
+{
+  document.oncontextmenu=new Function("event.returnValue=true;");  //启用右键功能
+} 
+}
+</script>
+
+<body>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var images = document.querySelectorAll('.image2');
+  images.forEach(function(image) {
+    image.addEventListener('click', function() {
+      // 切换class来放大图片
+      image.classList.toggle('enlarged-image');
+    });
+  });
+});
+</script>
+
+<body class="bg-orange">
+<div class="container1">
+  <img src="https://haijiaodao.github.io/xinwen/newslist/img/logo2.png" alt="logo" class="image1">
+</div>
+<div class="body">			
+
+	<form action="" class="sky-form">
+		<header><strong><h1><span style="color: red;">党纪学习教育·学条例  | 守党纪 </span><span style="color:#FF4500;"> </span><span style="color:#1E90FF;"></span><br><span style="color: #;text-align: center; font-size: 22px;">--让党员干部受警醒明底线知敬畏</span></h1>	</strong><p>
+<div class="subheading"></div>
+<div class="note"><strong></strong><a href="#">来源：新闻网🔯时间：2024年9月4日</a></div>
+
+</header>
+		
+		<fieldset>
+			<div>
+
+			
+			<p style="text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 14px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;">
+				自党纪学习教育活动开展以来，山临所党支部坚持以习近平新时代中国特色社会主义思想为指导，深入学习贯彻习近平总书记关于党纪学习教育的重要讲话和指示精神，将党纪学习教育作为当前和今后一个时期的重要政治任务，精心组织、周密部署、扎实推进，取得了显著成效。
+			</p>
+		<p style="text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 14px; /* 字体大小：20像素 */
+  font-weight: 600; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;">
+				提高政治站位，强化组织领导
+			</p>	
+			<p style="text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 14px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;">
+所党支部深刻认识到党纪学习教育对于加强党的纪律建设、推动全面从严治党向纵深发展的重要意义，第一时间成立由主要领导任组长的党纪学习教育领导小组，制定详细的工作方案，明确目标任务、责任分工和时间节点。通过召开动员大会、专题会议等形式，及时传达学习中央及上级党组织的部署要求，确保全体党员干部思想统一、行动一致。</p>
+<p style="text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 14px; /* 字体大小：20像素 */
+  font-weight: 600; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;">
+				丰富学习形式，深化学习效果
+			</p>	
+			<p style="text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 14px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;">
+所党支部紧扣学习重点，采取集中学习与个人自学相结合、线上学习与线下学习相补充的方式，深入开展党纪学习教育。一是组织党员干部职工认真学习《中国共产党纪律处分条例》等党内法规，通过原原本本学、逐条逐句学，深刻理解其精神实质和核心要义。二是党支部书记进行专题讲座辅导，通过深入浅出的讲解，帮助党员干部更好地把握党纪学习教育的重点难点。三是开展警示教育，通过剖析违纪违法典型案例，以案为鉴、以案促改，引导党员干部筑牢拒腐防变的思想防线。</p>
+<p style="text-align: justify; /* 两端对齐 */
+  color: #999; /* 颜色：红色 */
+  font-size: 14px; /* 字体大小：20像素 */
+  font-weight: 600; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;">
+				学习动员与准备阶段
+			</p>	
+			<p style="text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 14px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;">
+制定详细计划：根据上级党组织的部署要求，结合山临所实际情况，制定详细的党纪学习教育工作计划。计划内容包括学习目标、学习内容、时间安排、学习方式、考核评估等各个方面，确保学习教育活动有章可循、有序开展。
+</p>
+<p style="text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 14px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;">
+
+动员部署：召开全体党员干部大会，传达中央及上级党组织关于党纪学习教育的文件精神，明确学习教育的意义、目标和要求。通过动员讲话、发放学习资料等方式，激发党员干部的学习热情和参与积极性。
+</p>
+<p style="text-align: justify; /* 两端对齐 */
+  color: #999; /* 颜色：红色 */
+  font-size: 14px; /* 字体大小：20像素 */
+  font-weight: 600; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;">
+				学习实施阶段
+			</p>	
+			<p style="text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 14px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;">
+集中学习与研讨
+（1）时间安排：根据工作计划，每周固定时间组织党员干部进行集中学习。学习采用“领学+讨论”的方式，由领导小组指定专人领学，随后组织党员干部进行分组讨论，分享学习心得和体会。
+（2）学习内容：重点学习《中国共产党章程》、《中国共产党纪律处分条例》等党内法规，以及习近平总书记关于党纪学习教育的重要讲话和指示精神。通过学习，使党员干部全面了解党的纪律规矩，增强纪律意识和规矩意识。
+</p>
+<p style="text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 14px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;">
+个人自学与笔记
+（1）鼓励党员干部利用业余时间进行个人自学，通过阅读学习资料、撰写读书笔记等方式，深化对党纪法规的理解和认识。
+（2）定期检查党员干部职工的学习笔记和心得体会，了解他们的学习进展和思想动态。</p>
+<p style="text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 14px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;">
+集中学习与研讨
+（1）时间安排：根据工作计划，每周固定时间组织党员干部进行集中学习。学习采用“领学+讨论”的方式，由领导小组指定专人领学，随后组织党员干部进行分组讨论，分享学习心得和体会。
+（2）学习内容：重点学习《中国共产党章程》、《中国共产党纪律处分条例》等党内法规，以及习近平总书记关于党纪学习教育的重要讲话和指示精神。通过学习，使党员干部全面了解党的纪律规矩，增强纪律意识和规矩意识。
+</p>
+<p style="text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 14px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;">
+警示教育活动
+（1）组织党员干部参观廉政教育基地、观看警示教育片等活动，通过直观的感受和深刻的反思，增强纪律意识和规矩意识。
+（2）通报违纪违法典型案例，以案为鉴、以案促改，引导党员干部深刻剖析违纪违法行为的思想根源和危害后果，增强廉洁自律的自觉性和坚定性。</p>
+<p style="text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 14px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;">
+专题讲座与辅导
+（1）由党支部书记、支部委员、纪检干部，围绕党纪学习教育主题，为党员干部讲授专题党课和讲座。通过深入浅出的讲解和剖析，帮助党员干部更好地把握党纪法规的精神实质和核心要义。
+（2）组织党员干部参加线上学习课程和培训活动，利用网络平台获取更多的学习资源和信息。</p>
+
+<p style="text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 14px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;">
+准备学习资料：整理并分发《中国共产党章程》、《中国共产党纪律处分条例》等学习资料，确保每位党员干部都能获得完整、准确的学习材料。同时，利用“三会一课”、党员学习日、学习强国、钉钉APP等线上平台，推送学习资料、视频讲座、测试题目等，为党员干部提供多样化的学习资源。</p>
+<p style="text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 14px; /* 字体大小：20像素 */
+  font-weight: 600; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;">
+				强化实践锻炼，推动学以致用
+			</p>	
+			<p style="text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 14px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;">
+所党支部注重将党纪学习教育与实际工作相结合，引导党员干部将学习成果转化为推动工作的强大动力。一是结合“三会一课”、主题党日等活动，组织党员干部开展交流研讨，分享学习心得和体会。二是将党纪学习教育融入收费业务工作之中，通过建立健全各项规章制度，规范工作流程，提高工作效能。三是加强监督检查，对党员干部遵守党纪情况进行定期检查和随机抽查，发现问题及时整改，确保党纪学习教育取得实效。</p>
+
+<p style="text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 14px; /* 字体大小：20像素 */
+  font-weight: 600; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;">
+				总结实践经验，应用成效评估
+			</p>	
+			<p style="text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 14px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;">
+1.融入业务工作：将党纪学习教育与收费业务工作紧密结合，通过完善内部管理制度、优化工作流程等方式，将学习成果转化为推动工作的实际行动。同时，鼓励党员干部在工作中积极践行党纪法规要求，做到言行一致、表里如一。</p>
+<p style="text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 14px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;">
+2.开展自查自纠：组织党员干部对照党纪法规进行自查自纠，认真查找自身在遵守纪律方面存在的问题和不足，并制定整改措施进行整改。通过自查自纠活动，进一步增强党员干部的纪律意识和规矩意识。</p>
+<p style="text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 14px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;">
+3.考核评估与总结
+（1）制定考核评估标准和方法，对党员干部的学习成果进行考核评估。考核评估采用考试、问答、心得体会等多种方式进行，确保考核结果的客观性和准确性。
+（2）对学习教育工作进行全面总结，提炼经验做法和亮点特色，查找存在问题和不足，明确下一步努力方向。同时，将学习教育成果纳入党员干部职工年度考核和评优评先工作之中，作为评价党员干部工作表现的重要依据之一。</p>
+
+			<p style="text-align: justify; /* 两端对齐 */
+  color: #000; /* 颜色：红色 */
+  font-size: 14px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #B0C4DE;
+padding: 0px 20px 0px 20px;">
+
+				通过以上措施的实施，山临所党支部党纪学习教育工作取得了显著成效。党员干部的纪律意识明显增强，工作作风更加务实清廉；单位内部管理更加规范有序，工作效率和服务质量得到显著提升；同时，也积累了一些宝贵的经验做法，为今后的工作提供了有益的借鉴。下一步，山临所将继续巩固和扩大党纪学习教育成果，坚持把党纪学习教育作为一项长期任务来抓，不断创新学习方式方法，深化学习效果，推动全面从严治党向纵深发展。同时进一步加强监督检查和考核评估工作，确保党纪学习教育各项任务落到实处、取得实效。
+			</p>
+
+			
+			
+			<h2 id="examples" style="text-align: center; font-size: 18px;">镜头丨开展党纪学习教育</h2>
+			
+			<ul style=" list-style-type: none; ">
+				<li>
+					<a href="">⤵️地点：</a>山临所党支部			</li>
+<hr>  
+<div class="sfd">
+<img id="image1" class="image2" src="img/1.jpg" alt="Image">
+    </div>
+
+<hr>
+
+
+				<li>
+					<a href="">⤵️地点：</a>山临所党支部				
+				</li>
+<img id="image1" class="image2" src="img/2.jpg" alt="Image">
+  
+
+				<li>
+					<a href="">⤵️地点：</a>山临所党支部				
+				</li>
+<img id="image1" class="image2" src="img/3.jpg" alt="Image" onclick="zoomImage()"  class="shadow-img">
+
+          <hr>
+
+				<li>
+					<a href="">⤵️地点：</a>山临所党支部				
+				</li>
+<img id="image1" class="image2" src="img/4.jpg" alt="Image">
+			
+			
+		
+		
+		<fieldset>					
+			<section>
+				<label class="label"></label>
+				<div class="rating">
+					<input type="radio" name="stars-rating" id="stars-rating-5">
+					<label for="stars-rating-5"><i class="fa fa-star"></i></label>
+					<input type="radio" name="stars-rating" id="stars-rating-4">
+					<label for="stars-rating-4"><i class="fa fa-star"></i></label>
+					<input type="radio" name="stars-rating" id="stars-rating-3">
+					<label for="stars-rating-3"><i class="fa fa-star"></i></label>
+					<input type="radio" name="stars-rating" id="stars-rating-2">
+					<label for="stars-rating-2"><i class="fa fa-star"></i></label>
+					<input type="radio" name="stars-rating" id="stars-rating-1">
+					<label for="stars-rating-1"><i class="fa fa-star"></i></label>
+				星级评价
+				</div>
+				
+				
+				<div class="note"><strong></strong>邀请您对版面及文章进行评价。</div>
+<label class="label">
+<div class="note">
+<span><script language="JavaScript">
+<!--hide script from old browsers
+document.write("发布时间: " + document.lastModified + "")
+// end hiding -->
+</script>&emsp;访问量:<span id="result1"></span>次&emsp;©<!-- -->著作权归作者所有,转载或内容合作请联系作者。<span style="text-align:right;font-size: 12px;color:#8B0000">&copy;网内版权号：<span id="uniqueNumber"></span>
+
+
+</div></strong>
+
+ 
+                      <script type="text/javascript">
+	//流量统计
+                    if (localStorage.pagecount) {
+                        localStorage.pagecount = Number(localStorage.pagecount) + 1;
+                    } else {
+                        localStorage.pagecount = 1;
+                    }
+                    document.getElementById("result1").innerHTML = localStorage.pagecount;
+            //年份获取
+            var myDate = new Date();
+            var year = myDate.getFullYear();
+            document.getElementById('year').innerHTML = year;
+</script>
+<br>
+ <button class="my-button"><a href="" class="no123" title="感谢点赞">
+ 点赞</button></a>
+  <button class="my-button"><a href="https://haijiaodao.github.io/xinwen/newslist/zanzhu1/index.html" class"no123" title="打赏，支持一下">
+ 打赏</button></a>
+		
+			</div>
+
+
+</label>
+
+			</section>
+		</fieldset>
+			
+	</form>	
+
+<div>
+		<header class="htmleaf-header" style="color:red">
+			
+			<div class="htmleaf-links" style="color:red">
+				<a class="htmleaf-icon icon-htmleaf-home-outline" style="color:#fff" href="https://haijiaodao.github.io/xinwen/index.html" title="首页" target="_blank"><span>首页</span></a>
+
+                               
+
+				<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" style="color:#fff" href="https://haijiaodao.github.io/xinwen/newslist/index.html" title="返回" target="_blank"><span> 返回</span></a>
+			</div><h3 style="color: red;"></h3>
+		</header>
+
+	</div>
+<script>
+function copyCurrentUrl() {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    console.log('复制成功');
+  }).catch(function(error) {
+    console.error('复制失败', error);
+  });
+}
+
+// 监听鼠标和键盘事件
+document.removeEventListener("mousedown", haveSelect)
+document.addEventListener("mousedown", haveSelect)
+document.removeEventListener("mouseup", haveSelect)
+document.addEventListener("mouseup", haveSelect)
+document.removeEventListener("keydown", haveSelect)
+document.addEventListener("keydown", haveSelect)
+function haveSelect() {
+  window.getSelection().removeAllRanges()
+}
+</script>
+<script>
+// 生成版权
+function generateUniqueNumber(url) {
+  // 使用URL的hashCode作为号码
+  let hash = 0;
+  for (let i = 0; i < url.length; i++) {
+    hash = ((hash << 5) - hash) + url.charCodeAt(i);
+    hash |= 0; // 转换为32位整数
+  }
+  return Math.abs(hash);
+}
+ 
+// 获取当前页面的URL
+const url = window.location.href;
+// 生成唯一号码
+const uniqueNumber = generateUniqueNumber(url);
+// 显示号码
+document.getElementById('uniqueNumber').textContent = uniqueNumber.toString();
+</script>
+
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script></p>
+<div style="height:100%;"></div>
+<div style="text-align:center;clear:both">
+</div>
+</body>
+</html>
