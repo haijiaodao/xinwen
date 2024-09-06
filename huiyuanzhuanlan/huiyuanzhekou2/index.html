@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>优惠码折扣计算</title>
+<script>
+function calculateDiscount(couponCode, amount) {
+    var discountCodes = {
+        '2024XWW202409060001': 0.8,  // 80%折扣
+        '2024XWW202409060002': 0.7,  // 70%折扣
+        '2024SLBGS20240906': 0.6   // 60%折扣
+        // 添加更多优惠码和折扣比例
+    };
+ 
+    var discount = discountCodes[couponCode];
+    if (discount) {
+        var discountedAmount = amount * discount;
+        return discountedAmount.toFixed(0); // 保留两位小数
+    } else {
+        return "无效的优惠码";
+    }
+}
+ 
+function updateDiscount() {
+    var couponCode = document.getElementById('couponCode').value;
+    var amount = parseFloat(document.getElementById('amount').value);
+    var discountedAmount = calculateDiscount(couponCode, amount);
+    document.getElementById('discountedAmount').innerText = discountedAmount;
+}
+</script>
+<script>
+function toggleImage() {
+  var image = document.getElementById('myImage');
+  if (image.style.display === 'none') {
+    image.style.display = 'block';
+  } else {
+    image.style.display = 'none';
+  }
+}
+</script>
+</head>
+<style>
+
+#myImage {
+  width: 230px; /* 设置图片宽度为200像素 */
+  height: 300px; /* 设置图片高度为200像素 */
+  animation: bounce 5s infinite alternate; /* 应用名为bounce的动画，持续时间1秒，无限次数循环，交替方向 */
+ float: left; /* 让图片浮动到左边 */
+    margin-right: 30px; /* 在图片和文本之间添加一些间隔 */
+
+}
+ 
+@keyframes bounce {
+  0% {
+    transform: translateY(0); /* 动画开始时，图片位于原位置 */
+  }
+  50% {
+    transform: translateY(-10px); /* 动画进行到50%时，图片向上移动10像素 */
+  }
+  100% {
+    transform: translateY(0); /* 动画结束时，图片返回原位置 */
+  }
+}
+.centered-div {
+  width: 50%; /* 自适应宽度 */
+  max-width: 300px; /* 最大宽度限制 */
+  height: auto; /* 高度自适应 */
+  margin: 0 auto; /* 水平居中 */
+  position: absolute; /* 绝对定位 */
+  top: 45%; /* 顶部距离容器高度50% */
+  left: 50%; /* 左边距离容器宽度50% */
+  transform: translate(-50%, -50%); /* 向上、向左偏移自身宽高的一半，以实现居中 */
+}
+/* 设置数据输入框样式 */
+input[type="text"] {
+  padding: 5px; /* 内边距 */
+  margin: 5px; /* 外边距 */
+  border: 1px solid #ccc; /* 边框颜色 */
+  border-radius: 3px; /* 边框圆角 */
+  width: 200px; /* 宽度 */
+}
+ 
+/* 设置按钮样式 */
+button {
+  padding: 5px 10px; /* 内边距 */
+  margin: 5px; /* 外边距 */
+  background-color: #007bff; /* 背景颜色 */
+  color: white; /* 文本颜色 */
+  border: none; /* 无边框 */
+  border-radius: 3px; /* 边框圆角 */
+  cursor: pointer; /* 鼠标光标形状 */
+}
+ 
+/* 当鼠标悬停在按钮上时改变背景颜色 */
+button:hover {
+  background-color: #0056b3;
+}
+/* 设置整体页面的背景色和字体样式 */
+body {
+    background: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+}
+ 
+/* 设置输入框的共同样式 */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="date"] {
+    background: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 10px 15px;
+    width: calc(100% - 30px);
+    transition: box-shadow 0.2s ease;
+}
+ 
+/* 设置不同类型输入框的特定样式 */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus {
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    outline: none; /* 移除焦点时的默认边框 */
+}
+ 
+/* 设置登录按钮的样式 */
+button[type="submit"] {
+    background: #333;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+ 
+button[type="submit"]:hover {
+    background: #555;
+}
+</style>
+<body>
+<div class="centered-div">
+<h2>优惠码充值</h2>
+<form>
+    优惠码：<input type="text" id="couponCode" /><br><br>
+    金额：<select id="amount">
+  <option value="199">199</option>
+  <option value="499">499</option>
+  <option value="999">999</option>
+</select>
+
+    <button type="button" onclick="updateDiscount()">计算折扣</button>
+</form>
+<p>折扣后金额：<span id="discountedAmount"></span></p>
+<button onclick="toggleImage()">去支付</button>
+ <br><br>
+<img id="myImage" src="1.png" alt="支付" style="display: none;">
+<button onclick="openNewLink()">完成支付后登记</button>
+<script>
+function openNewLink() {
+    window.open('https://www.wjx.top/vm/OFwMr0q.aspx#', '_blank');
+}
+</script>
+ </div>
+</body>
+</html>
