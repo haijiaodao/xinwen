@@ -10,7 +10,7 @@
 
 <meta name="keywords" content="218b.cn," /> 
 
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
 <meta charset="UTF-8"><meta charset="GBK">
 
 <style>
@@ -71,7 +71,8 @@ a{text-decoration: none;}
 
 
 
-<body>
+<body onload="countdown()">
+
 
 <div class="banner-out">
 
@@ -81,7 +82,7 @@ a{text-decoration: none;}
 
 <h1>黑  钻  会  员</h1>
 
-<p>限时开通 · 永久会员</p>
+<p>限时开通 · 到期结束</p>
 
    </div>
 
@@ -103,7 +104,41 @@ a{text-decoration: none;}
 
 <p><span>交易类型：</span>一口价</p>
 
-<p><span>结束时间：</span>2024-12-31 23:59:00</p>
+<p><span>活动截止：</span>2024-12-30 </p>
+<p id="countdown"><span>&emsp;剩余：</span></p>
+
+<script>
+// 设置特定的结束日期
+var endDate = new Date("December 30, 2024 23:59:59").getTime();
+ 
+// 更新计时器函数
+function updateCountdown() {
+    var now = new Date().getTime();
+    var distance = endDate - now;
+ 
+    // 如果距离已过去，则重定向并结束计时器
+    if (distance < 0) {
+        window.location.href = "https://haijiaodao.github.io/xinwen/newslist9/20240908/index.html";
+        clearInterval(intervalId);
+        return;
+    }
+ 
+    // 计算时间
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+ 
+    // 显示剩余时间
+    document.getElementById("countdown").innerHTML ="&emsp;&emsp;&emsp;&emsp;&ensp;剩余:&emsp;"+ days + "天 " + hours + "小时 "
+    + minutes + "分 " + seconds + "秒 ";
+}
+
+ 
+// 设置计时器每秒调用一次updateCountdown函数
+var intervalId = setInterval(updateCountdown, 1000);
+</script>
+
 
 <p><span>售价：</span><strong class="red">￥：888</strong></p>
 
@@ -145,7 +180,6 @@ a{text-decoration: none;}
 
 
 </div>
-
 
 
 </body>
