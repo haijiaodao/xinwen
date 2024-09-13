@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>Christmas Countdown</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<style>
+p {
+  text-align: justify; /* 两端对齐 */
+  color: #fff; /* 颜色：红色 */
+  font-size: 16px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+text-indent: 2em; /* 设置首行缩进为2em */
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #999;
+padding: 0px 20px 0px 20px;
+line-height: 20px;
+}
+a {
+    color: inherit; /* 继承父元素的文字颜色 */
+    text-decoration: none; /* 去除下划线 */
+    outline: none; /* 去除点击后的蓝色边框，主要用于键盘导航 */
+}
+ 
+/* 可选：为鼠标悬停状态添加样式 */
+a:hover {
+    text-decoration: none; /* 鼠标悬停时也去除下划线 */
+    color: inherit; /* 鼠标悬停时保持和父元素一致的颜色 */
+}
+.sfd{
+text-indent: 2em; /* 设置首行缩进为2em */
+ color:#FF9966;
+font-size: 20px; 
+}
+@media screen and (max-width: 1280px) {
+  image1.hide-at-small-resolution {
+    display: none;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-content, #print-content * {
+    visibility: visible;
+  }
+  #print-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+h2 {
+  display: block;
+  margin: 0;
+  font-family: 'maozedong', 'Arial', sans-serif;
+  color: #87CEFA;
+  font-size: 2.2em;
+padding: 15px 15px 1px 15px;
+text-align: center;
+text-shadow: 1px 1px 2px #000;
+}
+@font-face {
+  font-family: 'maozedong';
+  src: url('maozedong.ttf') format('woff');
+}
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-content, #print-content * {
+    visibility: visible;
+  }
+  #print-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+/* 美化按钮样式 */
+.button {
+  background-color: #4CAF50; /* 设置按钮背景颜色 */
+  border: none; /* 去掉边框 */
+  color: white; /* 设置文字颜色 */
+  padding: 5px 10px; /* 设置内边距 */
+  text-align: center; /* 设置文字居中对齐 */
+  text-decoration: none; /* 去掉下划线 */
+  display: inline-block; /* 设置为内联块级元素 */
+  font-size: 16px; /* 设置字体大小 */
+  margin: 4px 2px; /* 设置外边距 */
+  cursor: pointer; /* 设置鼠标光标为指针形状 */
+  border-radius: 10px; /* 设置按钮边框圆角 */
+  transition: background-color 0.3s; /* 设置背景颜色过渡动画 */
+}
+ 
+/* 按钮悬停样式 */
+.button:hover {
+  background-color: #45a049; /* 悬停时按钮背景颜色变深 */
+}
+ 
+/* 美化文本样式 */
+.text {
+  color: white; /* 设置文字颜色 */
+  font-size: 20px; /* 设置字体大小 */
+  padding: 10px 50px; /* 设置内边距 */
+  background-color: #000000; /* 设置背景颜色 */
+  border-radius: 10px; /* 设置文本边框圆角 */
+  text-align: center; /* 设置文本居中对齐 */
+}
+</style>
+
+<body>
+
+<section class="countdownSection">
+  <div class="decorations">
+    <div class="decoration" data-pos="bottom left">1</div>
+    <div class="decoration" data-pos="top right">2</div>
+    <div class="snow">3</div>
+    <div class="santaWrapper">
+      <div class="santa">
+        <div class="hat">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="face">
+          <div class="eyeBrows left">4</div>
+          <div class="eyeBrows right">5</div>
+          <div class="eye left">6</div>
+          <div class="eye right">7</div>
+          <div class="nose"></div>
+          <div class="cheek left"></div>
+          <div class="cheek right"></div>
+          <div class="beard">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="sweater"></div>
+          <div class="hand left">
+            <div class="inner"></div>
+          </div>
+          <div class="hand right"></div>
+        </div>
+      </div>
+      <div class="rope"></div>
+      <div class="rope back"></div>
+      <div class="sled"></div>
+      <div class="reindeer">
+        <div class="face">
+          <div class="ear"></div>
+          <div class="horn right"></div>
+          <div class="horn left"></div>
+        </div>
+        <div class="body">
+          <div class="foot front">
+            <div class="inner">
+              <div class="extension"></div>
+            </div>
+          </div>
+          <div class="foot back">
+            <div class="inner">
+              <div class="extension"></div>
+            </div>
+          </div>
+          <div class="tail"></div>
+        </div>
+      </div>
+      <div class="reindeer second">
+        <div class="rope"></div>
+        <div class="face">
+          <div class="ear"></div>
+          <div class="horn right"></div>
+          <div class="horn left"></div>
+        </div>
+        <div class="body">
+          <div class="foot front">
+            <div class="inner">
+              <div class="extension"></div>
+            </div>
+          </div>
+          <div class="foot back">
+            <div class="inner">
+              <div class="extension"></div>
+            </div>
+          </div>
+          <div class="tail"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="counterWrapper">
+      <h2 style="font-size: 46px;font-family: "黑体", sans-serif;">网络文明，你我同行</h2><br><br>
+<h5 style="text-align: center; color: #000;">来源：新闻网🔯时间：2024年6月25日</h5><br>
+
+      <div class=""></div>
+<p style="font-size: 16px;font-family: "宋体", sans-serif;">
+网络文明是新形势下社会文明的重要内容，是建设网络强国的重要领域。为进一步加强网络文明建设，提升广大人民群众的网络媒介素养，近日，高速公路武威运营分公司山临所开展“共建网络文明，与您e路同行”网络文明建设主题宣传活动，充分利用高速公路车流量大、辐射面广的信息传播优势，通过广大司乘人员将共建共治共享网络生态文明的意识带入千家万户。
+</p><br>
+      <span align="center"><img src="img/1.png" height="211" width="288" /></span>
+<p style="font-size: 16px;font-family: "宋体", sans-serif;">
+活动中，山临所工作人员及网络文明志愿者携手走进高速收费站、停车区、服务区等高速公路车辆停靠地点，通过利用高速沿线可变信息情报板和收费站LED显示屏循环播放宣传标语及视频、8个收费站站口上下行人工车道发放宣传手册、面对面讲解网络谣言典型案例等方式，向司乘人员宣传普及网络文明相关知识，提升大家对网络谣言的辨别能力和防范意识，鼓励大家积极举报网上违法和不良信息，充分运用网络传播正能量。
+</p><br>
+<p style="font-size: 16px;font-family: "宋体", sans-serif;">
+甘肃高速武威分公司组织干部职工通过微信公众号“知识问答”页面参与网络安全知识问答；联合网络安全运维单位，全面摸排、系统检测本单位信息系统，组织网络安全巡检；组织网络安全知识专家讲座等一系列活动，充分调动干部职工的积极性、主动性和创造性，将网络安全教育与国家安全教育、提升防护技能、维护网络稳定等工作有机结合，营造出干部职工安全上网、依法上网的良好氛围。
+</p><br>
+<p style="font-size: 16px;font-family: "宋体", sans-serif;">
+此次活动，通过面向广大高速司乘人员的零距离宣传，取得了良好的社会效应。下一步，山临所将持续开展丰富多样的网络文明宣传活动，引导广大人民群众践行网络文明规范，自觉抵制网络谣言，积极举报网络违法和不良信息，共同建设网上美好精神家园。
+</p>
+<span style="text-align:right;font-size: 14px;color:#333">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔸<!-- -->著作权归作者所有,转载或内容合作请联系作者。<span style="text-align:right;font-size: 14px;color:#8B0000">🆔网内版权号：<span id="uniqueNumber"></span></span>
+
+<button class="button"><a href="" class="no123" title="感谢点赞">
+ 点赞</button></a>
+  <button class="button"><a href="https://haijiaodao.github.io/xinwen/zhifu0530/index.html" class"no123" title="打赏，支持一下">
+ 打赏</button></a>
+
+    </div>
+  </div>
+</section>
+
+<script src='js/jquery.min.js'></script>
+<script src="js/script.js"></script>
+<script type="text/javascript">	
+$(function() {
+	$( '#vc-container' ).cassette();	
+});
+</script>
+<script>
+		$(document).ready(function() {
+			$('.leftSidebar, .content, .rightSidebar')
+				.theiaStickySidebar({
+					additionalMarginTop: 30
+				});
+		});
+	</script>
+<script>
+function copyCurrentUrl() {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    console.log('复制成功');
+  }).catch(function(error) {
+    console.error('复制失败', error);
+  });
+}
+
+// 监听鼠标和键盘事件
+document.removeEventListener("mousedown", haveSelect)
+document.addEventListener("mousedown", haveSelect)
+document.removeEventListener("mouseup", haveSelect)
+document.addEventListener("mouseup", haveSelect)
+document.removeEventListener("keydown", haveSelect)
+document.addEventListener("keydown", haveSelect)
+function haveSelect() {
+  window.getSelection().removeAllRanges()
+}
+</script>
+<script>
+// 生成版权
+function generateUniqueNumber(url) {
+  // 使用URL的hashCode作为号码
+  let hash = 0;
+  for (let i = 0; i < url.length; i++) {
+    hash = ((hash << 5) - hash) + url.charCodeAt(i);
+    hash |= 0; // 转换为32位整数
+  }
+  return Math.abs(hash);
+}
+ 
+// 获取当前页面的URL
+const url = window.location.href;
+// 生成唯一号码
+const uniqueNumber = generateUniqueNumber(url);
+// 显示号码
+document.getElementById('uniqueNumber').textContent = uniqueNumber.toString();
+</script>
+
+</body>
+</html>
