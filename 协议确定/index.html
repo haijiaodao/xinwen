@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>网站协议</title>
+ <script>
+function agreeAction() {
+    window.open('', '_blank');
+}
+ 
+function disagreeAction() {
+    window.open('', '_blank');
+}
+</script>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<style>
+p {
+  text-align: justify; /* 两端对齐 */
+  color: #fff; /* 颜色：红色 */
+  font-size: 16px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 2px #999;
+padding: 0px 20px 10px 170px;
+line-height: 20px;
+}
+a {
+    color: inherit; /* 继承父元素的文字颜色 */
+    text-decoration: none; /* 去除下划线 */
+    outline: none; /* 去除点击后的蓝色边框，主要用于键盘导航 */
+}
+ 
+/* 可选：为鼠标悬停状态添加样式 */
+a:hover {
+    text-decoration: none; /* 鼠标悬停时也去除下划线 */
+    color: inherit; /* 鼠标悬停时保持和父元素一致的颜色 */
+}
+.sfd{
+text-indent: 2em; /* 设置首行缩进为2em */
+ color:#FF9966;
+font-size: 20px; 
+}
+@media screen and (max-width: 1280px) {
+  image1.hide-at-small-resolution {
+    display: none;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-content, #print-content * {
+    visibility: visible;
+  }
+  #print-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+h2 {
+  display: block;
+  margin: 0;
+  font-family: 'maozedong', 'Arial', sans-serif;
+  color: #87CEFA;
+  font-size: 2.2em;
+padding: 15px 15px 1px 15px;
+text-align: center;
+text-shadow: 1px 1px 2px #000;
+}
+@font-face {
+  font-family: 'maozedong';
+  src: url('maozedong.ttf') format('woff');
+}
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-content, #print-content * {
+    visibility: visible;
+  }
+  #print-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+/* 美化按钮样式 */
+.button {
+  background-color: #4CAF50; /* 设置按钮背景颜色 */
+  border: none; /* 去掉边框 */
+  color: white; /* 设置文字颜色 */
+  padding: 5px 10px; /* 设置内边距 */
+  text-align: center; /* 设置文字居中对齐 */
+  text-decoration: none; /* 去掉下划线 */
+  display: inline-block; /* 设置为内联块级元素 */
+  font-size: 16px; /* 设置字体大小 */
+  margin: 4px 2px; /* 设置外边距 */
+  cursor: pointer; /* 设置鼠标光标为指针形状 */
+  border-radius: 10px; /* 设置按钮边框圆角 */
+  transition: background-color 0.3s; /* 设置背景颜色过渡动画 */
+}
+ 
+/* 按钮悬停样式 */
+.button:hover {
+  background-color: #45a049; /* 悬停时按钮背景颜色变深 */
+}
+ 
+/* 美化文本样式 */
+.text {
+  color: white; /* 设置文字颜色 */
+  font-size: 20px; /* 设置字体大小 */
+  padding: 10px 50px; /* 设置内边距 */
+  background-color: #000000; /* 设置背景颜色 */
+  border-radius: 10px; /* 设置文本边框圆角 */
+  text-align: center; /* 设置文本居中对齐 */
+}
+</style>
+
+<body>
+<!-- partial:index.partial.html -->
+<div class="card">
+      <h3>确定继续操作吗?</h3>
+      <p>
+        同意使用条件再确认是否继续。<a href=""> 🔜协议</a>
+      </p>
+
+      <button class="btn btn-primary" onclick="agreeAction()">同意</button>
+      <button class="btn btn-secondary" onclick="disagreeAction()">不同意</button>
+
+      <div class="emo-container">
+        <div class="bunny">
+          <div class="ear l"></div>
+          <div class="ear r"></div>
+          <div class="face">
+            <div class="eye l"></div>
+            <div class="eye r"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+            <div class="mostash l"></div>
+            <div class="mostash r"></div>
+          </div>
+          <div class="hand l"></div>
+          <div class="hand r"></div>
+
+          <div class="leg l"></div>
+          <div class="leg r"></div>
+          <div class="tail"></div>
+        </div>
+      </div>
+    </div>
+<!-- partial -->
+  
+</body>
+</html>
