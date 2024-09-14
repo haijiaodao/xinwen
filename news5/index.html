@@ -12,6 +12,32 @@
 		supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
 		</script>
 </head>
+<style>
+.container {
+    display: flex;
+    align-items: center; /* 垂直居中 */
+}
+ 
+.image {
+    width: 100px; /* 指定图片宽度 */
+    height: 100px; /* 指定图片高度 */
+}
+ 
+.text {
+    margin-left: 20px; /* 图片和文字之间的距离 */
+}
+h2 {
+
+  color: #ff0000; /* 颜色：红色 */
+  font-size: 16px; /* 字体大小：20像素 */
+  font-weight: 100; /* 字体粗细：粗体 */
+
+ /* 水平偏移 垂直偏移 模糊半径 颜色 */
+  text-shadow: 1px 1px 1px #fff;
+
+line-height: 20px;
+}
+</style>
 <body class="cda-removeleft cda-naked cda-noimg demo-1">
 		<main>
 			<div class="frame">
@@ -24,10 +50,10 @@
 			</div>
 			<div class="content">
 				<div id="app"></div>
-				<div class="content__title-wrap">
-				
-					<h2 class="content__title"><a href="https://haijiaodao.github.io/xinwen/index.html" target="_blank">News</a></h2>
-				</div>
+				<div class="content__title-wrap"><div class="container">
+				<img src="1.png" alt="My Image" class="image"/>
+					 <span class="text"><h2 class="content__title"><a href="https://haijiaodao.github.io/xinwen/index.html" target="_blank">News</a></h2></span>
+				</div></div>
 			</div>
 		</main>
 		<script src="js/three.min.js"></script>

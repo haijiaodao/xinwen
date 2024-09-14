@@ -25,23 +25,16 @@ body.cda-noimg #cdawrap {
 
 body {
 	margin: 0;
-	--color-text: #fff;
-	--color-bg: #000;
-	--color-link: #5a5a5a;
+
 	--color-link-hover: #3eaaf1;
-	--color-alt: #3ba2e5;
-	--color-info: #fff;
-	color: var(--color-text);
-	background-color: var(--color-bg);
+
 	font-family: ltc-bodoni-175, serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
 .demo-2 {
-	--color-link-hover: #53C2C6;
-	--color-alt: #53C2C6;
-	--color-info: #FF5F73;
+
 }
 
 .demo-3 {
@@ -191,15 +184,17 @@ a:focus {
 }
 
 .content__pretitle {
-	color: var(--color-alt);
+
 	font-size: 1.35rem;
 }
 
 .content__title {
-	font-size: 6vw;
+	font-size: 5vw;
 	font-weight: normal;
 	margin: 0.5rem 0 1.5rem;
 	font-family: azo-sans-uber, sans-serif;
+color:#3d3b4f;
+
 }
 
 .content__link {
