@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新闻中心</title>
+
+<link rel="stylesheet" href="css\swiper.min.css">
+
+<script src="js\jquery.min.js"></script>
+<script src="js\swiper.min.js"></script>
+
+<link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="title">新闻中心</div>
+        <div class="w-imgText" id="imgText">
+            <div class="swiperBox">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide" data-title="特约稿件">
+                        <div class="item">
+                            <div class="imTB">
+                                <div class="img">
+                                    <img src="images\1.png">
+                                </div>
+                                <div class="textB">
+                                    <div class="bg_x"></div>
+                                    <div class="text_x">
+                                        <div class="tt_h">人民公路为人民</div>
+                                        <p>在高速公路发展的今天，作为高速公路运营中，一项重要的日常工作“稽核”，好多人还不清楚它是干什么用的，有人说:稽核就是专门打击偷逃费行为的；有人说稽核就是堵漏增收的；还有人说稽核跟我有啥关系吗？你别说，如果你有走过咋们国家高速公路的经历，还真是有很大关系的，因为作为交通运输和通行的参与者，稽核就是不断优化通行环境，维护收费公平，实实在在为大家美好出行服务的...</p>
+                                        <div class="btn">查看更多</div>
+                                    </div>
+                                </div>
+                            </div>
+                        <a href="https://haijiaodao.github.io/xinwen/newslist9/index.html"></a></div>
+                    </li>
+                    <li class="swiper-slide" data-title="交通要闻">
+                        <div class="item">
+                            <div class="imTB">
+                                <div class="img">
+                                    <img src="images\2.png">
+                                </div>
+                                <div class="textB">
+                                    <div class="bg_x"></div>
+                                    <div class="text_x">
+                                        <div class="tt_h">省交通运输厅召开2024年第一次巩固拓展脱贫攻坚成果同乡村振兴有效衔接定点帮扶暨结对关爱工作推进会</div>
+                                        <p>3月27日，省交通运输厅召开2024年第一次巩固拓展脱贫攻坚成果同乡村振兴有效衔接定点帮扶暨结对关爱工作推进会，传达学习中央、省上有关文件精神，审议《甘肃省交通运输厅2024年巩固拓展脱贫攻坚成果同乡村振兴有效衔接定点帮扶工作要点》，安排部署2024年度定点帮扶任务和结对关爱行动工作。厅党组成员、副厅长张肃军出席会议并讲话...</p>
+                                        <div class="btn">查看更多</div>
+                                    </div>
+                                </div>
+                            </div>
+                        <a href="https://haijiaodao.github.io/xinwen/newslist/20240402-JT/index.html"></a></div>
+                    </li>
+                    <li class="swiper-slide" data-title="公司资讯">
+                        <div class="item">
+                            <div class="imTB">
+                                <div class="img">
+                                    <img src="images\3.png">
+                                </div>
+                                <div class="textB">
+                                    <div class="bg_x"></div>
+                                    <div class="text_x">
+                                        <div class="tt_h">省公航旅集团高速公路运营管理分公司吹响“春训”集结号·践行“四高”新理念</div>
+                                        <p>近日，省公航旅集团高速公路运营管理分公司全面启动并迅速开展2024年“春训”工作。此次“春训”认真践行高标准运营、高效率管理、高品质服务、高效益转化的“四高”理念，以“行政人员精业务、党务人员懂业务”为总要求，以“在岗、在位、在状态”“出色、出彩、出业绩”为总任务，聚焦员工业务素质和综合能力提升，精心组织、周密部署、全员参与，奋力推进高速公路运营管理各项工作全面进步、规范管理、高效运转...</p>
+                                        <div class="btn">查看更多</div>
+                                    </div>
+                                </div>
+                            </div>
+                        <a href="https://haijiaodao.github.io/xinwen/newslist/20240402-GS/index.html"></a></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="igt_page"></div>
+        </div>
+        <div class="igt_page_text">
+            <ul class="clearfix">
+            </ul>
+        </div>
+        <script type="text/javascript">
+        $(function(){
+            var imgTextId=$('#imgText');
+            var swiperId=imgTextId.find('.swiperBox');
+            var pagediv=imgTextId.find('.igt_page');
+            var igtli=imgTextId.find('li');
+            var igtliW=100*1.0/igtli.length + '%';
+            var titles=[];
+            var _html = ''; 
+            igtli.each(function (index) { 
+                var title=$(this).attr('data-title');
+                if(index===0){
+                    _html += '<li class="igt_li on" style="width:' + igtliW  + ';"><div class="item_span"><div class="adore"></div><div class="num">0' + (index+1) + '</div><div class="tit">' + title + '</div></div></li>';
+                }else{
+                    _html += '<li class="igt_li" style="width:' + igtliW  + ';"><div class="item_span"><div class="adore"></div><div class="num">0' + (index+1) + '</div><div class="tit">' + title + '</div></div></li>';
+                } 
+            });
+            imgTextId.siblings('.igt_page_text').find('ul').append(_html);
+            var swiper1 = new Swiper(swiperId, {
+                effect : 'slide', 
+                autoplay : {
+                    delay:8000,//滚动速度
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: pagediv,
+                    type: 'custom',
+                    renderCustom: function (swiper, current, total) {
+                        return '<span class="on">0' + current + '</span><span>/</span><span>0' + total + '</span>';
+                    }
+                },
+              on:{
+                slideChange: function(){
+                    var index = this.activeIndex;
+                    imgTextId.siblings('.igt_page_text').find('li').eq(index).addClass('on').find('.adore').addClass('bg_main');
+                    imgTextId.siblings('.igt_page_text').find('li').eq(index).siblings('li').removeClass('on').find('.adore').removeClass('bg_main');
+                }
+              }
+            })
+            imgTextId.siblings('.igt_page_text').on('click','li',function(){ 
+                if (!$(this).hasClass('on')){
+                    var thisI = $(this).index();
+                    $(this).addClass('on').find('.adore').addClass('bg_main');
+                    $(this).siblings('li').removeClass('on').find('.adore').removeClass('bg_main');
+                    swiper1.slideTo(thisI, 1000, false);
+                }
+                
+            });
+        })
+      </script>     
+    </div>
+</body></html>
